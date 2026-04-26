@@ -181,3 +181,11 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - AGENTS.md
   - CONTRIBUTING.md
   - README.md
+## 2026-04-26T17:35:17.316Z
+- Trigger: commit
+- Learning: Agent sync manifests should resolve managed paths within the repository root so a bad manifest cannot write or verify files outside the starter.
+- Context: fix(agent): constrain sync paths to repo root
+- Branch: main
+- Actor: Ja3ood <moeghashim@users.noreply.github.com>
+- Changed Paths:
+  - scripts/agent-sync.mjs

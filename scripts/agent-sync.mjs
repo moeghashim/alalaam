@@ -12,8 +12,9 @@ import {
 	unlinkSync,
 	writeFileSync,
 } from "node:fs";
-import { dirname, join, relative, resolve } from "node:path";
+import { dirname, isAbsolute, join, relative, resolve } from "node:path";
 
+const REPO_ROOT = resolve(process.cwd());
 const DEFAULT_MANIFEST_PATH = resolve("agent/manifest.json");
 const DIRECTORY_ENTRY_TYPE = "directory";
 
@@ -27,6 +28,15 @@ function sha256(content) {
 
 function ensureDir(filePath) {
 	mkdirSync(dirname(filePath), { recursive: true });
+}
+
+function resolveRepoPath(targetPath, label) {
+	const resolvedPath = resolve(targetPath);
+	const repoRelativePath = relative(REPO_ROOT, resolvedPath);
+	if (repoRelativePath === "" || (!repoRelativePath.startsWith("..") && !isAbsolute(repoRelativePath))) {
+		return resolvedPath;
+	}
+	throw new Error(`${label} must stay within the repository root: ${targetPath}`);
 }
 
 function parseGitHubRepo(sourceRepo) {
@@ -168,7 +178,7 @@ async function syncFileEntry(manifest, entry) {
 	const expectedHash = sha256(upstreamContent);
 	entry.sha256 = expectedHash;
 
-	const localPath = resolve(entry.localPath);
+	const localPath = resolveRepoPath(entry.localPath, `Manifest localPath for ${entry.upstreamPath}`);
 	ensureDir(localPath);
 
 	const previous = existsSync(localPath) ? readFileSync(localPath) : null;
@@ -196,7 +206,7 @@ async function syncDirectoryEntry(manifest, entry, treeCache) {
 	);
 	entry.sha256 = computeDirectoryHash(files);
 
-	const localRoot = resolve(entry.localPath);
+	const localRoot = resolveRepoPath(entry.localPath, `Manifest localPath for ${entry.upstreamPath}`);
 	mkdirSync(localRoot, { recursive: true });
 
 	const expectedRelativePaths = new Set(files.map((file) => file.relativePath));
@@ -280,7 +290,7 @@ async function verify(manifest) {
 				mismatches.push(`${entry.localPath}: manifest hash is stale for ${entry.upstreamPath}`);
 			}
 
-			const localRoot = resolve(entry.localPath);
+			const localRoot = resolveRepoPath(entry.localPath, `Manifest localPath for ${entry.upstreamPath}`);
 			if (!existsSync(localRoot)) {
 				mismatches.push(`${entry.localPath}: directory missing`);
 				continue;
@@ -309,7 +319,7 @@ async function verify(manifest) {
 			continue;
 		}
 
-		const localPath = resolve(entry.localPath);
+		const localPath = resolveRepoPath(entry.localPath, `Manifest localPath for ${entry.upstreamPath}`);
 		if (!existsSync(localPath)) {
 			mismatches.push(`${entry.localPath}: file missing`);
 			continue;
@@ -363,7 +373,7 @@ function parseArgs(argv) {
 		if (!providedPath) {
 			throw new Error("Expected a path after --manifest");
 		}
-		manifestPath = resolve(providedPath);
+		manifestPath = resolveRepoPath(providedPath, "Manifest path");
 		index += 1;
 	}
 
