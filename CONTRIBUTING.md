@@ -13,6 +13,7 @@
 - No inline or dynamic imports.
 - Relative imports include `.js` extension.
 - `progress.md` is append-only; only add new entries at the end.
+- Forks should keep `progress.md` tracked and continue appending learnings so the repo retains local project memory after forking.
 - For agent-requested commits, use `npm run commit:with-progress -- "<message>" --learning "<learning>" -- "<path>" ...`.
 - For release commands, pass `--learning`, for example: `npm run release:patch -- --learning "What we learned from this release."`.
 - Release scripts skip `npm publish` by default in this starter; add `--publish` only when you intentionally want to publish packages.

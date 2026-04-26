@@ -30,6 +30,7 @@
 ## Agent Workflow
 - Agent workflow docs live in `docs/agent-workflow.md`, skill guidance in `docs/agent-skills.md`, and command index in `docs/commands.md`.
 - At task start, review recent entries in `progress.md` to understand prior learnings.
+- Treat `progress.md` as part of the starter contract for forks; keep it tracked, preserve the append-only history, and continue the log in derived repos.
 - Run `npm run docs:list` whenever docs are added or updated.
 - Run `npm run skills:verify-sync` after changing vendored Vercel skills or their pinned manifest.
 - Run `npm run skills:addy:verify-sync` after changing vendored Addy Osmani skills or their pinned manifest.

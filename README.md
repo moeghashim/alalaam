@@ -21,6 +21,7 @@ Inspired by [badlogic/pi-mono](https://github.com/badlogic/pi-mono), [steipete/a
 - Keep tool-specific agent config optional and manual.
 - Do not depend on symlink managers for this starter by default.
 - Treat `progress.md` as solo operational memory for commits, releases, and deploys.
+- Forks inherit `progress.md`; keep it tracked and continue appending project learnings in the fork instead of replacing the file.
 - In `apps/web`, do not import `useEffect` directly. Prefer render-time derivation, event handlers, framework data loading, or `useMountEffect`.
 
 ## Setup
@@ -41,6 +42,8 @@ This starter is used across `darwin-x64`, `darwin-arm64`, and Linux environments
 
 `apps/web` is the default app target. Vercel should use `apps/web` as the root directory. No custom `vercel.json` is required for the starter.
 
+GitHub Actions runs the required `Required checks` gate for pull requests and pushes to `main`; Vercel Git integration should remain responsible for deployment packaging only.
+
 ```bash
 npm run dev -w @pi-starter/web
 ```
@@ -50,6 +53,12 @@ See `docs/deploying-to-vercel.md` for the minimal Vercel setup.
 ## Publish A Package
 
 Shared package code lives in `packages/core`. Release scripts still default to build, validate, and log a learning entry before any publish step.
+
+## Fork Workflow
+
+When you fork this starter, `progress.md` comes with it. Keep that file in the fork so both humans and agents have a shared append-only learning log for commits, releases, deploys, and handoffs.
+
+If you want to mark the fork boundary, append a new entry noting when the fork started and continue from there. Do not rewrite earlier entries.
 
 ## Agent Layer
 

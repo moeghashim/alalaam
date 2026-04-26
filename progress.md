@@ -171,3 +171,13 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - .github/workflows/ci.yml
   - apps/web/next.config.ts
   - docs/deploying-to-vercel.md
+## 2026-04-26T17:34:26.651Z
+- Trigger: commit
+- Learning: Forked starters need to preserve progress.md as append-only project memory so humans and agents keep durable context after the fork boundary.
+- Context: docs(agent): clarify fork progress contract
+- Branch: main
+- Actor: Ja3ood <moeghashim@users.noreply.github.com>
+- Changed Paths:
+  - AGENTS.md
+  - CONTRIBUTING.md
+  - README.md
