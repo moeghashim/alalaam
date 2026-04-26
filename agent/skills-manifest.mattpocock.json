@@ -1,0 +1,28 @@
+{
+  "sourceRepo": "https://github.com/mattpocock/skills",
+  "pinnedCommit": "60aa99c0230fbac087514ba5fca2ae6e519965fe",
+  "files": [
+    {
+      "type": "directory",
+      "upstreamPath": "improve-codebase-architecture",
+      "localPath": "agent/skills/mattpocock/improve-codebase-architecture",
+      "strategy": "reference",
+      "sha256": "2338ffeb3323953f6bdeebdec78ffaca0a420f9efc7aecd184e30dc14e0f19b6"
+    },
+    {
+      "type": "directory",
+      "upstreamPath": "domain-model",
+      "localPath": "agent/skills/mattpocock/domain-model",
+      "strategy": "reference",
+      "sha256": "622222c626ec3b8a97d5a3f522c9f18a267eacd7ca6aa4ad3b796db7b7ca8ab5"
+    }
+  ],
+  "localOverrides": [
+    "docs/agent-skills.md",
+    "docs/agent-workflow.md",
+    "docs/architecture-decisions.md",
+    "AGENTS.md",
+    "README.md",
+    ".codex/prompts/**"
+  ]
+}

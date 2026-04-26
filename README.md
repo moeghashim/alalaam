@@ -12,8 +12,9 @@ Monorepo starter for solo maintainers shipping both deployable apps and publisha
 - Codex-first agent starter layer with vendored guardrail scripts
 - Curated vendored Vercel agent skills for React and UI work
 - Curated vendored Addy Osmani agent skills for context, testing, review, security, and ADR workflows
+- Curated vendored Matt Pocock skills for architecture review and domain vocabulary
 
-Inspired by [badlogic/pi-mono](https://github.com/badlogic/pi-mono), [steipete/agent-scripts](https://github.com/steipete/agent-scripts), [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills), and [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills).
+Inspired by [badlogic/pi-mono](https://github.com/badlogic/pi-mono), [steipete/agent-scripts](https://github.com/steipete/agent-scripts), [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills), [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills), and [mattpocock/skills](https://github.com/mattpocock/skills).
 
 ## Agent Rules
 
@@ -65,6 +66,7 @@ If you want to mark the fork boundary, append a new entry noting when the fork s
 - `agent/manifest.json` pins upstream source and vendored files.
 - `agent/skills-manifest.json` pins a curated Vercel skills subset vendored under `agent/skills/vercel-labs/`.
 - `agent/skills-manifest.addyosmani.json` pins a curated Addy Osmani skills subset vendored under `agent/skills/addyosmani/`.
+- `agent/skills-manifest.mattpocock.json` pins a curated Matt Pocock skills subset vendored under `agent/skills/mattpocock/`.
 - `scripts/agent-sync.mjs` syncs or verifies allowlisted upstream files.
 - `scripts/committer` provides safe path-scoped commits.
 - `scripts/commit-with-progress.mjs` wraps path-scoped commits and appends a required learning entry to `progress.md`.
@@ -83,6 +85,7 @@ Use `/build-feature` for tracer-bullet feature delivery, `/fix` for end-to-end i
 
 - `agent/skills/vercel-labs/*`: UI-focused guidance for React, Next.js, composition, interaction design, and transitions.
 - `agent/skills/addyosmani/*`: process-focused guidance for context setup, test discipline, review rigor, security, and ADRs.
+- `agent/skills/mattpocock/*`: architecture-review guidance for module depth, seams, domain language, and testable interfaces.
 
 PI Starter vendors only a small subset from each upstream source. The goal is to keep repo-local guidance pinned and stable without adopting an entire external workflow wholesale.
 
@@ -97,6 +100,8 @@ npm run skills:verify-sync
 npm run skills:sync
 npm run skills:addy:verify-sync
 npm run skills:addy:sync
+npm run skills:matt:verify-sync
+npm run skills:matt:sync
 npm run skills:verify-sync:all
 npm run skills:sync:all
 npm run agent:check

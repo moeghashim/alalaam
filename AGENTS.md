@@ -34,6 +34,7 @@
 - Run `npm run docs:list` whenever docs are added or updated.
 - Run `npm run skills:verify-sync` after changing vendored Vercel skills or their pinned manifest.
 - Run `npm run skills:addy:verify-sync` after changing vendored Addy Osmani skills or their pinned manifest.
+- Run `npm run skills:matt:verify-sync` after changing vendored Matt Pocock skills or their pinned manifest.
 - Run `npm run agent:check` before handoff to validate docs front matter, AGENTS structure, and vendored sync integrity.
 - Use `npm run commit:selective -- "type(scope): summary" "path/one" "path/two"` for path-scoped commits.
 - For agent-requested commits, use `npm run commit:with-progress -- "type(scope): summary" --learning "what was learned" -- "path/one" "path/two"` so `progress.md` is appended in the same commit.

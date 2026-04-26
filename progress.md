@@ -198,3 +198,19 @@ Append-only learning log for commits and deploys. Add new entries only at the en
 - Changed Paths:
   - apps/web/package.json
   - package-lock.json
+## 2026-04-26T17:37:07.349Z
+- Trigger: commit
+- Learning: A pinned Matt Pocock architecture pack can add module-depth and domain-vocabulary review guidance while PI Starter keeps its own ADR location and Codex-first workflow as local overrides.
+- Context: feat(agent): add Matt architecture skill pack
+- Branch: main
+- Actor: Ja3ood <moeghashim@users.noreply.github.com>
+- Changed Paths:
+  - AGENTS.md
+  - README.md
+  - docs/README.md
+  - docs/agent-skills.md
+  - docs/agent-workflow.md
+  - package.json
+  - scripts/agent-check.mjs
+  - agent/skills-manifest.mattpocock.json
+  - agent/skills/mattpocock
