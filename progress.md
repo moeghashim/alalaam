@@ -189,3 +189,12 @@ Append-only learning log for commits and deploys. Add new entries only at the en
 - Actor: Ja3ood <moeghashim@users.noreply.github.com>
 - Changed Paths:
   - scripts/agent-sync.mjs
+## 2026-04-26T17:35:31.466Z
+- Trigger: commit
+- Learning: The web workspace can move to the latest Next patch when the lockfile is regenerated under the repo's Node 22 runtime and the full check suite passes.
+- Context: chore(web): update next patch release
+- Branch: main
+- Actor: Ja3ood <moeghashim@users.noreply.github.com>
+- Changed Paths:
+  - apps/web/package.json
+  - package-lock.json
