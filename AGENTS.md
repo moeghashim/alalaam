@@ -27,6 +27,12 @@
 - Fix all errors, warnings, and infos before committing.
 - Keep `node_modules` machine-local. After moving between `darwin-x64`, `darwin-arm64`, Linux, or Rosetta/native modes, run `npm install` or `npm run reinstall:clean` before using native-tooling commands.
 
+## Database Deployments
+- Treat app deployment and database deployment as separate release surfaces.
+- Before shipping an app, check whether the diff touches schema, migrations, ORM configuration, seed data, database clients, or database environment variables.
+- If database changes are present, identify and run the project-specific database deploy or migration command before reporting the app as fully shipped.
+- If the database deploy cannot be run, call that out as a blocking or pending release step with the exact command or owner needed.
+
 ## Agent Workflow
 - Agent workflow docs live in `docs/agent-workflow.md`, skill guidance in `docs/agent-skills.md`, and command index in `docs/commands.md`.
 - At task start, review recent entries in `progress.md` to understand prior learnings.

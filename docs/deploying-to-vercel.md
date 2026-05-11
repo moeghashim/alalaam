@@ -30,6 +30,12 @@ GitHub Actions owns the required quality gate. The `CI` workflow runs `npm run c
 
 Start with no extra environment variables unless your app adds them. Configure app-specific secrets in the Vercel project, scoped to `apps/web`.
 
+## Database Deployments
+
+The starter does not prescribe a database provider or migration tool. When a fork adds one, document the project-specific database deploy command near the app code or in this document.
+
+Before shipping `apps/web`, inspect the diff for schema, migration, ORM configuration, seed data, database client, or database environment changes. If any are present, deploy the database changes before or during the app rollout and verify the deployed app is compatible with the deployed database state.
+
 ## Solo Shipping Flow
 
 1. Run `npm run check`
@@ -37,6 +43,8 @@ Start with no extra environment variables unless your app adds them. Configure a
 3. Run `npm run agent:check`
 4. Open a pull request and wait for `Required checks` to pass
 5. Merge to `main`
-6. Let Vercel Git integration build and deploy `apps/web`
+6. If the change includes database work, run the project-specific database deploy or migration command
+7. Let Vercel Git integration build and deploy `apps/web`
+8. Verify the deployed app and database are compatible
 
 This starter does not require a custom `vercel.json`.
