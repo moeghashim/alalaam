@@ -214,3 +214,13 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - scripts/agent-check.mjs
   - agent/skills-manifest.mattpocock.json
   - agent/skills/mattpocock
+## 2026-05-11T21:43:16.160Z
+- Trigger: commit
+- Learning: Shipping guidance should treat database deploys as a separate release surface whenever schema, migration, ORM, seed, client, or database environment changes are present.
+- Context: docs(agent): require database deploy checks
+- Branch: codex/database-deploy-guidance
+- Actor: Ja3ood <moeghashim@users.noreply.github.com>
+- Changed Paths:
+  - AGENTS.md
+  - docs/deploying-to-vercel.md
+  - .codex/prompts/ship.md
