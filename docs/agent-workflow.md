@@ -35,7 +35,8 @@ read_when:
 ## Ship
 
 1. Use `/ship` for the solo finalization flow.
-2. Push `main`, then either let Vercel deploy `apps/web` or run the package release command you need.
+2. For app deploys, push `main` and let Vercel deploy `apps/web`.
+3. For package releases, run the package release command you need. Release commands validate before committing and tagging, skip package publishing unless `--publish` is passed, and skip pushing `main` plus the release tag unless `--push` is passed.
 
 ## Handoff
 

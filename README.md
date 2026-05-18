@@ -109,10 +109,10 @@ npm run reinstall:clean
 npm run commit:selective -- "chore: message" "path/to/file"
 npm run commit:with-progress -- "chore: message" --learning "What changed and why it matters." -- "path/to/file"
 npm run release:patch -- --learning "What we learned from this release."
-npm run release:patch -- --learning "What we learned from this release." --publish
+npm run release:patch -- --learning "What we learned from this release." --publish --push
 ```
 
-`npm run release:*` skips `npm publish` by default in this starter. Add `--publish` when you explicitly want to publish packages.
+`npm run release:*` validates the bumped release tree before creating the release commit and tag. It skips `npm publish` and `git push` by default in this starter. Add `--publish` when you explicitly want to publish packages, and add `--push` when you explicitly want to push `main` and the release tag.
 
 ## Workspaces
 

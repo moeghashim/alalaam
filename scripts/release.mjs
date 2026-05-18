@@ -7,7 +7,7 @@ import { join } from "node:path";
 const VALID_BUMPS = new Set(["patch", "minor", "major"]);
 
 function usage() {
-	console.error('Usage: node scripts/release.mjs <patch|minor|major> --learning "<text>" [--publish]');
+	console.error('Usage: node scripts/release.mjs <patch|minor|major> --learning "<text>" [--publish] [--push]');
 }
 
 function parseArgs(argv) {
@@ -19,6 +19,7 @@ function parseArgs(argv) {
 
 	let learning = "";
 	let publish = false;
+	let push = false;
 	let index = 1;
 	while (index < argv.length) {
 		const arg = argv[index];
@@ -38,6 +39,11 @@ function parseArgs(argv) {
 			index += 1;
 			continue;
 		}
+		if (arg === "--push") {
+			push = true;
+			index += 1;
+			continue;
+		}
 
 		usage();
 		console.error(`Release aborted: unknown argument "${arg}".`);
@@ -50,10 +56,10 @@ function parseArgs(argv) {
 		process.exit(1);
 	}
 
-	return { bump, learning, publish };
+	return { bump, learning, publish, push };
 }
 
-const { bump, learning, publish } = parseArgs(process.argv.slice(2));
+const { bump, learning, publish, push } = parseArgs(process.argv.slice(2));
 
 function run(command) {
 	execSync(command, { stdio: "inherit", encoding: "utf8" });
@@ -146,13 +152,14 @@ runArgs("node", [
 	version,
 ]);
 
+run("npm run build");
+run("npm run check");
+run("npm test");
+
 run("git add .");
 run(`git commit -m "Release v${version}"`);
 run(`git tag v${version}`);
 
-run("npm run build");
-run("npm run check");
-run("npm test");
 if (publish) {
 	for (const packageName of publishablePackages()) {
 		runArgs("npm", ["publish", "-w", packageName, "--access", "public"]);
@@ -164,5 +171,9 @@ if (publish) {
 addUnreleasedSection();
 run("git add .");
 run('git commit -m "Add [Unreleased] section for next cycle"');
-run("git push origin main");
-run(`git push origin v${version}`);
+if (push) {
+	run("git push origin main");
+	run(`git push origin v${version}`);
+} else {
+	console.log("Skipping git push by default for starter releases. Pass --push to push main and the release tag.");
+}

@@ -224,3 +224,15 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - AGENTS.md
   - docs/deploying-to-vercel.md
   - .codex/prompts/ship.md
+## 2026-05-18T11:45:17.612Z
+- Trigger: commit
+- Learning: Release scripts should validate bumped release trees before committing or tagging, and remote pushes should require explicit intent.
+- Context: fix(release): gate release pushes
+- Branch: main
+- Actor: Ja3ood <moeghashim@users.noreply.github.com>
+- Changed Paths:
+  - .codex/prompts/ship.md
+  - .github/workflows/ci.yml
+  - README.md
+  - docs/agent-workflow.md
+  - scripts/release.mjs

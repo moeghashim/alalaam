@@ -19,7 +19,13 @@ concurrency:
 jobs:
   required-checks:
     name: Required checks
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Check out repository
@@ -39,9 +45,6 @@ jobs:
 
       - name: Check formatting, linting, and types
         run: npm run check
-
-      - name: List docs
-        run: npm run docs:list
 
       - name: Run tests
         run: npm test
