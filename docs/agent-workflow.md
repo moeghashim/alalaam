@@ -10,7 +10,7 @@ read_when:
 
 ## Start
 
-1. Read `AGENTS.md` and the relevant docs in this folder.
+1. Read `AGENTS.md` and the relevant docs in this folder. `CLAUDE.md` is a compatibility symlink, not a separate instruction source.
 2. If the task touches React, Next.js, UI review, interaction patterns, test strategy, review rigor, security, architecture review, refactoring, or ADR decisions, read `docs/agent-skills.md`.
 3. Review recent entries in `progress.md` and capture relevant learnings for the task.
 4. Run `npm run docs:list` to confirm docs metadata is valid.

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { execSync } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, lstatSync, readFileSync, readlinkSync } from "node:fs";
 
 const REQUIRED_PATHS = [
 	"agent/manifest.json",
@@ -33,6 +33,7 @@ const REQUIRED_AGENTS_SNIPPETS = [
 	"npm run skills:addy:verify-sync",
 	"npm run skills:matt:verify-sync",
 	"useMountEffect",
+	"CLAUDE.md",
 ];
 
 function fail(message) {
@@ -48,6 +49,19 @@ for (const targetPath of REQUIRED_PATHS) {
 
 if (!existsSync("AGENTS.md")) {
 	fail("AGENTS.md is missing");
+}
+
+if (!existsSync("CLAUDE.md")) {
+	fail("CLAUDE.md compatibility symlink is missing");
+}
+
+if (!lstatSync("CLAUDE.md").isSymbolicLink()) {
+	fail("CLAUDE.md must be a symlink to AGENTS.md");
+}
+
+const claudeTarget = readlinkSync("CLAUDE.md");
+if (claudeTarget !== "AGENTS.md") {
+	fail(`CLAUDE.md must point to AGENTS.md, found: ${claudeTarget}`);
 }
 
 const agents = readFileSync("AGENTS.md", "utf8");
