@@ -236,3 +236,15 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - README.md
   - docs/agent-workflow.md
   - scripts/release.mjs
+## 2026-06-07T15:50:04.165Z
+- Trigger: commit
+- Learning: A tracked CLAUDE.md symlink can support Claude-style tooling while AGENTS.md remains the canonical instruction source and agent:check enforces the alias.
+- Context: chore(agent): add Claude compatibility symlink
+- Branch: codex/claude-agent-symlink
+- Actor: Ja3ood <moeghashim@users.noreply.github.com>
+- Changed Paths:
+  - AGENTS.md
+  - README.md
+  - docs/agent-workflow.md
+  - scripts/agent-check.mjs
+  - CLAUDE.md

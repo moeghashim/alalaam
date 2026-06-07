@@ -19,6 +19,7 @@ Inspired by [badlogic/pi-mono](https://github.com/badlogic/pi-mono), [steipete/a
 ## Agent Rules
 
 - Canonical source of agent instructions: `AGENTS.md` at repo root.
+- Compatibility alias: `CLAUDE.md` is a tracked symlink to `AGENTS.md`; do not duplicate agent instructions across files.
 - Keep tool-specific agent config optional and manual.
 - Do not depend on symlink managers for this starter by default.
 - Treat `progress.md` as solo operational memory for commits, releases, and deploys.
