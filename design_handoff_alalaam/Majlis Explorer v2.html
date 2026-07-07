@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Alalaam — The Majlis · Design Uplift</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="system.css"/>
+  <link rel="stylesheet" href="uplift.css"/>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    html { background: #F2E9D2; }
+    body { background: var(--paper); }
+    #root { position: fixed; inset: 0; }
+  </style>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body class="th-tazhib">
+  <div id="root"></div>
+
+  <script src="data.js"></script>
+  <script type="text/babel" src="shared.jsx"></script>
+  <script type="text/babel" src="v2-shared.jsx"></script>
+  <script src="figures.js"></script>
+  <script type="text/babel" src="v3-app.jsx"></script>
+  <script type="text/babel" src="figure-picker.jsx"></script>
+  <script type="text/babel" src="majlis-multi.jsx"></script>
+  <script type="text/babel" src="majlis-explorer-v2.jsx"></script>
+  <script type="text/babel" src="compare.jsx"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "mood": "Editorial",
+      "ornament": 50,
+      "motion": true
+    }/*EDITMODE-END*/;
+
+    const MOOD_CLASS = { "Museum": "th-riwaq", "Illuminated": "th-tazhib", "Editorial": "th-sahifa" };
+
+    function TopBar({ view, setView }) {
+      const { t, lang } = useKW();
+      const V = V3[lang];
+      return (
+        <div className="kw-topbar" data-screen-label="Top bar">
+          <div className="tb-brand">
+            <Medallion size={32} glyph="خ" />
+            <span className="nm">{t.ui.brand}</span>
+            <span className="tb-sep"></span>
+            <span className="sub">{t.figure.short}</span>
+          </div>
+          <div className="kw-tabs">
+            <button className={"kw-tab" + (view === "explore" ? " active" : "")} onClick={() => setView("explore")}>{V.tabs.explore}</button>
+            <button className={"kw-tab" + (view === "compare" ? " active" : "")} onClick={() => setView("compare")}>{V.tabs.compare}</button>
+          </div>
+          <div className="tb-right">
+            {view === "explore" && <span className="tb-hint">{V.hintExplore}</span>}
+            <LangToggle />
+          </div>
+        </div>
+      );
+    }
+
+    function App() {
+      const [view, setView] = useState("explore");
+      const [tw, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+      useEffect(() => {
+        const b = document.body;
+        b.classList.remove("th-riwaq", "th-tazhib", "th-sahifa");
+        b.classList.add(MOOD_CLASS[tw.mood] || "th-tazhib");
+        b.style.setProperty("--orn", String((tw.ornament == null ? 70 : tw.ornament) / 100));
+        b.classList.toggle("no-motion", !tw.motion);
+      }, [tw]);
+
+      return (
+        <KWProvider>
+          <TopBar view={view} setView={setView} />
+          {view === "explore" ? <MajlisExplorer /> : <CompareView />}
+          <TweaksPanel title="Tweaks">
+            <TweakSection label="Mood" />
+            <TweakRadio label="Direction" value={tw.mood} options={["Museum", "Illuminated", "Editorial"]} onChange={(v) => setTweak("mood", v)} />
+            <TweakSection label="Surface" />
+            <TweakSlider label="Ornament" value={tw.ornament} min={0} max={100} onChange={(v) => setTweak("ornament", v)} />
+            <TweakToggle label="Motion" value={tw.motion} onChange={(v) => setTweak("motion", v)} />
+          </TweaksPanel>
+        </KWProvider>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
