@@ -24,7 +24,7 @@ brand pages, adapted to **Cloudflare Workers** via `@opennextjs/cloudflare`:
    replace the Vercel-specific escape hatch in `next.config.ts`;
    `docs/deploying-to-cloudflare.md` mirroring the Vercel doc; package the
    generic changes as the `pi-starter-cloudflare/` upstream kit under `docs/`.
-2. **Port the design** from `design_handoff_alalaam/`: `system.css`,
+2. **Port the design** from `redesign/` (formerly `design_handoff_alalaam/`): `system.css`,
    `uplift.css`, `pages.css` tokens **verbatim**; the JSX prototypes are
    reference only.
 3. **Explorer** (routes `/(explore)` · `/compare` · `/guidelines` ·

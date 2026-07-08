@@ -6,7 +6,7 @@ import test from "node:test";
 import { compileGraph } from "../src/compile.js";
 import { importLegacy } from "../src/legacy.js";
 
-const handoff = join(import.meta.dirname, "../../../design_handoff_alalaam");
+const handoff = join(import.meta.dirname, "../../../redesign");
 const figuresJs = readFileSync(join(handoff, "figures.js"), "utf8");
 const sharedJs = readFileSync(join(handoff, "v2-shared.jsx"), "utf8");
 

@@ -217,7 +217,7 @@ function deriveEdges(fig: Record<string, LegacyFigure>, order: string[], inter: 
 }
 
 /**
- * One-time import of the prototype roster (design_handoff_alalaam). Asserts that the
+ * One-time import of the prototype roster (redesign). Asserts that the
  * derived tiers AND medallion categories reproduce the prototype's INTER map and per-figure
  * `cat` for every related figure — a silent mismatch would ship a wrong medallion colour.
  */

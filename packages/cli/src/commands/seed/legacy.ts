@@ -7,10 +7,10 @@ import { DEFAULT_SEED_PATH, writeJsonFile } from "../../lib/io.js";
 export default class SeedLegacy extends Command {
 	static description =
 		"One-time import of the legacy prototype roster from the design handoff (asserts tier + medallion-category parity)";
-	static examples = ["<%= config.bin %> seed legacy", "<%= config.bin %> seed legacy --dir design_handoff_alalaam"];
+	static examples = ["<%= config.bin %> seed legacy", "<%= config.bin %> seed legacy --dir redesign"];
 
 	static flags = {
-		dir: Flags.string({ description: "design handoff directory", default: "design_handoff_alalaam" }),
+		dir: Flags.string({ description: "design handoff directory", default: "redesign" }),
 		out: Flags.string({ description: "seed output path", default: DEFAULT_SEED_PATH }),
 	};
 

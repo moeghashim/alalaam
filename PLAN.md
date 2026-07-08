@@ -29,7 +29,7 @@ The product is built **CLI-first** in three layers:
 
 | From source | Treatment |
 |---|---|
-| `design_handoff_alalaam/` (README, JSX prototypes, CSS) | **Design reference, not production code.** Recreate the design faithfully in the target stack. The React is inline-Babel prototyping only. |
+| `redesign/` (CLAUDE.md, Home/Cities/Brand/Roadmap HTML, JSX prototypes, CSS) — *the original `design_handoff_alalaam/` bundle was removed 2026-07-08; `redesign/` is the sole design reference* | **Design reference, not production code.** Recreate the design faithfully in the target stack. The React is inline-Babel prototyping only. |
 | `system.css`, `uplift.css`, `pages.css` | **Port the CSS token system almost verbatim.** Colours, typography, dash patterns, spacing, and the ornament/mood layers are final and transfer directly. |
 | `figures.js`, `data.js`, `v2-shared.jsx` | **Content + model source for the legacy seed.** Converted into `figures.seed.json` by `alalaam seed:legacy` (see §9, §15.3). Includes prose-only circle chips and per-figure `cat` values — both must survive the import (§13.1, §13.3). |
 | [`moeghashim/PI-Starter`](https://github.com/moeghashim/PI-Starter) | **Foundation repo.** The project is built on a clone of this starter (npm-workspaces monorepo, Next.js `apps/web`, `packages/core`, Biome, strict TS, CI workflow, Codex agent layer, append-only `progress.md`). The starter targets Vercel; adapting it to Cloudflare is in scope and produces an upstreamable adaptation kit (§4.1). |
@@ -98,7 +98,7 @@ alalaam/                        # clone of PI-Starter → origin github.com/moeg
 │  └─ deploying-to-cloudflare.md  # part of the upstreamable adaptation kit (§4.1)
 ├─ agent/ · scripts/ · AGENTS.md · progress.md   # PI-Starter layer, kept and extended at handoff
 ├─ PLAN.md                      # this document
-├─ design_handoff_alalaam/      # design reference bundle (§2)
+├─ redesign/                    # design reference bundle (§2)
 └─ package.json                 # npm workspaces + root scripts (starter's check/test/CI gates kept)
 ```
 
@@ -139,7 +139,7 @@ alalaam/                        # clone of PI-Starter → origin github.com/moeg
 |---|---|
 | `alalaam db migrate` | Apply D1 SQL migrations. |
 | `alalaam db push [--dry-run]` | Load `figures.seed.json` into D1 (idempotent upsert by slug) and bump the DO version stamp → live-refresh. |
-| `alalaam seed:legacy` | One-time import of the 23 prototype figures from `design_handoff_alalaam/` into a seed file. |
+| `alalaam seed:legacy` | One-time import of the 23 prototype figures from `redesign/` into a seed file. |
 
 **Two-writers rule (`figure add` / `link add` vs `sheet sync`).** The Google Sheet is canonical once configured, and Sheets access is read-only — so anything written only to `figures.seed.json` is overwritten by the next `sheet sync --write`. Therefore: `figure add` and `link add` are **bootstrap/local tools**. When `GOOGLE_SHEETS_ID` is set, they still work but (a) print a prominent warning that the next sync will overwrite the seed, and (b) print the exact Sheet row values (tab, column order) to paste into the Sheet so the change can be made durable. `sheet sync --dry-run` diffs against the committed seed, so any un-pasted local addition shows up as a would-be deletion before it is lost.
 

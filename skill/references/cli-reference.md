@@ -81,7 +81,7 @@ colour (`patron`→brass, `source/past`→lapis, `peer`→verdigris,
 ### `seed legacy [--dir <handoffDir>] [--out <seedPath>]`
 
 One-time import of the legacy prototype roster from
-`design_handoff_alalaam/`. Asserts tier **and** medallion-category parity with
+`redesign/`. Asserts tier **and** medallion-category parity with
 the prototype for every fixture figure and fails loudly on mismatch. Safe to
 re-run; overwrites the seed with the prototype set.
 
