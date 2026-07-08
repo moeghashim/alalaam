@@ -44,6 +44,9 @@
 			},
 			"seed": {
 				"description": "One-time seed imports"
+			},
+			"db": {
+				"description": "Load the seed into Cloudflare D1 and manage its migrations (the live layer)"
 			}
 		}
 	},

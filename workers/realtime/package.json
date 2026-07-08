@@ -1,0 +1,22 @@
+{
+	"name": "@alalaam/realtime",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Alalaam live-refresh Durable Object — holds the data version stamp and broadcasts data-changed to connected clients",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"build": "tsgo -p tsconfig.json --noEmit && tsgo -p tsconfig.test.json --noEmit",
+		"check": "tsgo -p tsconfig.json --noEmit && tsgo -p tsconfig.test.json --noEmit",
+		"test": "tsx --test test/**/*.test.ts",
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250327.0",
+		"wrangler": "^4.108.0"
+	},
+	"engines": {
+		"node": "22.x"
+	}
+}

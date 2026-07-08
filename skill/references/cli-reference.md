@@ -10,8 +10,8 @@ Every command supports `--help`. Run via `node packages/cli/bin/run.js …` (or
 - **Output:** human-readable by default; read commands (`validate`,
   `graph export`) accept `--json`.
 - **Posture:** read-only by default — writes require `--write` (sync) or are
-  explicit appends (`figure add`, `link add`). `sheet sync` and future
-  `db push` are idempotent (upsert by slug).
+  explicit appends (`figure add`, `link add`). `sheet sync` and `db push`
+  are idempotent (upsert by slug).
 - **Credentials:** env vars only (`GOOGLE_SHEETS_ID`,
   `GOOGLE_APPLICATION_CREDENTIALS`), never flags; `.env` is supported.
 
@@ -84,6 +84,26 @@ One-time import of the legacy prototype roster from
 `redesign/`. Asserts tier **and** medallion-category parity with
 the prototype for every fixture figure and fails loudly on mismatch. Safe to
 re-run; overwrites the seed with the prototype set.
+
+### `db migrate [--local]`
+
+Apply the SQL migrations under `migrations/` to the `alalaam-db` Cloudflare D1
+database (`wrangler d1 migrations apply` underneath, via
+`apps/web/wrangler.jsonc`). Remote by default; `--local` targets the wrangler
+dev (miniflare) database. Run before the first `db push` and after any new
+migration lands.
+
+### `db push [--dry-run] [--local]`
+
+Mirror `data/figures.seed.json` + `data/graph.derived.json` into D1: validates
+the seed, refuses a stale derived graph (run `compile` first), upserts by slug,
+deletes rows missing from the seed, stamps `meta.seed.version` with a content
+hash, then POSTs the new stamp to the realtime worker so connected clients
+live-refresh. Idempotent — re-running with no changes writes nothing.
+`--dry-run` prints the row-level diff only; `--local` pushes to the miniflare
+database and skips the bump. The bump needs `ALALAAM_REALTIME_SECRET` in the
+environment/`.env` (worker URL override: `ALALAAM_REALTIME_URL`); without it
+the data still pushes and a warning is printed.
 
 ## Worked examples
 
