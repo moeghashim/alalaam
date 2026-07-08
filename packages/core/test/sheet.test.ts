@@ -136,3 +136,17 @@ test("blank publication years stay display strings; missing tabs yield empty lis
 		assert.equal(result.seed.figures[0]?.circleNotes.length, 0);
 	}
 });
+
+test("parseCsv: quotes, escaped quotes, embedded commas/newlines, CRLF, Arabic", async () => {
+	const { parseCsv } = await import("../src/sheet.js");
+	assert.deepEqual(parseCsv('a,b,c\r\n"x,y","he said ""hi""","line1\nline2"\n'), [
+		["a", "b", "c"],
+		["x,y", 'he said "hi"', "line1\nline2"],
+	]);
+	assert.deepEqual(parseCsv('slug,name_ar\nkw,"الخوارزمي"\n'), [
+		["slug", "name_ar"],
+		["kw", "الخوارزمي"],
+	]);
+	assert.deepEqual(parseCsv(""), []);
+	assert.deepEqual(parseCsv('""\n'), [[""]]);
+});

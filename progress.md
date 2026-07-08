@@ -307,3 +307,13 @@ Append-only learning log for commits and deploys. Add new entries only at the en
 - Actor: Moe Ghashim <mohanadgh@gmail.com>
 - Changed Paths:
   - apps/web
+## 2026-07-08T14:39:21.093Z
+- Trigger: commit
+- Learning: Link-readable Google Sheets can be synced with zero credentials via the gviz CSV export (out:csv&sheet=<tab>); a sign-in HTML response (non-CSV content-type) is the tell that the sheet is private. sheet sync also refuses --write when the Figures tab is empty but the seed is not — an empty import must never erase the roster.
+- Context: feat(sheet): credential-free sync for link-readable sheets + empty-sheet guard
+- Branch: feat/public-sheet-read
+- Actor: Moe Ghashim <mohanadgh@gmail.com>
+- Changed Paths:
+  - packages/core/src/sheet.ts
+  - packages/cli/src/commands/sheet/sync.ts
+  - skill/SKILL.md

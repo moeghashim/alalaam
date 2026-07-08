@@ -152,6 +152,82 @@ async function accessToken(account: ServiceAccount): Promise<string> {
 	return body.access_token;
 }
 
+/** Minimal RFC 4180 CSV parser — quoted fields, escaped quotes, newlines inside quotes, CRLF. */
+export function parseCsv(text: string): string[][] {
+	const rows: string[][] = [];
+	let row: string[] = [];
+	let field = "";
+	let inQuotes = false;
+	let sawAny = false;
+	for (let i = 0; i < text.length; i++) {
+		const ch = text[i];
+		if (inQuotes) {
+			if (ch === '"') {
+				if (text[i + 1] === '"') {
+					field += '"';
+					i++;
+				} else {
+					inQuotes = false;
+				}
+			} else {
+				field += ch;
+			}
+		} else if (ch === '"') {
+			inQuotes = true;
+			sawAny = true;
+		} else if (ch === ",") {
+			row.push(field);
+			field = "";
+			sawAny = true;
+		} else if (ch === "\n" || ch === "\r") {
+			if (ch === "\r" && text[i + 1] === "\n") {
+				i++;
+			}
+			if (sawAny || field !== "") {
+				row.push(field);
+				rows.push(row);
+			}
+			row = [];
+			field = "";
+			sawAny = false;
+		} else {
+			field += ch;
+		}
+	}
+	if (sawAny || field !== "") {
+		row.push(field);
+		rows.push(row);
+	}
+	return rows;
+}
+
+/**
+ * Pull all four tabs from a link-readable ("anyone with the link") sheet via the
+ * public CSV export — no credentials needed. A tab that does not exist or is
+ * empty yields no rows; validation reports the real problem (e.g. no figures).
+ */
+export async function fetchSheetRowsPublic(sheetId: string): Promise<SheetRows> {
+	const result = {} as SheetRows;
+	for (const tab of SHEET_TABS) {
+		const url = `https://docs.google.com/spreadsheets/d/${encodeURIComponent(sheetId)}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab)}`;
+		const response = await fetch(url, { redirect: "follow" });
+		if (!response.ok) {
+			result[tab] = [];
+			continue;
+		}
+		const contentType = response.headers.get("content-type") ?? "";
+		if (!contentType.includes("csv") && !contentType.includes("text/plain")) {
+			// A sign-in HTML page means the sheet is not link-readable.
+			throw new Error(
+				`sheet "${tab}" is not publicly readable — share the spreadsheet as "anyone with the link: viewer", ` +
+					"or configure a service account (GOOGLE_APPLICATION_CREDENTIALS)",
+			);
+		}
+		result[tab] = parseCsv(await response.text());
+	}
+	return result;
+}
+
 /**
  * Pull all four tabs. `credentialsPath` is a service-account JSON key file
  * (GOOGLE_APPLICATION_CREDENTIALS); the account needs read access to the sheet.
