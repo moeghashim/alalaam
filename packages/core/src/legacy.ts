@@ -65,7 +65,7 @@ const UNDER_PREFIX = /^under\s+/i;
 
 export type LegacyImportResult = {
 	seed: SeedFile;
-	/** Per-figure parity report for the 23 non-subject figures. */
+	/** Per-figure parity report for the non-subject figures in the legacy roster. */
 	parity: { slug: string; tier: Tier; category: Category }[];
 };
 

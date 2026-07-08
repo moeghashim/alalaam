@@ -103,7 +103,7 @@
 <header class="masthead">
   <p class="kicker">Product Requirements &amp; Build Plan · signed off 2026-07-08 · build in progress</p>
   <h1>Alalaam <span class="ar" lang="ar" dir="rtl">الأعلام</span></h1>
-  <p class="dek">One historical figure at the centre of their world, drawn as an evidence graph — who they met, who they may have met, and who they only knew through books. Demo subject: al-Khwarizmi, with 23 related figures.</p>
+  <p class="dek">One historical figure at the centre of their world, drawn as an evidence graph — who they met, who they may have met, and who they only knew through books. Demo subject: al-Khwarizmi, with an initial roster of 23 related figures — a starting set, designed to grow well beyond it.</p>
 </header>
 
 <div class="statusbar">
@@ -119,7 +119,7 @@
 <div class="phases">
   <div class="phase"><span class="v">GATE</span><div class="t"><b>Plan sign-off</b><span>PRD reviewed, three gaps fixed, Cloudflare + PI-Starter decisions locked. Signed off by the owner 2026-07-08.</span></div><span class="state done">done</span></div>
   <div class="phase"><span class="v">v0.0</span><div class="t"><b>Foundation</b><span>PI-Starter merged into moeghashim/alalaam (42c4e82) · fork-boundary entry in progress.md · build/check/test/agent-check green locally · CI Required checks green on main.</span></div><span class="state done">done</span></div>
-  <div class="phase"><span class="v">v0.1</span><div class="t"><b>Engine — core + CLI</b><span>Types, zod schema, deriveContext, compile · seed:legacy imports all 23 figures with category-parity assertion + circle notes.</span></div><span class="state active">up next — handoff</span></div>
+  <div class="phase"><span class="v">v0.1</span><div class="t"><b>Engine — core + CLI</b><span>Built: @alalaam/core (deriveContext grammar, zod validation, Sheets ingestion) + alalaam CLI (7 commands) · seed:legacy reproduces all 23 tiers AND medallion categories · 29 tests green · PR #1 open.</span></div><span class="state active">in review — PR #1</span></div>
   <div class="phase"><span class="v">v0.2</span><div class="t"><b>Skill</b><span>SKILL.md wrapping the alalaam CLI so Codex / Claude Code operate content through natural language.</span></div><span class="state planned">planned</span></div>
   <div class="phase"><span class="v">v0.3</span><div class="t"><b>Web on Cloudflare</b><span>apps/web adapted to Workers via @opennextjs/cloudflare · pixel-faithful explorer · PI-Starter Cloudflare adaptation kit delivered.</span></div><span class="state planned">planned</span></div>
   <div class="phase"><span class="v">v0.4</span><div class="t"><b>Live layer — D1 + Durable Objects</b><span>Migrations · alalaam db push · live-refresh: a synced change appears on the published site within seconds.</span></div><span class="state planned">planned</span></div>
@@ -228,6 +228,7 @@
 </ul>
 <h3>Build log</h3>
 <ul class="log">
+  <li><strong>2026-07-08 — v0.1 engine built, PR #1 open:</strong> <code>@alalaam/core</code> (bilingual model + circleNotes, deriveContext grammar, validation naming offending rows, Sheets ingestion) and the <code>alalaam</code> CLI (sheet sync, validate, figure/link add with the two-writers warning, compile, graph export, seed legacy). <code>seed:legacy</code> reproduces the prototype's tiers <em>and</em> medallion categories for all 23 figures — the parity assertion caught a real books-prefix bug on its first run. 24 figures / 45 connections committed to <code>data/</code>; 29 tests green.</li>
   <li><strong>2026-07-08 — plan signed off;</strong> v0.0 foundation complete: PI-Starter history merged (<code>42c4e82</code>), fork-boundary entry appended to <code>progress.md</code>, full quality gate green under Node 22, CI <code>Required checks</code> passing on <code>main</code>. This status page deployed to Cloudflare Pages from <code>plan-site/</code>.</li>
   <li><strong>2026-07-07 — plan committed</strong> (<code>a25e8b7</code>) with the review revisions and pushed to <code>main</code>.</li>
 </ul>

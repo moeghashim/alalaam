@@ -11,7 +11,7 @@
 
 ## 1. Brief
 
-**Alalaam** ("lives, in context") places one historical figure at the centre of their world and draws that world as an **evidence graph**: who they met, who they may have met, and who they only knew through books. The demo subject is **al-Khwarizmi**, with a roster of 23 related figures.
+**Alalaam** ("lives, in context") places one historical figure at the centre of their world and draws that world as an **evidence graph**: who they met, who they may have met, and who they only knew through books. The demo subject is **al-Khwarizmi**, with an **initial** roster of 23 related figures — an example set, not a limit: the roster is expected to grow well beyond it (see the *Roster scale* decision, §12).
 
 The product is built **CLI-first** in three layers:
 
@@ -210,7 +210,7 @@ A local **`skill/SKILL.md`** wraps the `alalaam` CLI, following the project owne
 | **v0.0 — Foundation (bootstrap)** | Clone PI-Starter → `moeghashim/alalaam`; merge in `PLAN.md` + `design_handoff_alalaam/`; fork-boundary entry in `progress.md`; CI green on `main`. | `npm install && npm run build && npm run check && npm test && npm run agent:check` all pass in the new repo; CI `Required checks` green. |
 | **v0.1 — Engine (core + CLI)** | `core` types + zod schema + `deriveContext` + `compile`; CLI `sheet sync`, `validate`, `figure add`, `link add`, `compile`, `graph export`; `seed:legacy` (23 figures + circle notes); tests. | From a terminal, produce a validated `figures.seed.json` + `graph.derived.json` for al-Khwarizmi that reproduces the prototype's tiers/edges **and all 23 medallion categories** (`seed:legacy` asserts derived category == prototype `cat` and fails loudly on mismatch); prose-only circle chips survive the import. |
 | **v0.2 — Skill** | `SKILL.md` + command reference wrapping the CLI. | Codex / Claude Code can add a figure, add a connection, sync, and validate through natural language. |
-| **v0.3 — Web (Cloudflare)** | `apps/web` adapted to Cloudflare Workers via `@opennextjs/cloudflare`; tokens ported verbatim; Majlis Explorer, profile panel, multi-focal, compare, browse sheet, brand pages, EN/AR toggle. Reads compiled artifacts via an abstracted data layer. **Plus the PI-Starter Cloudflare adaptation kit (§4.1).** | Pixel-faithful explorer deployed on Cloudflare against `graph.derived.json`; grammar (§14) intact; bilingual RTL correct; adaptation kit ready to PR upstream. |
+| **v0.3 — Web (Cloudflare)** | `apps/web` adapted to Cloudflare Workers via `@opennextjs/cloudflare`; tokens ported verbatim; Majlis Explorer, profile panel, multi-focal, compare, browse sheet, brand pages, EN/AR toggle. Reads compiled artifacts via an abstracted data layer. **Plus the PI-Starter Cloudflare adaptation kit (§4.1).** | Pixel-faithful explorer deployed on Cloudflare against `graph.derived.json`; grammar (§14) intact; bilingual RTL correct; ring placement computed from the data (layout stays legible as the roster grows — no per-figure hand-tuning); adaptation kit ready to PR upstream. |
 | **v0.4 — Live layer (D1 + DO)** | D1 schema + migrations; `alalaam db push`; Durable Object live-refresh; web data layer swaps static → D1 and subscribes to the DO. | A synced change appears on the published site within seconds, no manual refresh. |
 | **v0.5 — Future (optional)** | In-app editing admin; multi-user collaboration; a second subject to exercise the multi-subject model. | Deferred — not in the committed scope. |
 
@@ -232,6 +232,7 @@ The web's data access is abstracted behind a single `getSubjectGraph()` seam, so
 10. **Hosting:** Cloudflare — Workers (`@opennextjs/cloudflare`) + D1 + Durable Objects; the generic adaptation is packaged for upstream PI-Starter (§4.1).
 11. **Design fidelity:** CSS tokens ported verbatim; Editorial mood (`th-sahifa`); ornament 0.5; motion on; fonts from Google Fonts.
 12. **Tooling:** Biome + `tsgo --noEmit` + `tsx --test` (from the starter); Conventional Commits; one PR per task; tests concentrated in `core` + `cli`; CI `Required checks` gate on every PR.
+13. **Scale:** the roster grows over time — 23 is the legacy example's count, not a design constant. Engine, CLI, and web are roster-size-agnostic: counts come from the data, never from literals; no fixed-size structures, ring capacities, or per-figure hand-tuning. The prototype's `23` may appear only inside `seed:legacy` and its parity tests (the prototype fixture is frozen). Commands, derivations, Sheet sync, D1 loads, and explorer layout must remain correct and usable for rosters in the **hundreds** per subject.
 
 ---
 
@@ -257,6 +258,7 @@ The web's data access is abstracted behind a single `getSubjectGraph()` seam, so
 | Web framework | Next.js (App Router), static over compiled artifacts, then D1 | Locked by user |
 | Sequencing | bootstrap → core+CLI → skill → web (Cloudflare) → live layer (D1+DO) | Recommended, accepted |
 | Demo subject | al-Khwarizmi + 23 figures (schema stays multi-subject) | Locked |
+| Roster scale | **Unbounded.** The 23-figure roster is the legacy example, not a limit. No figure counts, ring capacities, or fixed-size structures hardcoded anywhere in core / CLI / web; the literal `23` is allowed only in `seed:legacy` and its parity tests against the frozen prototype fixture. Everything downstream (validation, derivation, sync, D1, explorer layout) must scale to hundreds of figures per subject. | **Locked by user (2026-07-08)** |
 | Second subject | Deferred to v0.5 | Locked |
 | City matching (compare / multi-focal) | Shared-city facts match on the **EN** `lived` value as the key; AR is display-only | Added in review |
 
@@ -338,7 +340,9 @@ Returns, for a given focal figure, the visual encoding for `other`: `{ tier, edg
 
 **Category → medallion colour** (derived from the strongest edge + dates): `patron → brass` · `source/past → lapis` · `peer → verdigris` · `student/heir/future → rose` · `contemporary/world → sand`.
 
-**Parity assertion:** the prototype stores an explicit `cat` per figure (`figures.js`). The derivation above must reproduce it for all 23 figures — `seed:legacy` compares derived category against prototype `cat` and fails loudly on any mismatch (e.g. Harun al-Rashid: tier `possible` but category must resolve the patron-vs-sand question the same way the prototype does). Medallion colour is part of the non-negotiable grammar (§14); a silent mismatch is a shipped bug.
+**Parity assertion:** the prototype stores an explicit `cat` per figure (`figures.js`). The derivation above must reproduce it for every figure in the legacy fixture — `seed:legacy` compares derived category against prototype `cat` and fails loudly on any mismatch (e.g. Harun al-Rashid: tier `possible` but category must resolve the patron-vs-sand question the same way the prototype does). Medallion colour is part of the non-negotiable grammar (§14); a silent mismatch is a shipped bug.
+
+The fixture happens to contain 23 figures — that number is a property of the frozen prototype, not of the system. The assertion iterates whatever the fixture contains; nothing outside `seed:legacy` and its tests may reference a roster count (Roster-scale decision, §12).
 
 ### 13.4 Google Sheet workbook
 

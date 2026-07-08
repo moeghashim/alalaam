@@ -6,7 +6,7 @@ import { DEFAULT_SEED_PATH, writeJsonFile } from "../../lib/io.js";
 
 export default class SeedLegacy extends Command {
 	static description =
-		"One-time import of the 23 prototype figures from the design handoff (asserts tier + medallion-category parity)";
+		"One-time import of the legacy prototype roster from the design handoff (asserts tier + medallion-category parity)";
 	static examples = ["<%= config.bin %> seed legacy", "<%= config.bin %> seed legacy --dir design_handoff_alalaam"];
 
 	static flags = {
