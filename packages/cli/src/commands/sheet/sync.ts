@@ -1,7 +1,8 @@
 import { existsSync } from "node:fs";
 import type { SeedFile } from "@alalaam/core";
-import { assembleSeed, compileGraph, fetchSheetRows, validateSeed } from "@alalaam/core";
+import { assembleSeed, compileGraph, fetchSheetRows, fetchSheetRowsPublic, validateSeed } from "@alalaam/core";
 import { Command, Flags } from "@oclif/core";
+import { loadEnvFile } from "../../lib/db.js";
 import { diffSeeds, formatDiff, isEmptyDiff } from "../../lib/diff.js";
 import { DEFAULT_GRAPH_PATH, DEFAULT_SEED_PATH, formatIssues, readSeed, writeJsonFile } from "../../lib/io.js";
 
@@ -24,17 +25,21 @@ export default class SheetSync extends Command {
 		if (flags.write && flags["dry-run"]) {
 			this.error("--write and --dry-run are mutually exclusive", { exit: 2 });
 		}
+		loadEnvFile();
 		const sheetId = flags.id ?? process.env.GOOGLE_SHEETS_ID;
 		const credentials = flags.credentials ?? process.env.GOOGLE_APPLICATION_CREDENTIALS;
-		if (!sheetId || !credentials) {
-			this.error(
-				"Google Sheets access is not configured — set GOOGLE_SHEETS_ID and GOOGLE_APPLICATION_CREDENTIALS (see README)",
-				{ exit: 2 },
-			);
+		if (!sheetId) {
+			this.error("Google Sheets access is not configured — set GOOGLE_SHEETS_ID (see README)", { exit: 2 });
 		}
 
-		this.log(`Reading sheet ${sheetId}…`);
-		const rows = await fetchSheetRows(sheetId, credentials);
+		let rows: Awaited<ReturnType<typeof fetchSheetRows>>;
+		if (credentials) {
+			this.log(`Reading sheet ${sheetId} (service account)…`);
+			rows = await fetchSheetRows(sheetId, credentials);
+		} else {
+			this.log(`Reading sheet ${sheetId} via the public CSV export (no credentials configured)…`);
+			rows = await fetchSheetRowsPublic(sheetId);
+		}
 		const { data, issues } = assembleSeed(rows);
 		if (issues.length > 0) {
 			this.error(`the Sheet has rows that cannot be parsed:\n${formatIssues(issues)}`, { exit: 1 });
@@ -48,6 +53,13 @@ export default class SheetSync extends Command {
 		const current = existsSync(flags.out)
 			? readSeed(flags.out)
 			: { version: 1 as const, figures: [], relationships: [] };
+		if (incoming.figures.length === 0 && current.figures.length > 0) {
+			this.error(
+				`the Sheet has no figure rows but ${flags.out} has ${current.figures.length} — refusing to erase the seed. ` +
+					"Import the roster into the Sheet first (Figures tab), or check the tab names.",
+				{ exit: 1 },
+			);
+		}
 		const diff = diffSeeds(current, incoming);
 		this.log(`Diff vs ${flags.out}:`);
 		this.log(formatDiff(diff));

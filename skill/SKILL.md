@@ -27,7 +27,7 @@ else reads — `data/figures.seed.json` (canonical roster) and
   `PATH="$(mise where node@22)/bin:$PATH"` if the default Node differs).
 - Build once from the repo root: `npm install && npm run build`, then run
   `node packages/cli/bin/run.js …` (or `npx alalaam …` after `npm link`).
-- **Sheet sync only:** `GOOGLE_SHEETS_ID` and a read-only service-account key
+- **Sheet sync only:** `GOOGLE_SHEETS_ID` (in `.env`). If the sheet is link-readable ("anyone with the link: viewer"), no credentials are needed — sync reads the public CSV export. For private sheets, add a read-only service-account key
   via `GOOGLE_APPLICATION_CREDENTIALS` (in `.env`). Everything else works
   offline against the committed seed.
 
