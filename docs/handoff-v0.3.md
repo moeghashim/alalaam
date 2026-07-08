@@ -1,3 +1,10 @@
+---
+summary: "Implementation brief for v0.3 — the Majlis Explorer web app on Cloudflare Workers plus the PI-Starter Cloudflare adaptation kit"
+read_when:
+  - Starting or resuming the v0.3 web build.
+  - Reviewing a v0.3 PR against the agreed scope.
+---
+
 # v0.3 handoff — Web on Cloudflare
 
 > Paste this (or point the implementing agent at it) to start v0.3. PLAN.md is
