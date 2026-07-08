@@ -292,3 +292,11 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - README.md
   - biome.json
   - scripts/check-file-length.mjs
+## 2026-07-08T13:34:31.335Z
+- Trigger: commit
+- Learning: Interactive prototype pages that measure the DOM after render (Cities label collision pass) port cleanly under the no-useEffect rule by keying the stage component on its layout inputs so useMountEffect re-runs per remount; rounding trig-derived SSR coordinates to 1/100 px eliminates Node-vs-Chrome last-bit float hydration mismatches (SignatureNet still exhibits this pre-existing warning in dev).
+- Context: feat(web): redesign IA — Cities page, Cities tab, footer pill, brand الأعلام
+- Branch: feat/redesign-ia
+- Actor: Moe Ghashim <mohanadgh@gmail.com>
+- Changed Paths:
+  - apps/web

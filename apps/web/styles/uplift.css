@@ -52,6 +52,7 @@ body { --lat: color-mix(in srgb, var(--line-3) calc(var(--orn, .7) * var(--orn-m
 }
 body.th-tazhib .kw-topbar { box-shadow: 0 1px 0 color-mix(in srgb, var(--brass) calc(var(--orn) * 45%), transparent); }
 .kw-topbar .tb-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+a.tb-brand { text-decoration: none; color: inherit; }
 .kw-topbar .tb-brand .nm { font-family: var(--font-disp); font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: -.012em; white-space: nowrap; }
 .kw-topbar .tb-sep { width: 1px; height: 20px; background: var(--line-3); flex: 0 0 auto; }
 .kw-topbar .tb-brand .sub { font-family: var(--font-serif); font-style: italic; font-size: 13px; color: var(--ink-3); white-space: nowrap; }
@@ -73,6 +74,18 @@ body.th-sahifa .kw-tab.active { background: transparent; color: var(--ink); box-
 .tb-right { display: flex; align-items: center; gap: 14px; }
 .tb-hint { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-4); max-width: 260px; }
 @media (max-width: 1080px) { .tb-hint { display: none; } }
+a.kw-tab { text-decoration: none; display: inline-flex; align-items: center; }
+.kw-footlinks {
+  position: fixed; inset-inline-end: 20px; bottom: 18px; z-index: 40;
+  display: flex; align-items: center; gap: 12px;
+  background: color-mix(in srgb, var(--card) 88%, transparent);
+  border: 1px solid var(--line-2); border-radius: 999px; padding: 7px 16px;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.kw-footlinks a { font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--ink-3); text-decoration: none; white-space: nowrap; }
+.kw-footlinks a:hover { color: var(--ink); }
+.kw-footlinks .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--line-3); flex: 0 0 auto; }
+[dir="rtl"] .kw-footlinks a { font-size: 13.5px; }
 @media (max-width: 720px) { .kw-topbar .tb-brand .sub, .kw-topbar .tb-sep { display: none; } }
 
 /* ── Shared primitives ─────────────────────────────────────── */

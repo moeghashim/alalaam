@@ -64,7 +64,7 @@ export default function RoadmapPage() {
 	const next = COLORS.next as PhaseColor;
 	const later = COLORS.later as PhaseColor;
 	return (
-		<PageShell active="roadmap">
+		<PageShell>
 			<section className="pg-hero">
 				<div className="pg-kicker">Product roadmap · draft for review · July 2026</div>
 				<h1>Where the Majlis goes next</h1>

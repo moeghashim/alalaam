@@ -63,11 +63,11 @@ function GlMed({
 
 export default function GuidelinesPage() {
 	return (
-		<PageShell active="guidelines">
+		<PageShell>
 			<section className="pg-hero">
 				<div className="pg-kicker">Brand guidelines · v1 · July 2026</div>
 				<h1>Alalaam</h1>
-				<div className="ar">العَلّام — سِيَرٌ في سياقها</div>
+				<div className="ar">الأعلام — سِيَرٌ في سياقها</div>
 				<p className="pg-lede">
 					Lives, in context. Alalaam places one historical figure at the centre of their world and draws that world
 					as evidence — who they met, who they may have met, and who they only ever knew through books. These pages
@@ -106,7 +106,7 @@ export default function GuidelinesPage() {
 							>
 								Alalaam
 							</div>
-							<div style={{ ...reemKufi, fontSize: 21, color: "var(--ink-3)", marginTop: 6 }}>العَلّام</div>
+							<div style={{ ...reemKufi, fontSize: 21, color: "var(--ink-3)", marginTop: 6 }}>الأعلام</div>
 						</div>
 					</div>
 					<p className="pg-p">

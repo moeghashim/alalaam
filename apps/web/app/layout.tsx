@@ -7,6 +7,7 @@ import "../styles/system.css";
 import "../styles/components.css";
 import "../styles/uplift.css";
 import "../styles/pages.css";
+import "../styles/cities.css";
 import "../styles/alalaam-web.css";
 
 const newsreader = Newsreader({

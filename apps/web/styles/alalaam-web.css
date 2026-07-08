@@ -64,14 +64,23 @@ body {
 	cursor: pointer;
 }
 
-/* view tabs are <Link> anchors in the app (buttons in the prototype) */
-a.kw-tab {
-	text-decoration: none;
-	display: inline-block;
-}
+/* view tabs are <Link> anchors in the app (uplift.css now styles `a.kw-tab`) */
 a.kw-tab:focus-visible {
 	outline: 2px solid var(--brass);
 	outline-offset: 2px;
+}
+
+/* footer pill: leading non-link "under development" marker (web addition,
+   PLAN.md §Site IA — the homepage must state the project is in progress) */
+.kw-footlinks .dev {
+	font-family: var(--font-sans);
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--rose);
+	white-space: nowrap;
+}
+[dir="rtl"] .kw-footlinks .dev {
+	font-size: 13.5px;
 }
 
 /* 3 ── static-page shell on a wrapper div instead of <body> */
