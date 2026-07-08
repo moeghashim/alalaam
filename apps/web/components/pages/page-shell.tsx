@@ -2,8 +2,11 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { Medallion } from "../medallion";
 
-/** Static-page shell (pages.css): sticky nav + editorial column (README §6–7). */
-export function PageShell({ active, children }: { active: "guidelines" | "roadmap"; children: ReactNode }) {
+/**
+ * Static-page shell (pages.css): sticky nav + editorial column.
+ * Header per redesign/CLAUDE.md — brand → home; nav: Explorer + Cities.
+ */
+export function PageShell({ active, wide, children }: { active?: "cities"; wide?: boolean; children: ReactNode }) {
 	return (
 		<div className="pg-body kw-lattice">
 			<header className="pg-top">
@@ -13,15 +16,14 @@ export function PageShell({ active, children }: { active: "guidelines" | "roadma
 				</Link>
 				<nav className="pg-nav">
 					<Link href="/">Explorer</Link>
-					<Link href="/guidelines" className={active === "guidelines" ? "on" : undefined}>
-						Guidelines
-					</Link>
-					<Link href="/roadmap" className={active === "roadmap" ? "on" : undefined}>
-						Roadmap
+					<Link href="/cities" className={active === "cities" ? "on" : undefined}>
+						Cities
 					</Link>
 				</nav>
 			</header>
-			<main className="pg-wrap">{children}</main>
+			<main className="pg-wrap" style={wide ? { maxWidth: 1100 } : undefined}>
+				{children}
+			</main>
 		</div>
 	);
 }

@@ -46,7 +46,7 @@ function LangToggle() {
 	);
 }
 
-/** Top bar (README §Screens 1): wordmark · view tabs · mono hint + EN/عربي toggle. */
+/** Top bar (redesign/Home.html): wordmark → home (resets state) · view tabs + Cities link · EN/عربي toggle. */
 export function TopBar() {
 	const { lang, ui } = useLang();
 	const pathname = usePathname();
@@ -54,12 +54,14 @@ export function TopBar() {
 	const isExplore = pathname === "/";
 	return (
 		<div className="kw-topbar">
-			<div className="tb-brand">
+			{/* plain <a>, not <Link>: a full navigation is the reset — no figure selected, focal back to the demo subject
+			    (matches the prototype's brand → Home.html; a same-route <Link> would leave the Explorer state intact). */}
+			<a className="tb-brand" href="/">
 				<Medallion size={32} glyph={subject?.glyph ?? "خ"} />
 				<span className="nm">{ui.brand}</span>
 				<span className="tb-sep" />
 				<span className="sub">{subject ? localize(subject.name, lang) : ui.subject}</span>
-			</div>
+			</a>
 			<div className="kw-tabs">
 				<Link href="/" className={`kw-tab${isExplore ? " active" : ""}`}>
 					{ui.tabs.explore}
@@ -67,9 +69,11 @@ export function TopBar() {
 				<Link href="/compare" className={`kw-tab${pathname === "/compare" ? " active" : ""}`}>
 					{ui.tabs.compare}
 				</Link>
+				<Link href="/cities" className="kw-tab">
+					{ui.tabs.cities}
+				</Link>
 			</div>
 			<div className="tb-right">
-				{isExplore && <span className="tb-hint">{ui.hintExplore}</span>}
 				<LangToggle />
 			</div>
 		</div>

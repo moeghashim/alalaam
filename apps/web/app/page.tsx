@@ -1,4 +1,5 @@
 import { Explorer } from "../components/explorer/explorer";
+import { FootLinks } from "../components/foot-links";
 import { LiveData } from "../components/live-data";
 import { TopBar } from "../components/top-bar";
 import { getDataSnapshot } from "../lib/data-server";
@@ -16,6 +17,7 @@ export default async function ExplorePage() {
 			<div id="root">
 				<TopBar />
 				<Explorer />
+				<FootLinks />
 			</div>
 		</LiveData>
 	);

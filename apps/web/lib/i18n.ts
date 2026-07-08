@@ -44,13 +44,13 @@ type TierStrings = { t: string; d: string };
 export type Strings = {
 	brand: string;
 	subject: string;
-	tabs: { explore: string; compare: string };
+	tabs: { explore: string; compare: string; cities: string };
+	footlinks: { underDev: string; guidelines: string; roadmap: string; plan: string };
 	props: Record<"teacher" | "student" | "peer" | "acq" | "gen" | "born" | "died" | "lived" | "bio" | "pubs", string>;
 	people: string;
 	lifework: string;
 	noneRecorded: string;
 	rel: Record<"self" | "direct" | "possible" | "past" | "future", string>;
-	hintExplore: string;
 	first: string;
 	second: string;
 	connect: string;
@@ -89,7 +89,8 @@ export const UI: Record<Lang, Strings> = {
 	en: {
 		brand: "Alalaam",
 		subject: "al-Khwarizmi",
-		tabs: { explore: "The Majlis", compare: "Compare lives" },
+		tabs: { explore: "The Majlis", compare: "Compare lives", cities: "Cities" },
+		footlinks: { underDev: "Under development", guidelines: "Guidelines", roadmap: "Roadmap", plan: "The plan" },
 		props: {
 			teacher: "Teacher",
 			student: "Student",
@@ -112,7 +113,6 @@ export const UI: Record<Lang, Strings> = {
 			past: "A source he read",
 			future: "An heir of his method",
 		},
-		hintExplore: "Click any figure to open its profile · click the map to dismiss",
 		first: "First figure",
 		second: "Second figure",
 		connect: "How they connect",
@@ -165,9 +165,10 @@ export const UI: Record<Lang, Strings> = {
 		},
 	},
 	ar: {
-		brand: "العَلّام",
+		brand: "الأعلام",
 		subject: "الخوارزمي",
-		tabs: { explore: "المجلس", compare: "قارِن السِّيَر" },
+		tabs: { explore: "المجلس", compare: "قارِن السِّيَر", cities: "المدن" },
+		footlinks: { underDev: "قيد التطوير", guidelines: "الدليل", roadmap: "خارطة الطريق", plan: "الخطة" },
 		props: {
 			teacher: "المعلّم",
 			student: "التلميذ",
@@ -190,7 +191,6 @@ export const UI: Record<Lang, Strings> = {
 			past: "مصدرٌ قرأه",
 			future: "وريثُ منهجه",
 		},
-		hintExplore: "انقر أيّ شخصية لعرض ملفّها · انقر الخريطة للإغلاق",
 		first: "الشخصية الأولى",
 		second: "الشخصية الثانية",
 		connect: "كيف يتّصلان",

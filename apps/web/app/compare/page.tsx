@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CompareView } from "../../components/compare/compare-view";
+import { FootLinks } from "../../components/foot-links";
 import { LiveData } from "../../components/live-data";
 import { TopBar } from "../../components/top-bar";
 import { getDataSnapshot } from "../../lib/data-server";
@@ -18,6 +19,7 @@ export default async function ComparePage() {
 			<div id="root">
 				<TopBar />
 				<CompareView />
+				<FootLinks />
 			</div>
 		</LiveData>
 	);
