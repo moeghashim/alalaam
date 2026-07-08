@@ -1,0 +1,26 @@
+{
+	"$schema": "../../node_modules/wrangler/config-schema.json",
+	"name": "alalaam-realtime",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-25",
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "VERSION_ROOM",
+				"class_name": "VersionRoom"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": ["VersionRoom"]
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+	// Secret (never committed): npx wrangler secret put REALTIME_SECRET
+	// The same value goes into the repo-root .env as ALALAAM_REALTIME_SECRET so
+	// `alalaam db push` can authenticate its POST /bump.
+}

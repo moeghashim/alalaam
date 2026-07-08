@@ -7,6 +7,22 @@
 	"assets": {
 		"directory": ".open-next/assets",
 		"binding": "ASSETS"
+	},
+	// v0.4 live layer (PLAN.md §10): the web worker reads the roster from D1 at
+	// request time; `alalaam db migrate` / `db push` target the same database
+	// through this config (its migrations live at the repo root ../../migrations).
+	"d1_databases": [
+		{
+			"binding": "ALALAAM_DB",
+			"database_name": "alalaam-db",
+			"database_id": "1107d340-79c5-4575-86da-0a5d6e9678c0",
+			"migrations_dir": "../../migrations"
+		}
+	],
+	// Public (non-secret) config. NEXT_PUBLIC_* values are inlined by `next build`,
+	// so the client fallback in lib/realtime.ts carries the same default — this var
+	// documents it and covers any server-side reader.
+	"vars": {
+		"NEXT_PUBLIC_ALALAAM_REALTIME_WS": "wss://alalaam-realtime.mohanadgh.workers.dev/ws"
 	}
-	// v0.4 adds D1 + Durable Object bindings here (PLAN.md §10).
 }

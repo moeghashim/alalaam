@@ -292,3 +292,10 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - README.md
   - biome.json
   - scripts/check-file-length.mjs
+## 2026-07-08T13:30:17.028Z
+- Trigger: commit
+- Learning: Keeping the v0.3 data seam synchronous made the D1 swap cheap: server pages load a snapshot (D1 with static-artifact fallback) and hydrate the same module store during render, so no consumer component changed. A render-phase hydrate ahead of children plus a version-stamped no-op keeps it safe, and the DO stays a broadcast bell (version stamp only) so push stays idempotent end-to-end.
+- Context: feat(live): v0.4 live layer — D1 schema + alalaam db migrate/push, realtime Durable Object, web D1 read path with live refresh
+- Branch: feat/v0.4-live
+- Actor: Moe Ghashim <mohanadgh@gmail.com>
+- Changed Paths: n/a

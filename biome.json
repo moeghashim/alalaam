@@ -31,6 +31,8 @@
 			"apps/**/*.mjs",
 			"packages/*/src/**/*.ts",
 			"packages/*/test/**/*.ts",
+			"workers/*/src/**/*.ts",
+			"workers/*/test/**/*.ts",
 			"scripts/**/*.ts",
 			"scripts/**/*.js",
 			"scripts/**/*.mjs",

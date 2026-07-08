@@ -6,8 +6,8 @@ description: >-
   them, compiled from a Google Sheet into versioned JSON artifacts. Add a
   figure, add or adjust a connection (teacher/patron/source/peer/
   acquaintance/contemporary), sync the Sheet and read the diff, validate the
-  roster, reseed from the legacy prototype, or export a subject's derived
-  graph. Use this skill whenever the user wants to change or inspect Alalaam
+  roster, reseed from the legacy prototype, export a subject's derived
+  graph, or push the compiled data live to Cloudflare D1. Use this skill whenever the user wants to change or inspect Alalaam
   content — figures, connections, publications, circle notes — even if they
   don't say "alalaam" explicitly. Do not edit `data/*.json` by hand; the CLI
   owns every data operation.
@@ -97,6 +97,19 @@ node packages/cli/bin/run.js seed legacy           # reseed from the frozen prot
 
 Exit codes: `0` success · `1` validation/integrity failure · `2` usage error.
 Read commands take `--json` for machine-readable output.
+
+### Publish to the live site (v0.4)
+
+```bash
+node packages/cli/bin/run.js db migrate            # apply migrations/ to Cloudflare D1 (once per new migration)
+node packages/cli/bin/run.js db push --dry-run     # preview the row-level diff vs D1
+node packages/cli/bin/run.js db push               # idempotent upsert + live-refresh bump
+```
+
+`db push` mirrors the committed artifacts into D1 and notifies connected
+explorer clients within seconds (needs `ALALAAM_REALTIME_SECRET` in `.env` for
+the bump). Push only committed, validated data — D1 is a load target, never an
+authoring surface.
 
 ## Vocabularies (closed — the CLI rejects anything else)
 
