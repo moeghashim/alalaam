@@ -24,4 +24,7 @@ Validation is enforced by `npm run docs:list`.
 - `docs/agent-skills.md`: curated vendored Vercel, Addy Osmani, and Matt Pocock skills plus the update policy.
 - `docs/architecture-decisions.md`: ADR template and local conventions for recording durable technical decisions.
 - `docs/commands.md`: in-repo command prompt index.
-- `docs/deploying-to-vercel.md`: minimal Vercel deployment path for `apps/web`.
+- `docs/deploying-to-vercel.md`: minimal Vercel deployment path for `apps/web` (upstream PI-Starter baseline).
+- `docs/deploying-to-cloudflare.md`: Cloudflare Workers deployment path for `apps/web` (this fork's hosting).
+- `docs/pi-starter-cloudflare/`: upstreamable kit adapting a fresh PI-Starter fork to Cloudflare Workers.
+- `docs/handoff-v0.3.md`: the v0.3 Web (Cloudflare) implementation brief.

@@ -1,0 +1,86 @@
+/* ════════════════════════════════════════════════════════════
+   ALALAAM — Next.js glue (NOT part of the ported token system).
+   Loads last. Three jobs only:
+   1. Wire next/font CSS variables into the token system's font
+      variables (system.css declares literal Google Font names;
+      next/font serves them under hashed family names).
+   2. Page scaffolding the prototype did with inline <style> in
+      the HTML entry files (html/body reset, fixed app viewport).
+   3. Re-apply pages.css `body.pg-body` rules to a `.pg-body`
+      wrapper div, since the App Router shares one <body>.
+   ════════════════════════════════════════════════════════════ */
+
+/* 1 ── fonts: next/font variables → token variables */
+:root {
+	--font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
+	--font-sans: var(--font-plex-sans), system-ui, -apple-system, sans-serif;
+	--font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+	--font-disp: var(--font-newsreader), Georgia, serif;
+}
+[dir="rtl"] {
+	--font-serif: var(--font-amiri), var(--font-newsreader), Georgia, serif;
+	--font-sans: var(--font-plex-arabic), var(--font-plex-sans), system-ui, sans-serif;
+	--font-disp: var(--font-reem-kufi), var(--font-amiri), serif;
+}
+/* literal family names inside the verbatim CSS → hashed next/font families */
+.kw-medallion .kw-glyph {
+	font-family: var(--font-amiri), serif;
+}
+.pg-hero .ar,
+.pg-sec-h .ar {
+	font-family: var(--font-reem-kufi), serif;
+}
+
+/* 2 ── page scaffolding (prototype: inline <style> in the HTML entries) */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body {
+	background: var(--paper);
+}
+/* the app viewport — prototype's `#root { position: fixed; inset: 0 }` */
+#root {
+	position: fixed;
+	inset: 0;
+	overflow: hidden;
+}
+
+/* interactive nodes/chips are real <button>s in the app (divs/spans in the
+   prototype); :where() keeps this reset at zero specificity so the ported
+   component classes always win */
+:where(button.btn-bare) {
+	appearance: none;
+	border: none;
+	background: none;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	text-align: inherit;
+	line-height: inherit;
+	cursor: pointer;
+}
+
+/* view tabs are <Link> anchors in the app (buttons in the prototype) */
+a.kw-tab {
+	text-decoration: none;
+	display: inline-block;
+}
+a.kw-tab:focus-visible {
+	outline: 2px solid var(--brass);
+	outline-offset: 2px;
+}
+
+/* 3 ── static-page shell on a wrapper div instead of <body> */
+div.pg-body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--font-sans);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	min-height: 100vh;
+}

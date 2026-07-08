@@ -279,3 +279,16 @@ Append-only learning log for commits and deploys. Add new entries only at the en
 - Actor: Moe Ghashim <mohanadgh@gmail.com>
 - Changed Paths:
   - www
+## 2026-07-08T12:17:10.306Z
+- Trigger: commit
+- Learning: Turbopack does not resolve NodeNext-style .js specifiers to .tsx sources — apps/web relative imports must be extensionless; and @opennextjs/cloudflare pins next>=16.2.6, so the adapter dictated the Next upgrade.
+- Context: feat: v0.3 web — Majlis Explorer on Cloudflare Workers + upstream adaptation kit
+- Branch: feat/v0.3-web
+- Actor: Moe Ghashim <mohanadgh@gmail.com>
+- Changed Paths:
+  - apps/web
+  - docs/deploying-to-cloudflare.md
+  - docs/pi-starter-cloudflare
+  - README.md
+  - biome.json
+  - scripts/check-file-length.mjs
