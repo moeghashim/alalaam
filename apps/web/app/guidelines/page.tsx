@@ -547,7 +547,13 @@ export default function GuidelinesPage() {
 			</section>
 
 			<footer className="pg-foot">
-				<span className="f1">Alalaam — lives, in context. Demo subject: al-Khwarizmi.</span>
+				<span className="f1">
+					Alalaam — lives, in context. Demo subject: al-Khwarizmi. By{" "}
+					<a href="https://x.com/moeghashim" rel="me">
+						@moeghashim
+					</a>{" "}
+					· <a href="mailto:salam@alalaam.com">salam@alalaam.com</a>
+				</span>
 				<a href="/roadmap">Product roadmap →</a>
 			</footer>
 		</PageShell>

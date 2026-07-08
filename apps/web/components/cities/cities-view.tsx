@@ -400,7 +400,13 @@ export function CitiesView() {
 			</section>
 
 			<footer className="pg-foot">
-				<span className="f1">Alalaam — lives, in context. Every city is a claim a reader can check.</span>
+				<span className="f1">
+					Alalaam — lives, in context. Every city is a claim a reader can check. By{" "}
+					<a href="https://x.com/moeghashim" rel="me">
+						@moeghashim
+					</a>{" "}
+					· <a href="mailto:salam@alalaam.com">salam@alalaam.com</a>
+				</span>
 				<span style={{ display: "flex", gap: 20 }}>
 					<a href="/guidelines">Brand guidelines</a>
 					<a href="/roadmap">Roadmap</a>
