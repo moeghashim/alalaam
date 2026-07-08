@@ -107,7 +107,7 @@
 </header>
 
 <div class="statusbar">
-  <span class="pill brass">Status: v0.3 shipped — <a href="https://alalaam.mohanadgh.workers.dev">explorer live</a> · v0.4 live layer in progress</span>
+  <span class="pill brass">Status: v0.1–v0.4 + redesign ALL shipped — <a href="https://alalaam.mohanadgh.workers.dev">explorer live</a></span>
   <span class="pill"><a href="https://alalaam-www.mohanadgh.workers.dev">teaser site live</a> → alalaam.com pending NS switch</span>
   <span class="pill">base: moeghashim/PI-Starter</span>
   <span class="pill"><a href="https://github.com/moeghashim/alalaam">repo: moeghashim/alalaam</a></span>
@@ -123,7 +123,8 @@
   <div class="phase"><span class="v">v0.1</span><div class="t"><b>Engine — core + CLI</b><span>@alalaam/core (deriveContext grammar, zod validation, Sheets ingestion) + alalaam CLI (7 commands) · seed:legacy reproduces all 23 tiers AND medallion categories · 29 tests · PR #1 merged.</span></div><span class="state done">done</span></div>
   <div class="phase"><span class="v">v0.2</span><div class="t"><b>Skill</b><span>skill/SKILL.md + CLI reference wrapping the alalaam CLI for Codex / Claude Code — two-writers rule front and centre · PR #2 merged.</span></div><span class="state done">done</span></div>
   <div class="phase"><span class="v">v0.3</span><div class="t"><b>Web on Cloudflare</b><span>Majlis Explorer live at <a href="https://alalaam.mohanadgh.workers.dev">alalaam.mohanadgh.workers.dev</a> — ring view, profile panel, multi-focal, compare, brand pages, EN/AR RTL · ring layout computed from data · PI-Starter Cloudflare kit at docs/pi-starter-cloudflare/ · PR #4 merged, 42 tests.</span></div><span class="state done">done</span></div>
-  <div class="phase"><span class="v">v0.4</span><div class="t"><b>Live layer — D1 + Durable Objects</b><span>Migrations · alalaam db push · live-refresh: a synced change appears on the published site within seconds.</span></div><span class="state active">in progress</span></div>
+  <div class="phase"><span class="v">v0.4</span><div class="t"><b>Live layer — D1 + Durable Objects</b><span>D1 alalaam-db migrated + loaded (24 figures / 45 edges / 24 derivations) · alalaam db migrate + db push (idempotent, verified end-to-end) · VersionRoom DO broadcasting data-changed over WebSocket · explorer reads D1 per request with static fallback · PR #5 merged, 59 tests.</span></div><span class="state done">done</span></div>
+  <div class="phase"><span class="v">IA</span><div class="t"><b>Redesign — explorer as homepage</b><span>Cities &amp; roads page live at /cities · Cities tab + home-resetting wordmark · footer pill (Under development · Guidelines · Roadmap · The plan) · brand الأعلام · PR #6 merged.</span></div><span class="state done">done</span></div>
   <div class="phase"><span class="v">v0.5</span><div class="t"><b>Future (deferred)</b><span>In-app editing admin · multi-user collaboration · a second subject.</span></div><span class="state planned">deferred</span></div>
 </div>
 
@@ -229,6 +230,7 @@
 </ul>
 <h3>Build log</h3>
 <ul class="log">
+  <li><strong>2026-07-08 — v0.4 + redesign shipped (PRs #5, #6): the committed scope is complete.</strong> The live layer runs on D1 + a Durable Object (a <code>db push</code> reaches the published site within seconds), and the redesign IA is live: the explorer is the homepage with the Cities tab, the new Cities &amp; roads page, the footer pill (Under development · Guidelines · Roadmap · The plan), and the الأعلام wordmark. Remaining outside the roadmap: alalaam.com nameserver switch (owner), the real Google Sheet, and the optional PI-Starter upstream PR.</li>
   <li><strong>2026-07-08 — v0.3 Majlis Explorer shipped (PR #4):</strong> full explorer live on Cloudflare Workers via @opennextjs/cloudflare — signature ring view (placement computed from data, tested at roster sizes 5/24/100), sliding profile panel, multi-focal with shared circle, compare view, brand pages, full EN/AR RTL with Eastern-Arabic digits; CSS tokens byte-identical to the handoff; upstream Cloudflare kit for PI-Starter included. v0.4 live layer started.</li>
   <li><strong>2026-07-08 — public teaser site shipped (PR #3):</strong> a static landing page in the full design language (grammar vignette, under-development notice, links here and to GitHub), live at <a href="https://alalaam-www.mohanadgh.workers.dev">alalaam-www.mohanadgh.workers.dev</a>; it claims <strong>alalaam.com</strong> automatically once the domain's nameservers move to Cloudflare. Same PR fixed the docs front-matter that had main CI red and authenticated CI's GitHub API calls to kill the macOS rate-limit flake.</li>
   <li><strong>2026-07-08 — v0.1 + v0.2 merged; v0.3 underway:</strong> PR #1 (engine) and PR #2 (skill) merged with CI green; roster-scale decision locked in PLAN.md (23+1 is the legacy example, not a limit — ring layout must be computed from data); v0.3 web build started from <code>docs/handoff-v0.3.md</code>.</li>
