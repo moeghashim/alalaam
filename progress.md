@@ -271,3 +271,11 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - tsconfig.json
   - package.json
   - README.md
+## 2026-07-08T12:07:27.575Z
+- Trigger: commit
+- Learning: Teaser site: the SVG medallion 16-segment conic ring reproduces cleanly with a pathLength=16 stroke-dasharray='1 1' circle trick (stroke-width = radius paints wedges from centre), so no conic-gradient foreignObject is needed. Headless Chrome --window-size clamps to 500px min width; use puppeteer-core setViewport against the installed Chrome for real 375px overflow checks. Block-level dir=rtl Arabic subtitles right-align across the whole column — wrap them as inline rtl spans inside LTR blocks to keep them anchored to their headings.
+- Context: feat: alalaam.com teaser site
+- Branch: feat/www-teaser
+- Actor: Moe Ghashim <mohanadgh@gmail.com>
+- Changed Paths:
+  - www
