@@ -248,3 +248,13 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - docs/agent-workflow.md
   - scripts/agent-check.mjs
   - CLAUDE.md
+## 2026-07-08T10:00:44.325Z
+- Trigger: commit
+- Learning: Fork boundary: Alalaam begins here, built on the PI-Starter baseline merged with --allow-unrelated-histories. PLAN.md is the authoritative PRD (Decisions log wins); hosting is Cloudflare Workers + D1 + Durable Objects, so the Vercel deployment docs will be superseded by a Cloudflare adaptation (PLAN.md §4.1).
+- Context: chore: bootstrap from PI-Starter (v0.0 foundation)
+- Branch: main
+- Actor: Moe Ghashim <mohanadgh@gmail.com>
+- Changed Paths:
+  - PLAN.md
+  - design_handoff_alalaam
+  - .gitignore
