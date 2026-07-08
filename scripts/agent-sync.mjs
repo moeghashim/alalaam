@@ -71,10 +71,12 @@ async function fetchUpstream({ sourceRepo, pinnedCommit, upstreamPath }) {
 }
 
 async function fetchGitHubJson(url) {
+	const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
 	const response = await fetch(url, {
 		headers: {
 			accept: "application/vnd.github+json",
 			"user-agent": "pi-starter-agent-sync",
+			...(token ? { authorization: `Bearer ${token}` } : {}),
 		},
 	});
 	if (!response.ok) {

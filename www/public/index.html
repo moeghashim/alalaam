@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Alalaam — lives, in context</title>
+	<meta name="description" content="Alalaam places one historical figure at the centre of their world and draws that world as an evidence graph: who they met, who they may have met, and who they only knew through books. Under development — built in the open."/>
+	<meta property="og:title" content="Alalaam — lives, in context"/>
+	<meta property="og:description" content="One historical figure at the centre of their world, drawn as an evidence graph. Under development — built in the open."/>
+	<meta property="og:url" content="https://alalaam.com"/>
+	<meta property="og:type" content="website"/>
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23B0822F'/%3E%3Ccircle cx='16' cy='16' r='11.5' fill='none' stroke='%23FEFCF6' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%2315192B'/%3E%3C/svg%3E"/>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+	<header class="top">
+		<a class="brand" href="/">
+			<span class="medallion" style="width:30px;height:30px" aria-hidden="true"><span class="glyph" style="font-size:12px">خ</span></span>
+			<span class="nm">Alalaam</span>
+			<span class="ar" lang="ar" dir="rtl">العَلّام</span>
+		</a>
+		<nav aria-label="Project links">
+			<a href="https://alalaam-plan.pages.dev">The plan</a>
+			<a href="https://github.com/moeghashim/alalaam">GitHub</a>
+		</nav>
+	</header>
+
+	<main class="wrap">
+
+		<!-- ─── Hero ─────────────────────────────────────────── -->
+		<section class="hero">
+			<p class="kicker">Under construction · an atlas of lives</p>
+			<h1>Alalaam</h1>
+			<p class="ar"><span lang="ar" dir="rtl">العَلّام — سِيَرٌ في سياقها</span></p>
+			<p class="lede"><em>Lives, in context.</em> Alalaam places one historical figure at the centre of their world and draws that world as an evidence graph: who they met, who they may have met, and who they only knew through books.</p>
+			<div class="cta">
+				<a class="btn brass" href="https://alalaam-plan.pages.dev"><span class="dia" aria-hidden="true"></span>Follow the build</a>
+				<a class="btn" href="https://github.com/moeghashim/alalaam">View on GitHub</a>
+			</div>
+		</section>
+
+		<!-- ─── Under-development notice ─────────────────────── -->
+		<aside class="notice" aria-label="Under development notice">
+			<span class="dia" aria-hidden="true"></span>
+			<div>
+				<p class="nt">Under development</p>
+				<p>Alalaam is a work in progress, built in the open. Everything here — the plan, the roster, and the historical content it describes — is <strong>draft material: unverified and subject to change</strong> without notice.</p>
+			</div>
+		</aside>
+
+		<!-- ─── 01 · The map ─────────────────────────────────── -->
+		<section class="sec" aria-labelledby="sec-map">
+			<div class="sec-h">
+				<div class="no">01</div>
+				<h2 id="sec-map">One life, drawn as evidence</h2>
+				<p class="ar"><span lang="ar" dir="rtl">حياة واحدة، مرسومة بالدليل</span></p>
+			</div>
+			<div>
+				<p class="p">The subject sits at the centre; everyone else takes their distance by certainty. An inner ring for documented colleagues, a dashed ring for plausible contemporaries, a dotted ring for those known only through books — the sources he inherited on one side, the heirs of his method on the other.</p>
+
+				<figure class="vg-fig" role="img" aria-label="A radial evidence map: al-Khwarizmi at the centre, surrounded by medallions for al-Ma'mun, Hunayn ibn Ishaq, the Banu Musa, al-Jahiz, Euclid, Diophantus and al-Battani, connected by lines whose textures encode the kind of evidence.">
+					<svg class="vg-map" viewBox="0 0 720 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<defs>
+							<radialGradient id="vg-disc" cx="38%" cy="34%" r="75%">
+								<stop offset="0%" stop-color="#2B3149"/>
+								<stop offset="70%" stop-color="#15192B"/>
+							</radialGradient>
+							<radialGradient id="vg-glow">
+								<stop offset="0%" stop-color="#EFE0BC" stop-opacity=".55"/>
+								<stop offset="100%" stop-color="#EFE0BC" stop-opacity="0"/>
+							</radialGradient>
+							<marker id="arr-past" viewBox="0 0 9 8" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+								<path d="M0 0 L9 4 L0 8 Z" fill="#335E9E"/>
+							</marker>
+							<marker id="arr-future" viewBox="0 0 9 8" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+								<path d="M0 0 L9 4 L0 8 Z" fill="#A14A60"/>
+							</marker>
+						</defs>
+
+						<circle cx="360" cy="300" r="95" fill="url(#vg-glow)"/>
+
+						<!-- rings: distance of certainty -->
+						<g class="vg-rings" fill="none" stroke="#CEC29F" stroke-width="1" opacity=".55">
+							<circle cx="360" cy="300" r="157"/>
+							<circle cx="360" cy="300" r="218" stroke-dasharray="3 7"/>
+							<circle cx="360" cy="300" r="266" stroke-dasharray="1 6" stroke-linecap="round"/>
+						</g>
+
+						<!-- edges: texture = kind of evidence -->
+						<g class="vg-edges" fill="none">
+							<!-- direct · solid brass -->
+							<line x1="375" y1="258.6" x2="404.8" y2="176.8" stroke="#8C6620" stroke-width="1.8" opacity=".55"/>
+							<line x1="326.3" y1="328.3" x2="259.6" y2="384.2" stroke="#8C6620" stroke-width="1.8" opacity=".55"/>
+							<line x1="380.6" y1="338.9" x2="421.5" y2="415.6" stroke="#8C6620" stroke-width="1.8" opacity=".55"/>
+							<!-- possible · long dash sand -->
+							<line x1="316.7" y1="292.3" x2="168" y2="266.1" stroke="#8A7A55" stroke-width="1.6" stroke-dasharray="8 6" opacity=".55"/>
+							<!-- past · fine dots lapis, arrow points in -->
+							<line x1="157.3" y1="163.3" x2="323.5" y2="275.4" stroke="#335E9E" stroke-width="1.5" stroke-dasharray="2 6" opacity=".62" marker-end="url(#arr-past)"/>
+							<line x1="122.8" y1="359.1" x2="317.3" y2="310.6" stroke="#335E9E" stroke-width="1.5" stroke-dasharray="2 6" opacity=".62" marker-end="url(#arr-past)"/>
+							<!-- future · fine dots rose, arrow points out -->
+							<line x1="403" y1="309.2" x2="599.1" y2="350.8" stroke="#A14A60" stroke-width="1.5" stroke-dasharray="2 6" opacity=".62" marker-end="url(#arr-future)"/>
+						</g>
+
+						<!-- al-Ma'mun · direct · patron (brass) -->
+						<g class="vg-node" style="--i:1">
+							<text x="413.7" y="108" text-anchor="middle" font-family="Newsreader, serif" font-weight="600" font-size="11.5" fill="#101320">al-Ma&#8217;mun</text>
+							<text x="413.7" y="121" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" letter-spacing=".06em" fill="#4E556E">786&#8211;833</text>
+							<g transform="translate(413.7 152.4)">
+								<circle r="23" fill="#8C6620"/>
+								<circle r="11.5" fill="none" stroke="#B0822F" stroke-width="23" pathLength="16" stroke-dasharray="1 1"/>
+								<circle r="21.5" fill="none" stroke="#FEFCF6" stroke-width="3"/>
+								<circle r="23" fill="none" stroke="#DED4B9" stroke-width="1"/>
+								<circle r="14.7" fill="url(#vg-disc)" stroke="rgba(176,130,47,.5)" stroke-width="1.5"/>
+								<text y="1" text-anchor="middle" dominant-baseline="central" font-family="Amiri, serif" font-size="17" fill="#EFE0BC">م</text>
+							</g>
+						</g>
+
+						<!-- Hunayn ibn Ishaq · direct · peer (verdigris) -->
+						<g class="vg-node" style="--i:2">
+							<g transform="translate(239.7 400.9)">
+								<circle r="23" fill="#2C6052"/>
+								<circle r="11.5" fill="none" stroke="#3C7E6E" stroke-width="23" pathLength="16" stroke-dasharray="1 1"/>
+								<circle r="21.5" fill="none" stroke="#FEFCF6" stroke-width="3"/>
+								<circle r="23" fill="none" stroke="#DED4B9" stroke-width="1"/>
+								<circle r="14.7" fill="url(#vg-disc)" stroke="rgba(176,130,47,.5)" stroke-width="1.5"/>
+								<text y="1" text-anchor="middle" dominant-baseline="central" font-family="Amiri, serif" font-size="17" fill="#EFE0BC">ح</text>
+							</g>
+							<text x="239.7" y="442" text-anchor="middle" font-family="Newsreader, serif" font-weight="600" font-size="11.5" fill="#101320">Hunayn ibn Ishaq</text>
+							<text x="239.7" y="455" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" letter-spacing=".06em" fill="#4E556E">809&#8211;873</text>
+						</g>
+
+						<!-- The Banu Musa · direct · peers (verdigris) -->
+						<g class="vg-node" style="--i:3">
+							<g transform="translate(433.7 438.6)">
+								<circle r="23" fill="#2C6052"/>
+								<circle r="11.5" fill="none" stroke="#3C7E6E" stroke-width="23" pathLength="16" stroke-dasharray="1 1"/>
+								<circle r="21.5" fill="none" stroke="#FEFCF6" stroke-width="3"/>
+								<circle r="23" fill="none" stroke="#DED4B9" stroke-width="1"/>
+								<circle r="14.7" fill="url(#vg-disc)" stroke="rgba(176,130,47,.5)" stroke-width="1.5"/>
+								<text y="1" text-anchor="middle" dominant-baseline="central" font-family="Amiri, serif" font-size="17" fill="#EFE0BC">ب</text>
+							</g>
+							<text x="433.7" y="480" text-anchor="middle" font-family="Newsreader, serif" font-weight="600" font-size="11.5" fill="#101320">The Banu Musa</text>
+							<text x="433.7" y="493" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" letter-spacing=".06em" fill="#4E556E">c. 800&#8211;873</text>
+						</g>
+
+						<!-- al-Jahiz · possible · the wider age (sand) -->
+						<g class="vg-node" style="--i:4">
+							<g transform="translate(145.3 262.1)">
+								<circle r="20" fill="#6B5C3B"/>
+								<circle r="10" fill="none" stroke="#8A7A55" stroke-width="20" pathLength="16" stroke-dasharray="1 1"/>
+								<circle r="18.5" fill="none" stroke="#FEFCF6" stroke-width="3"/>
+								<circle r="20" fill="none" stroke="#DED4B9" stroke-width="1"/>
+								<circle r="12.8" fill="url(#vg-disc)" stroke="rgba(176,130,47,.5)" stroke-width="1.5"/>
+								<text y="1" text-anchor="middle" dominant-baseline="central" font-family="Amiri, serif" font-size="15" fill="#EFE0BC">ج</text>
+							</g>
+							<text x="145.3" y="300" text-anchor="middle" font-family="Newsreader, serif" font-weight="600" font-size="11.5" fill="#101320">al-Jahiz</text>
+							<text x="145.3" y="313" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" letter-spacing=".06em" fill="#4E556E">776&#8211;868</text>
+						</g>
+
+						<!-- Euclid · past source (lapis) -->
+						<g class="vg-node" style="--i:5">
+							<g transform="translate(139.5 151.3)">
+								<circle r="18.5" fill="#234678"/>
+								<circle r="9.25" fill="none" stroke="#335E9E" stroke-width="18.5" pathLength="16" stroke-dasharray="1 1"/>
+								<circle r="17" fill="none" stroke="#FEFCF6" stroke-width="3"/>
+								<circle r="18.5" fill="none" stroke="#DED4B9" stroke-width="1"/>
+								<circle r="11.8" fill="url(#vg-disc)" stroke="rgba(176,130,47,.5)" stroke-width="1.5"/>
+								<text y="1" text-anchor="middle" dominant-baseline="central" font-family="Amiri, serif" font-size="14" fill="#EFE0BC">إ</text>
+							</g>
+							<text x="139.5" y="188" text-anchor="middle" font-family="Newsreader, serif" font-weight="600" font-size="11.5" fill="#101320">Euclid</text>
+							<text x="139.5" y="201" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" letter-spacing=".06em" fill="#4E556E">fl. 300 BC</text>
+						</g>
+
+						<!-- Diophantus · past source (lapis) -->
+						<g class="vg-node" style="--i:6">
+							<g transform="translate(101.9 364.3)">
+								<circle r="18.5" fill="#234678"/>
+								<circle r="9.25" fill="none" stroke="#335E9E" stroke-width="18.5" pathLength="16" stroke-dasharray="1 1"/>
+								<circle r="17" fill="none" stroke="#FEFCF6" stroke-width="3"/>
+								<circle r="18.5" fill="none" stroke="#DED4B9" stroke-width="1"/>
+								<circle r="11.8" fill="url(#vg-disc)" stroke="rgba(176,130,47,.5)" stroke-width="1.5"/>
+								<text y="1" text-anchor="middle" dominant-baseline="central" font-family="Amiri, serif" font-size="14" fill="#EFE0BC">د</text>
+							</g>
+							<text x="101.9" y="401" text-anchor="middle" font-family="Newsreader, serif" font-weight="600" font-size="11.5" fill="#101320">Diophantus</text>
+							<text x="101.9" y="414" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" letter-spacing=".06em" fill="#4E556E">c. 201&#8211;285</text>
+						</g>
+
+						<!-- al-Battani · future heir (rose) -->
+						<g class="vg-node" style="--i:7">
+							<g transform="translate(620.1 355.3)">
+								<circle r="18.5" fill="#7E3850"/>
+								<circle r="9.25" fill="none" stroke="#A14A60" stroke-width="18.5" pathLength="16" stroke-dasharray="1 1"/>
+								<circle r="17" fill="none" stroke="#FEFCF6" stroke-width="3"/>
+								<circle r="18.5" fill="none" stroke="#DED4B9" stroke-width="1"/>
+								<circle r="11.8" fill="url(#vg-disc)" stroke="rgba(176,130,47,.5)" stroke-width="1.5"/>
+								<text y="1" text-anchor="middle" dominant-baseline="central" font-family="Amiri, serif" font-size="14" fill="#EFE0BC">ب</text>
+							</g>
+							<text x="620.1" y="392" text-anchor="middle" font-family="Newsreader, serif" font-weight="600" font-size="11.5" fill="#101320">al-Battani</text>
+							<text x="620.1" y="405" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" letter-spacing=".06em" fill="#4E556E">858&#8211;929</text>
+						</g>
+
+						<!-- Centre · al-Khwarizmi (brass, glyph خ — never a fabricated face) -->
+						<g class="vg-node" style="--i:0">
+							<g transform="translate(360 300)">
+								<circle r="41" fill="#8C6620"/>
+								<circle r="20.5" fill="none" stroke="#B0822F" stroke-width="41" pathLength="16" stroke-dasharray="1 1"/>
+								<circle r="39" fill="none" stroke="#FEFCF6" stroke-width="4"/>
+								<circle r="41" fill="none" stroke="#DED4B9" stroke-width="1"/>
+								<circle r="26.2" fill="url(#vg-disc)" stroke="rgba(176,130,47,.5)" stroke-width="1.5"/>
+								<text y="2" text-anchor="middle" dominant-baseline="central" font-family="Amiri, serif" font-size="30" fill="#EFE0BC">خ</text>
+							</g>
+							<rect x="302" y="350" width="116" height="23" rx="4" fill="#FEFCF6" opacity=".96" stroke="#DED4B9" stroke-width="1"/>
+							<text x="360" y="366" text-anchor="middle" font-family="Newsreader, serif" font-weight="700" font-size="15" letter-spacing="-.01em" fill="#101320">al-Khwarizmi</text>
+							<text x="360" y="388" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9.5" letter-spacing=".06em" fill="#8C6620">c. 780&#8211;850</text>
+						</g>
+					</svg>
+					<figcaption class="vg-cap">Every line is a relationship; its texture is the evidence.</figcaption>
+				</figure>
+
+				<div class="legend" aria-label="How to read the lines">
+					<p class="lg-t">How to read the lines</p>
+					<div class="lg-row">
+						<svg width="72" height="12" viewBox="0 0 72 12" aria-hidden="true"><line x1="4" y1="6" x2="68" y2="6" stroke="#8C6620" stroke-width="2"/></svg>
+						<span class="lt">Met &amp; worked beside him</span>
+						<span class="ld">documented</span>
+					</div>
+					<div class="lg-row">
+						<svg width="72" height="12" viewBox="0 0 72 12" aria-hidden="true"><line x1="4" y1="6" x2="68" y2="6" stroke="#8A7A55" stroke-width="1.8" stroke-dasharray="8 6"/></svg>
+						<span class="lt">May have crossed paths</span>
+						<span class="ld">shared his city &amp; decades</span>
+					</div>
+					<div class="lg-row">
+						<svg width="72" height="12" viewBox="0 0 72 12" aria-hidden="true"><line x1="68" y1="6" x2="16" y2="6" stroke="#335E9E" stroke-width="1.8" stroke-dasharray="2 6"/><path d="M13 6 L22 2 L22 10 Z" fill="#335E9E"/></svg>
+						<span class="lt">Knew them through books</span>
+						<span class="ld">a source he read — arrow in</span>
+					</div>
+					<div class="lg-row">
+						<svg width="72" height="12" viewBox="0 0 72 12" aria-hidden="true"><line x1="4" y1="6" x2="56" y2="6" stroke="#A14A60" stroke-width="1.8" stroke-dasharray="2 6"/><path d="M59 6 L50 2 L50 10 Z" fill="#A14A60"/></svg>
+						<span class="lt">Knew him through books</span>
+						<span class="ld">an heir who read him — arrow out</span>
+					</div>
+					<div class="lg-cats">
+						<span class="lg-cat"><span class="dot" style="background:#B0822F"></span>Subject &amp; patrons</span>
+						<span class="lg-cat"><span class="dot" style="background:#335E9E"></span>Sources &amp; teachers</span>
+						<span class="lg-cat"><span class="dot" style="background:#3C7E6E"></span>House of Wisdom peers</span>
+						<span class="lg-cat"><span class="dot" style="background:#A14A60"></span>Heirs</span>
+						<span class="lg-cat"><span class="dot" style="background:#8A7A55"></span>The wider age</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ─── 02 · What's coming ───────────────────────────── -->
+		<section class="sec" aria-labelledby="sec-coming">
+			<div class="sec-h">
+				<div class="no">02</div>
+				<h2 id="sec-coming">What&#8217;s coming</h2>
+				<p class="ar"><span lang="ar" dir="rtl">ما القادم</span></p>
+			</div>
+			<div>
+				<div class="ms">
+					<span class="dia" aria-hidden="true"></span>
+					<div>
+						<p class="t">The Majlis Explorer <span class="ar" lang="ar" dir="rtl">مجلس</span></p>
+						<p class="d">An interactive radial map of one figure&#8217;s world — rings of certainty, a sliding profile panel, multi-focal comparisons — fully bilingual English&#8202;/&#8202;Arabic with true right-to-left reading.</p>
+					</div>
+					<span class="tag">EXPLORER</span>
+				</div>
+				<div class="ms">
+					<span class="dia verd" aria-hidden="true"></span>
+					<div>
+						<p class="t">al-Khwarizmi &amp; his world <span class="ar" lang="ar" dir="rtl">الخوارزمي وعالمه</span></p>
+						<p class="d">The demo subject: the House of Wisdom, the caliphs who commissioned it, the sources he inherited and the heirs of his method. An initial roster of 23 figures — an example set, not a limit; the roster keeps growing.</p>
+					</div>
+					<span class="tag">ROSTER</span>
+				</div>
+				<div class="ms">
+					<span class="dia lapis" aria-hidden="true"></span>
+					<div>
+						<p class="t">An editorial pipeline <span class="ar" lang="ar" dir="rtl">خط تحرير</span></p>
+						<p class="d">From a Google Sheet, through a validating command-line engine, to a living site — every claim checked against the model before it reaches the map, and the published site refreshing as the record grows.</p>
+					</div>
+					<span class="tag">PIPELINE</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ─── 03 · Follow the build ────────────────────────── -->
+		<section class="sec" aria-labelledby="sec-follow" style="border-bottom:2px solid var(--ink)">
+			<div class="sec-h">
+				<div class="no">03</div>
+				<h2 id="sec-follow">Built in the open</h2>
+				<p class="ar"><span lang="ar" dir="rtl">بناء مفتوح</span></p>
+			</div>
+			<div>
+				<p class="p">The plan, the decisions, and the progress log are all public. The build plan is published as a living page and updated as each phase lands; the source — engine, CLI, and site — lives on GitHub.</p>
+				<div class="follow-links">
+					<a class="btn brass" href="https://alalaam-plan.pages.dev"><span class="dia" aria-hidden="true"></span>Follow the build</a>
+					<a class="btn" href="https://github.com/moeghashim/alalaam">github.com/moeghashim/alalaam</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ─── Footer ───────────────────────────────────────── -->
+		<footer class="foot">
+			<div class="fb">
+				<span class="medallion" style="width:26px;height:26px" aria-hidden="true"><span class="glyph" style="font-size:10px">خ</span></span>
+				<span class="nm">Alalaam</span>
+			</div>
+			<p class="f1">A work in progress — everything here is draft, unverified, and subject to change.</p>
+			<p class="f2">Built in the open · <a href="https://alalaam-plan.pages.dev">the plan</a> · <a href="https://github.com/moeghashim/alalaam">GitHub</a></p>
+		</footer>
+
+	</main>
+
+</body>
+</html>
