@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alalaam — Build Plan</title>
+<style>
+  :root{
+    --paper:#F8F5EB; --paper2:#F3EFE1; --card:#FEFCF6; --inset:#F1EDDD;
+    --line:#E9E2CE; --line2:#DED4B9; --line3:#CEC29F;
+    --ink:#101320; --ink2:#262C42; --ink3:#4E556E; --ink4:#898FA6;
+    --brass:#B0822F; --brass-deep:#8C6620; --brass-tint:#EFE0BC;
+    --lapis:#335E9E; --lapis-tint:#D9E2F0;
+    --verd:#3C7E6E; --verd-tint:#D5E6DF;
+    --rose:#A14A60; --rose-tint:#F0D9DF;
+    --sand:#8A7A55; --sand-tint:#E9DEC2;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  html{background:var(--paper)}
+  body{
+    margin:0; font-family:var(--sans); color:var(--ink2); line-height:1.6; font-size:15.5px;
+    background:var(--paper);
+    background-image:
+      repeating-linear-gradient(45deg, rgba(140,102,32,.025) 0 1px, transparent 1px 42px),
+      repeating-linear-gradient(-45deg, rgba(140,102,32,.025) 0 1px, transparent 1px 42px);
+  }
+  .wrap{max-width:880px; margin:0 auto; padding:48px 28px 96px}
+  header.masthead{border-bottom:2px solid var(--ink); padding-bottom:26px; margin-bottom:14px}
+  .kicker{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--brass-deep); margin:0 0 10px}
+  h1{font-family:var(--serif); font-weight:600; font-size:44px; line-height:1.08; color:var(--ink); margin:0 0 8px; text-wrap:balance; letter-spacing:-.01em}
+  h1 .ar{font-size:.62em; color:var(--ink3); font-weight:400}
+  .dek{font-family:var(--serif); font-style:italic; font-size:18px; color:var(--ink3); margin:0; max-width:62ch}
+  .statusbar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:14px 0 34px; border-bottom:1px solid var(--line2); margin-bottom:40px}
+  .pill{font-family:var(--mono); font-size:11px; padding:4px 11px; border-radius:999px; border:1px solid var(--line3); background:var(--card); color:var(--ink3); white-space:nowrap}
+  .pill.brass{background:var(--brass-tint); border-color:var(--brass); color:var(--brass-deep); font-weight:600}
+  h2{font-family:var(--serif); font-weight:600; font-size:25px; color:var(--ink); margin:56px 0 6px; text-wrap:balance}
+  h2::before{content:""; display:inline-block; width:8px; height:8px; background:var(--brass); transform:rotate(45deg); margin-right:12px; vertical-align:2px}
+  h3{font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--ink3); margin:30px 0 10px}
+  .hairline{height:1px; background:linear-gradient(90deg,var(--line3),transparent); margin:4px 0 18px}
+  p{max-width:70ch; margin:0 0 14px}
+  a{color:var(--lapis); text-decoration-color:var(--lapis-tint); text-underline-offset:3px}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--brass); outline-offset:2px}
+  code{font-family:var(--mono); font-size:.86em; background:var(--inset); border:1px solid var(--line); border-radius:3px; padding:1px 5px; color:var(--ink2)}
+  strong{color:var(--ink)}
+  /* phase tracker */
+  .phases{display:flex; flex-direction:column; gap:0; border:1px solid var(--line2); border-radius:8px; background:var(--card); box-shadow:0 24px 50px -36px rgba(16,19,32,.35); overflow:hidden}
+  .phase{display:grid; grid-template-columns:118px 1fr auto; gap:16px; align-items:baseline; padding:15px 20px; border-bottom:1px dotted var(--line2)}
+  .phase:last-child{border-bottom:none}
+  .phase .v{font-family:var(--mono); font-size:12px; font-weight:700; color:var(--ink)}
+  .phase .t{min-width:0}
+  .phase .t b{display:block; font-family:var(--serif); font-size:16.5px; font-weight:600; color:var(--ink)}
+  .phase .t span{font-size:13px; color:var(--ink3)}
+  .state{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; padding:3px 10px; border-radius:999px; white-space:nowrap}
+  .state.planned{background:var(--sand-tint); color:var(--sand); border:1px solid var(--line3)}
+  .state.active{background:var(--brass-tint); color:var(--brass-deep); border:1px solid var(--brass)}
+  .state.done{background:var(--verd-tint); color:var(--verd); border:1px solid var(--verd)}
+  .state.gate{background:var(--lapis-tint); color:var(--lapis); border:1px solid var(--lapis)}
+  /* tables */
+  .tblwrap{overflow-x:auto; border:1px solid var(--line2); border-radius:8px; background:var(--card); margin:14px 0 8px}
+  table{border-collapse:collapse; width:100%; font-size:13.5px}
+  th{font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink3); text-align:left; padding:10px 14px; border-bottom:1px solid var(--line2); background:var(--paper2); white-space:nowrap}
+  td{padding:10px 14px; border-bottom:1px dotted var(--line); vertical-align:top; color:var(--ink2)}
+  tr:last-child td{border-bottom:none}
+  td:first-child{font-weight:600; color:var(--ink); white-space:nowrap}
+  [dir="rtl"], .arabic{font-family:var(--serif)}
+  /* cards & callouts */
+  .callout{border:1px solid var(--line2); border-inline-start:3px solid var(--brass); background:var(--card); border-radius:0 6px 6px 0; padding:14px 18px; margin:16px 0; max-width:none}
+  .callout.lapis{border-inline-start-color:var(--lapis)}
+  .callout.rose{border-inline-start-color:var(--rose)}
+  .callout p{margin:0 0 8px} .callout p:last-child{margin:0}
+  .callout .tag{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--brass-deep); display:block; margin-bottom:5px}
+  .callout.lapis .tag{color:var(--lapis)} .callout.rose .tag{color:var(--rose)}
+  .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:14px 0}
+  .card{border:1px solid var(--line2); border-radius:8px; background:var(--card); padding:16px 18px}
+  .card b.h{font-family:var(--serif); font-size:16px; color:var(--ink); display:block; margin-bottom:6px}
+  .card p{font-size:13.5px; margin:0}
+  ul{padding-left:22px; margin:0 0 14px; max-width:70ch}
+  li{margin-bottom:6px}
+  li::marker{color:var(--brass)}
+  /* grammar swatches */
+  .gram{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin:14px 0}
+  .gram .g{border:1px solid var(--line2); border-radius:8px; background:var(--card); padding:13px 15px; font-size:12.5px; color:var(--ink3)}
+  .gram .g b{display:block; color:var(--ink); font-size:13px; margin-bottom:4px}
+  .gram svg{display:block; margin-bottom:8px}
+  .med{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 4px}
+  .med .m{display:inline-flex; align-items:center; gap:7px; font-size:12px; color:var(--ink3); border:1px solid var(--line); background:var(--card); border-radius:999px; padding:3px 12px 3px 5px}
+  .med .dot{width:16px; height:16px; border-radius:50%; border:2px solid}
+  footer{margin-top:70px; border-top:1px solid var(--line2); padding-top:18px; font-size:12.5px; color:var(--ink4); font-family:var(--mono)}
+  .log li{font-size:13.5px}
+  @media (max-width:640px){ .phase{grid-template-columns:1fr; gap:4px} h1{font-size:34px} }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header class="masthead">
+  <p class="kicker">Product Requirements &amp; Build Plan · signed off 2026-07-08 · build in progress</p>
+  <h1>Alalaam <span class="ar" lang="ar" dir="rtl">الأعلام</span></h1>
+  <p class="dek">One historical figure at the centre of their world, drawn as an evidence graph — who they met, who they may have met, and who they only knew through books. Demo subject: al-Khwarizmi, with 23 related figures.</p>
+</header>
+
+<div class="statusbar">
+  <span class="pill brass">Status: signed off · v0.0 foundation complete · CI green</span>
+  <span class="pill">base: moeghashim/PI-Starter</span>
+  <span class="pill"><a href="https://github.com/moeghashim/alalaam">repo: moeghashim/alalaam</a></span>
+  <span class="pill">deploys to: Cloudflare Workers + D1 + DO</span>
+  <span class="pill">implementer: Codex</span>
+</div>
+
+<h2>Progress</h2>
+<div class="hairline"></div>
+<div class="phases">
+  <div class="phase"><span class="v">GATE</span><div class="t"><b>Plan sign-off</b><span>PRD reviewed, three gaps fixed, Cloudflare + PI-Starter decisions locked. Signed off by the owner 2026-07-08.</span></div><span class="state done">done</span></div>
+  <div class="phase"><span class="v">v0.0</span><div class="t"><b>Foundation</b><span>PI-Starter merged into moeghashim/alalaam (42c4e82) · fork-boundary entry in progress.md · build/check/test/agent-check green locally · CI Required checks green on main.</span></div><span class="state done">done</span></div>
+  <div class="phase"><span class="v">v0.1</span><div class="t"><b>Engine — core + CLI</b><span>Types, zod schema, deriveContext, compile · seed:legacy imports all 23 figures with category-parity assertion + circle notes.</span></div><span class="state active">up next — handoff</span></div>
+  <div class="phase"><span class="v">v0.2</span><div class="t"><b>Skill</b><span>SKILL.md wrapping the alalaam CLI so Codex / Claude Code operate content through natural language.</span></div><span class="state planned">planned</span></div>
+  <div class="phase"><span class="v">v0.3</span><div class="t"><b>Web on Cloudflare</b><span>apps/web adapted to Workers via @opennextjs/cloudflare · pixel-faithful explorer · PI-Starter Cloudflare adaptation kit delivered.</span></div><span class="state planned">planned</span></div>
+  <div class="phase"><span class="v">v0.4</span><div class="t"><b>Live layer — D1 + Durable Objects</b><span>Migrations · alalaam db push · live-refresh: a synced change appears on the published site within seconds.</span></div><span class="state planned">planned</span></div>
+  <div class="phase"><span class="v">v0.5</span><div class="t"><b>Future (deferred)</b><span>In-app editing admin · multi-user collaboration · a second subject.</span></div><span class="state planned">deferred</span></div>
+</div>
+
+<h2>The build, in three layers</h2>
+<div class="hairline"></div>
+<div class="cols">
+  <div class="card"><b class="h">1 · Core + CLI</b><p>A TypeScript engine (<code>packages/core</code>) plus an oclif <code>alalaam</code> binary (<code>packages/cli</code>) owning all data operations: pull from Google Sheets, validate, derive the evidence graph, compile artifacts.</p></div>
+  <div class="card"><b class="h">2 · Skill</b><p>A local <code>SKILL.md</code> wrapping the CLI so a coding agent operates Alalaam's content through natural language instead of hand-editing data files.</p></div>
+  <div class="card"><b class="h">3 · Web</b><p>Next.js Majlis Explorer + brand pages on <strong>Cloudflare Workers</strong>, reading the same core; D1 + a Durable Object give the published site live refresh on sync.</p></div>
+</div>
+
+<h2>Foundation: PI-Starter → Cloudflare</h2>
+<div class="hairline"></div>
+<p>The project is built on a clone of <a href="https://github.com/moeghashim/PI-Starter">moeghashim/PI-Starter</a> (npm workspaces, Next.js 16 in <code>apps/web</code>, Biome, strict TS, CI <code>Required checks</code>, Codex agent layer, append-only <code>progress.md</code>), pushed to <a href="https://github.com/moeghashim/alalaam">moeghashim/alalaam</a>. Starter conventions win over earlier plan drafts — npm replaces pnpm, Biome replaces ESLint/Prettier, <code>tsx --test</code> replaces Vitest.</p>
+<div class="callout lapis">
+  <span class="tag">Upstream deliverable — Cloudflare adaptation kit</span>
+  <p>PI-Starter targets Vercel; Alalaam is hosted on Cloudflare. The clone gains <code>@opennextjs/cloudflare</code> + <code>wrangler.jsonc</code> + <code>open-next.config.ts</code>, a provider-neutral replacement for the <code>VERCEL=1</code> type-check escape hatch, and <code>docs/deploying-to-cloudflare.md</code> mirroring the starter's Vercel doc.</p>
+  <p>The <em>generic</em> subset is packaged as <code>pi-starter-cloudflare/</code> (doc + config templates + patch, Alalaam bindings stripped) — ready to open as a PR against the original PI-Starter repo. Delivered in v0.3.</p>
+</div>
+
+<h2>Stack</h2>
+<div class="hairline"></div>
+<div class="tblwrap"><table>
+  <tr><th>Layer</th><th>Choice</th></tr>
+  <tr><td>Language</td><td>TypeScript strict, ESM, Node 22 — shared types from <code>core</code></td></tr>
+  <tr><td>Monorepo</td><td>npm workspaces: <code>packages/core</code> · <code>packages/cli</code> · <code>apps/web</code> · <code>workers/realtime</code> · <code>skill</code> · <code>data</code> · <code>migrations</code></td></tr>
+  <tr><td>CLI</td><td>oclif, binary <code>alalaam</code></td></tr>
+  <tr><td>Validation</td><td>zod — schema + referential integrity over Sheet rows, errors name the offending row</td></tr>
+  <tr><td>Authoring</td><td>Google Sheets (read-only service account) → committed <code>figures.seed.json</code> → derived <code>graph.derived.json</code></td></tr>
+  <tr><td>Web</td><td>Next.js App Router on Cloudflare Workers via <code>@opennextjs/cloudflare</code></td></tr>
+  <tr><td>Data / live</td><td>Cloudflare D1 (load target, not authoring) + Durable Object version-stamp broadcast</td></tr>
+  <tr><td>Styling</td><td>Handoff CSS token system ported verbatim — Editorial mood, ornament 0.5, motion on</td></tr>
+  <tr><td>Quality</td><td>Biome · <code>tsgo --noEmit</code> · <code>tsx --test</code> · Conventional Commits · one PR per task · CI gate on every PR</td></tr>
+</table></div>
+
+<h2>Command surface</h2>
+<div class="hairline"></div>
+<div class="tblwrap"><table>
+  <tr><th>Command</th><th>Does</th></tr>
+  <tr><td><code>alalaam sheet sync</code></td><td>Sheet → validate → compile → seed. Defaults to a dry-run diff; <code>--write</code> applies.</td></tr>
+  <tr><td><code>alalaam validate</code></td><td>Schema + integrity checks; non-zero exit naming the offending row.</td></tr>
+  <tr><td><code>alalaam figure add</code> / <code>link add</code></td><td>Bootstrap tools — append to the seed; when a Sheet is configured they warn and print the exact Sheet rows to paste (two-writers rule).</td></tr>
+  <tr><td><code>alalaam compile</code></td><td>Seed → <code>graph.derived.json</code> (tiers, categories, edge textures).</td></tr>
+  <tr><td><code>alalaam graph export</code></td><td>Print a subject's derived graph as JSON.</td></tr>
+  <tr><td><code>alalaam db migrate</code> / <code>db push</code></td><td>v0.4 — apply D1 migrations; idempotent upsert + DO version bump → live refresh.</td></tr>
+  <tr><td><code>alalaam seed:legacy</code></td><td>One-time import of the 23 prototype figures — asserts category parity, keeps circle notes.</td></tr>
+</table></div>
+<div class="callout">
+  <span class="tag">Two-writers rule</span>
+  <p>The Sheet is canonical and Sheets access is read-only, so anything written only to <code>figures.seed.json</code> dies at the next <code>sheet sync --write</code>. <code>figure add</code> / <code>link add</code> therefore warn loudly and print paste-ready Sheet rows; the dry-run diff surfaces any un-pasted local addition as a would-be deletion before it is lost.</p>
+</div>
+
+<h2>Data model — review fixes locked in</h2>
+<div class="hairline"></div>
+<ul>
+  <li><strong>Bilingual everywhere:</strong> every human-facing string is <code>{ en, ar }</code>; Eastern-Arabic digits rendered at display time. Full RTL.</li>
+  <li><strong>Edges, one row each:</strong> directed <code>Relationship</code> (<code>teacher · patron · source · peer · acquaintance · contemporary</code>) with evidence <code>nature</code> (<code>documented · plausible · booksOnly</code>); inverses derived at read time, never authored.</li>
+  <li><strong>Category &amp; tier are derived</strong> per focal figure via <code>deriveContext</code> — explicit edges beat the date heuristic; dates are the no-edge fallback.</li>
+  <li><strong>New — <code>circleNotes</code>:</strong> prose-only "Circle of People" chips (people outside the roster: "Thabit ibn Qurra", "None recorded by name") are stored per figure so <code>seed:legacy</code> loses nothing and the profile panel stays pixel-faithful. Fourth Sheet tab <code>CircleNotes</code>.</li>
+  <li><strong>New — category parity assertion:</strong> the prototype stores <code>cat</code> per figure; <code>seed:legacy</code> fails loudly if the derivation disagrees on any of the 23 (medallion colour is grammar, not decoration).</li>
+  <li><strong>Clarified:</strong> numeric validation applies only to <code>birthYear</code>/<code>deathYear</code>; publication years stay display strings ("c.820"). Shared-city matching keys on the EN <code>lived</code> value; AR is display-only.</li>
+</ul>
+
+<h2>The graph grammar — non-negotiable</h2>
+<div class="hairline"></div>
+<p>Every visual property encodes a claim about the historical record. Rings = distance of certainty; edge texture = kind of evidence; weight/opacity = focus, never meaning.</p>
+<div class="gram">
+  <div class="g"><svg width="100%" height="10" aria-hidden="true"><line x1="0" y1="5" x2="100%" y2="5" stroke="#8C6620" stroke-width="2.2"/></svg><b>Documented — solid brass</b>Met &amp; worked beside him. Ring 1, r 0.28×.</div>
+  <div class="g"><svg width="100%" height="10" aria-hidden="true"><line x1="0" y1="5" x2="100%" y2="5" stroke="#8A7A55" stroke-width="2" stroke-dasharray="8 6"/></svg><b>Possible — long-dash sand</b>May have crossed paths. Ring 2, r 0.39×.</div>
+  <div class="g"><svg width="100%" height="10" aria-hidden="true"><line x1="0" y1="5" x2="100%" y2="5" stroke="#335E9E" stroke-width="2" stroke-dasharray="2 6"/></svg><b>Books, arrow in — lapis</b>A source he read. Ring 3 left arc.</div>
+  <div class="g"><svg width="100%" height="10" aria-hidden="true"><line x1="0" y1="5" x2="100%" y2="5" stroke="#A14A60" stroke-width="2" stroke-dasharray="2 6"/></svg><b>Books, arrow out — rose</b>An heir who read him. Ring 3 right arc.</div>
+</div>
+<div class="med">
+  <span class="m"><span class="dot" style="border-color:#B0822F;background:#EFE0BC"></span>brass — subject &amp; patrons</span>
+  <span class="m"><span class="dot" style="border-color:#335E9E;background:#D9E2F0"></span>lapis — sources &amp; teachers</span>
+  <span class="m"><span class="dot" style="border-color:#3C7E6E;background:#D5E6DF"></span>verdigris — peers</span>
+  <span class="m"><span class="dot" style="border-color:#A14A60;background:#F0D9DF"></span>rose — heirs</span>
+  <span class="m"><span class="dot" style="border-color:#8A7A55;background:#E9DEC2"></span>sand — the wider age</span>
+</div>
+<p style="font-size:13px;color:var(--ink3)">Medallions are 16-segment conic rings with an Amiri initial — <strong>never a fabricated face</strong>. Full specs (sizes, arcs, dash patterns, motion) port verbatim from the handoff CSS in v0.3.</p>
+
+<h2>Non-goals</h2>
+<div class="hairline"></div>
+<ul>
+  <li>No in-app editing — authoring is the Sheet; the app is read-only until v0.5 revisits an admin.</li>
+  <li>No multi-user collaboration — real-time is live-refresh only.</li>
+  <li>No raster portraits; no auth in v0.1–v0.4 (public read-only site).</li>
+  <li>Single demo subject shipped; the schema stays multi-subject-ready.</li>
+</ul>
+
+<h2>Review verdict &amp; changelog</h2>
+<div class="hairline"></div>
+<div class="callout rose">
+  <span class="tag">Verdict — 2026-07-07</span>
+  <p><strong>Approve with revisions — all revisions now applied to PLAN.md.</strong> Architecture, sequencing, and design-fidelity sections were sound; three substantive gaps were found against the design handoff and fixed.</p>
+</div>
+<ul class="log">
+  <li><strong>Fixed:</strong> edge model couldn't represent prose-only circle chips → added <code>circleNotes</code> + a <code>CircleNotes</code> Sheet tab.</li>
+  <li><strong>Fixed:</strong> <code>figure add</code>/<code>link add</code> edits would be silently destroyed by the next sync → two-writers rule.</li>
+  <li><strong>Fixed:</strong> derived medallion categories unverified against prototype <code>cat</code> → parity assertion in <code>seed:legacy</code>, added to v0.1 success criteria.</li>
+  <li><strong>Added:</strong> PI-Starter as foundation repo; <code>moeghashim/alalaam</code> as project repo; Cloudflare hosting locked; Workers via <code>@opennextjs/cloudflare</code> (supersedes "Pages"); upstreamable Cloudflare adaptation kit as a v0.3 deliverable; tooling reconciled to starter conventions (npm, Biome, node:test).</li>
+  <li><strong>Clarified:</strong> numeric-year validation scope; EN-keyed city matching; CI inherited from the starter as the PR gate.</li>
+</ul>
+<h3>Build log</h3>
+<ul class="log">
+  <li><strong>2026-07-08 — plan signed off;</strong> v0.0 foundation complete: PI-Starter history merged (<code>42c4e82</code>), fork-boundary entry appended to <code>progress.md</code>, full quality gate green under Node 22, CI <code>Required checks</code> passing on <code>main</code>. This status page deployed to Cloudflare Pages from <code>plan-site/</code>.</li>
+  <li><strong>2026-07-07 — plan committed</strong> (<code>a25e8b7</code>) with the review revisions and pushed to <code>main</code>.</li>
+</ul>
+
+<footer>PLAN.md is the single source of truth — the Decisions log wins on any conflict. · This page tracks the build and is updated as phases land. · Last updated 2026-07-08.</footer>
+</div>
+</body>
+</html>
