@@ -107,8 +107,7 @@
 </header>
 
 <div class="statusbar">
-  <span class="pill brass">Status: v0.1–v0.4 + redesign ALL shipped — <a href="https://alalaam.mohanadgh.workers.dev">explorer live</a></span>
-  <span class="pill"><a href="https://alalaam-www.mohanadgh.workers.dev">teaser site live</a> → alalaam.com pending NS switch</span>
+  <span class="pill brass">Status: shipped — <a href="https://alalaam.com">alalaam.com is live</a> (v0.1–v0.4 + redesign)</span>
   <span class="pill">base: moeghashim/PI-Starter</span>
   <span class="pill"><a href="https://github.com/moeghashim/alalaam">repo: moeghashim/alalaam</a></span>
   <span class="pill">deploys to: Cloudflare Workers + D1 + DO</span>
@@ -230,6 +229,7 @@
 </ul>
 <h3>Build log</h3>
 <ul class="log">
+  <li><strong>2026-07-08 — <a href="https://alalaam.com">alalaam.com</a> is live.</strong> The owner switched nameservers to Cloudflare; the explorer worker now owns the apex and www via zone routes, and the interim teaser worker is retired (www/ removed). Remaining open items: the real Google Sheet, and the optional PI-Starter upstream PR.</li>
   <li><strong>2026-07-08 — v0.4 + redesign shipped (PRs #5, #6): the committed scope is complete.</strong> The live layer runs on D1 + a Durable Object (a <code>db push</code> reaches the published site within seconds), and the redesign IA is live: the explorer is the homepage with the Cities tab, the new Cities &amp; roads page, the footer pill (Under development · Guidelines · Roadmap · The plan), and the الأعلام wordmark. Remaining outside the roadmap: alalaam.com nameserver switch (owner), the real Google Sheet, and the optional PI-Starter upstream PR.</li>
   <li><strong>2026-07-08 — v0.3 Majlis Explorer shipped (PR #4):</strong> full explorer live on Cloudflare Workers via @opennextjs/cloudflare — signature ring view (placement computed from data, tested at roster sizes 5/24/100), sliding profile panel, multi-focal with shared circle, compare view, brand pages, full EN/AR RTL with Eastern-Arabic digits; CSS tokens byte-identical to the handoff; upstream Cloudflare kit for PI-Starter included. v0.4 live layer started.</li>
   <li><strong>2026-07-08 — public teaser site shipped (PR #3):</strong> a static landing page in the full design language (grammar vignette, under-development notice, links here and to GitHub), live at <a href="https://alalaam-www.mohanadgh.workers.dev">alalaam-www.mohanadgh.workers.dev</a>; it claims <strong>alalaam.com</strong> automatically once the domain's nameservers move to Cloudflare. Same PR fixed the docs front-matter that had main CI red and authenticated CI's GitHub API calls to kill the macOS rate-limit flake.</li>
