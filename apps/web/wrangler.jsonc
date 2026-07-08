@@ -16,6 +16,8 @@
 		{ "pattern": "alalaam.com/*", "zone_name": "alalaam.com" },
 		{ "pattern": "www.alalaam.com/*", "zone_name": "alalaam.com" }
 	],
+	// Keep the workers.dev URL alive alongside the domain (older links point at it).
+	"workers_dev": true,
 	// v0.4 live layer (PLAN.md §10): the web worker reads the roster from D1 at
 	// request time; `alalaam db migrate` / `db push` target the same database
 	// through this config (its migrations live at the repo root ../../migrations).
