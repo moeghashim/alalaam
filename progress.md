@@ -317,3 +317,11 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - packages/core/src/sheet.ts
   - packages/cli/src/commands/sheet/sync.ts
   - skill/SKILL.md
+## 2026-07-08T16:52:22.951Z
+- Trigger: commit
+- Learning: Workers custom-domain attach cannot override DNS records a zone inherited from a registrar import: the API returns 100117 (externally managed DNS records) even with override_existing_dns_record=true, so the parking A/CNAME records must be deleted in the dashboard first. wrangler leaves previously deployed zone routes in place when they are removed from config, so the site keeps serving through the old routes while the custom-domain config waits for the DNS cleanup. Email Routing is fully scriptable with the wrangler OAuth token (email_routing:write): destination addresses matching the account owner email are auto-verified, so salam@alalaam.com -> mohanadgh@gmail.com went live with no manual verification click.
+- Context: chore(web): switch worker to custom domains for alalaam.com
+- Branch: worktree-agent-ac05e3c13a0feb62c
+- Actor: Moe Ghashim <mohanadgh@gmail.com>
+- Changed Paths:
+  - apps/web/wrangler.jsonc

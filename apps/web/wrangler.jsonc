@@ -9,12 +9,12 @@
 		"binding": "ASSETS"
 	},
 	// The explorer IS the homepage (PLAN.md Decisions: "Site IA (redesign)") —
-	// it owns the apex and www. Zone routes (not custom domains): the zone was
-	// imported from name.com with proxied DNS records already in place, and
-	// routes intercept proxied traffic without recreating DNS.
+	// it owns the apex and www as real Workers custom domains (Cloudflare manages
+	// the DNS records). The zone's inherited name.com parking records were
+	// replaced by the custom-domain attach.
 	"routes": [
-		{ "pattern": "alalaam.com/*", "zone_name": "alalaam.com" },
-		{ "pattern": "www.alalaam.com/*", "zone_name": "alalaam.com" }
+		{ "pattern": "alalaam.com", "custom_domain": true },
+		{ "pattern": "www.alalaam.com", "custom_domain": true }
 	],
 	// Keep the workers.dev URL alive alongside the domain (older links point at it).
 	"workers_dev": true,
