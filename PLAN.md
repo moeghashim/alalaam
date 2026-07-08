@@ -2,7 +2,7 @@
 
 > ⚠️ **Under development:** this project is a work in progress. The plan, the build status, and the historical content it describes are draft material — not yet reliable, unverified, and subject to change without notice.
 
-> **Status:** signed off 2026-07-08 · **v0.0 Foundation complete** (PI-Starter merged, CI green) · v0.1 Engine is next, handing to the implementing agent (Codex).
+> **Status:** signed off 2026-07-08 · **v0.1 Engine complete** (PR #1 merged 2026-07-08: core + CLI, seed:legacy parity green, roster-scale decision locked) · v0.2 Skill is next.
 > **Authority:** The **Decisions log** at the end of this document is the single source of truth. When any downstream work conflicts with this file, the Decisions-log row wins.
 > **Repos:** built on a clone of [`moeghashim/PI-Starter`](https://github.com/moeghashim/PI-Starter) · project lives at [`moeghashim/alalaam`](https://github.com/moeghashim/alalaam) · hosted on **Cloudflare**.
 > **Status page:** [alalaam-plan.pages.dev](https://alalaam-plan.pages.dev) — this plan as a live page (source `plan-site/index.html`, deployed via `wrangler pages deploy plan-site --project-name alalaam-plan`), updated as phases land.
