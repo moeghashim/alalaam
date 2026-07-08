@@ -1,0 +1,53 @@
+{
+	"name": "@alalaam/cli",
+	"version": "0.1.0",
+	"description": "alalaam — the Alalaam data engine CLI: sync, validate, derive, and export the evidence graph",
+	"license": "MIT",
+	"type": "module",
+	"bin": {
+		"alalaam": "./bin/run.js"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"bin",
+		"dist/**/*",
+		"README.md"
+	],
+	"scripts": {
+		"clean": "rm -rf dist",
+		"build": "tsgo -p tsconfig.build.json",
+		"dev": "tsgo -p tsconfig.build.json --watch --preserveWatchOutput",
+		"test": "tsx --test test/**/*.test.ts"
+	},
+	"dependencies": {
+		"@alalaam/core": "*",
+		"@oclif/core": "^4.5.4"
+	},
+	"oclif": {
+		"bin": "alalaam",
+		"dirname": "alalaam",
+		"commands": "./dist/commands",
+		"topicSeparator": " ",
+		"topics": {
+			"sheet": {
+				"description": "Pull and sync the Google Sheet authoring source"
+			},
+			"figure": {
+				"description": "Add figures to the seed (bootstrap tool — the Sheet is canonical)"
+			},
+			"link": {
+				"description": "Add connections between figures (bootstrap tool — the Sheet is canonical)"
+			},
+			"graph": {
+				"description": "Inspect derived evidence graphs"
+			},
+			"seed": {
+				"description": "One-time seed imports"
+			}
+		}
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	}
+}

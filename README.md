@@ -1,4 +1,27 @@
-# pi-starter
+# Alalaam
+
+**Alalaam** ("lives, in context") places one historical figure at the centre of their world and draws that world as an
+evidence graph. See [PLAN.md](PLAN.md) (authoritative PRD) and the live status page at
+[alalaam-plan.pages.dev](https://alalaam-plan.pages.dev). Built on the PI-Starter baseline (kept below); hosted on Cloudflare.
+
+## Quickstart (engine + CLI)
+
+```bash
+npm run doctor && npm install   # Node 22 (.nvmrc)
+npm run build
+node packages/cli/bin/run.js seed legacy   # 23-figure prototype import (asserts parity)
+node packages/cli/bin/run.js compile       # → data/graph.derived.json
+node packages/cli/bin/run.js graph export --subject kw --lang en
+```
+
+Google Sheets sync (optional until the Sheet exists): set `GOOGLE_SHEETS_ID` and
+`GOOGLE_APPLICATION_CREDENTIALS` (a read-only service-account JSON key) in `.env`, then
+`node packages/cli/bin/run.js sheet sync` (dry-run diff; `--write` applies). The Sheet is canonical once
+configured — `figure add` / `link add` are bootstrap tools (two-writers rule, PLAN.md §5).
+
+---
+
+# pi-starter (baseline)
 
 Monorepo starter for solo maintainers shipping both deployable apps and publishable packages:
 - Vercel-ready Next.js app in `apps/web`

@@ -1,7 +1,7 @@
 {
-	"name": "@pi-starter/core",
-	"version": "0.0.2",
-	"description": "Core library",
+	"name": "@alalaam/core",
+	"version": "0.1.0",
+	"description": "Alalaam domain engine — bilingual figure model, evidence-graph derivation, seed compilation",
 	"license": "MIT",
 	"type": "module",
 	"main": "./dist/index.js",
@@ -15,8 +15,10 @@
 		"clean": "rm -rf dist",
 		"build": "tsgo -p tsconfig.build.json",
 		"dev": "tsgo -p tsconfig.build.json --watch --preserveWatchOutput",
-		"test": "tsx --test test/**/*.test.ts",
-		"prepublishOnly": "npm run clean && npm run build"
+		"test": "tsx --test test/**/*.test.ts"
+	},
+	"dependencies": {
+		"zod": "^4.1.11"
 	},
 	"engines": {
 		"node": ">=20.0.0"
