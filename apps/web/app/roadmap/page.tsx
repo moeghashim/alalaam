@@ -190,7 +190,13 @@ export default function RoadmapPage() {
 			</Phase>
 
 			<footer className="pg-foot">
-				<span className="f1">Draft — dates and scope are proposals, not commitments.</span>
+				<span className="f1">
+					Draft — dates and scope are proposals, not commitments. By{" "}
+					<a href="https://x.com/moeghashim" rel="me">
+						@moeghashim
+					</a>{" "}
+					· <a href="mailto:salam@alalaam.com">salam@alalaam.com</a>
+				</span>
 				<a href="/guidelines">Brand guidelines →</a>
 			</footer>
 		</PageShell>

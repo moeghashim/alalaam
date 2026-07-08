@@ -4,10 +4,13 @@ import Link from "next/link";
 import { useLang } from "../lib/lang-context";
 
 const PLAN_URL = "https://alalaam-plan.pages.dev";
+export const X_URL = "https://x.com/moeghashim";
+export const CONTACT_EMAIL = "salam@alalaam.com";
 
 /**
  * Fixed footer pill (redesign/Home.html FootLinks, `.kw-footlinks`):
- * under-development marker · Guidelines · Roadmap · the plan site.
+ * under-development marker · Guidelines · Roadmap · the plan site ·
+ * attribution (@moeghashim) · contact.
  */
 export function FootLinks() {
 	const { ui } = useLang();
@@ -20,6 +23,12 @@ export function FootLinks() {
 			<Link href="/roadmap">{ui.footlinks.roadmap}</Link>
 			<span className="dot" />
 			<a href={PLAN_URL}>{ui.footlinks.plan}</a>
+			<span className="dot" />
+			<a href={X_URL} rel="me">
+				@moeghashim
+			</a>
+			<span className="dot" />
+			<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
 		</div>
 	);
 }
