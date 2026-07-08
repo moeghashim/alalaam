@@ -62,9 +62,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
 	// Product defaults (PLAN.md §11.11): Editorial mood, ornament 0.5, motion on.
+	// The font-variable classes must sit on <html>: alalaam-web.css maps them into
+	// the token variables at :root, and custom properties resolve per element — on
+	// <body> they are invisible to :root and every font falls back (brand bug).
 	return (
-		<html lang="en" dir="ltr">
-			<body className={`th-sahifa ${fontVariables}`} style={{ "--orn": ".5" } as CSSProperties}>
+		<html lang="en" dir="ltr" className={fontVariables}>
+			<body className="th-sahifa" style={{ "--orn": ".5" } as CSSProperties}>
 				<LangProvider>{children}</LangProvider>
 			</body>
 		</html>
