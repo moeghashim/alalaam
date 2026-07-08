@@ -1,8 +1,8 @@
 ---
-summary: "Implementation brief for v0.3 — the Majlis Explorer web app on Cloudflare Workers"
+summary: "Implementation brief for v0.3 — the Majlis Explorer web app on Cloudflare Workers plus the PI-Starter Cloudflare adaptation kit"
 read_when:
-  - Implementing or reviewing the v0.3 Web (Cloudflare) task.
-  - Checking what the v0.3 scope and success criteria were.
+  - Starting or resuming the v0.3 web build.
+  - Reviewing a v0.3 PR against the agreed scope.
 ---
 
 # v0.3 handoff — Web on Cloudflare
