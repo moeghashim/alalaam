@@ -41,7 +41,21 @@ The v0.3 site reads committed data artifacts and needs no runtime environment va
 
 ## Database Deployments (v0.4)
 
-The v0.4 live layer adds D1 + Durable Object bindings to `wrangler.jsonc` and SQL migrations under `migrations/`. When that lands: apply migrations with `alalaam db migrate` (wrangler D1 migrations underneath) **before** deploying a Worker that expects the new schema, then `alalaam db push` to load the seed.
+The v0.4 live layer (PLAN.md §10) is three pieces:
+
+- **D1** — database `alalaam-db`, bound as `ALALAAM_DB` in `apps/web/wrangler.jsonc`; SQL migrations live at the repo root under `migrations/` (`migrations_dir` in the same config). The schema mirrors the committed artifacts: `figures` and `derived` as JSON documents keyed by slug, `relationships` relational, `meta` for the `seed.version` content hash. The derived graph is **stored in D1** by `alalaam db push` (not re-derived by the web) — the web stays a reader, `@alalaam/core` stays CLI-side.
+- **Realtime worker** — `workers/realtime` (`alalaam-realtime`), a Durable Object (`VersionRoom`) holding the current version stamp: `GET /version`, `POST /bump` (Bearer `REALTIME_SECRET`), `GET /ws`. Deployed with `npm run deploy -w @alalaam/realtime`; its secret is set once via `npx wrangler secret put REALTIME_SECRET` (in `workers/realtime/`) and mirrored to the repo-root `.env` as `ALALAAM_REALTIME_SECRET` so `alalaam db push` can authenticate its bump (`.env` is gitignored; the worker URL can be overridden with `ALALAAM_REALTIME_URL`).
+- **Web read path** — `apps/web` reads D1 per request via `getCloudflareContext()` (`lib/data-server.ts`); `/` and `/compare` are `force-dynamic` so a push is visible on the next render. When the binding is unreachable (`next dev`, build prerender, an unmigrated or unpushed database) the app silently falls back to the committed `data/*.json` artifacts. `components/live-data.tsx` keeps a WebSocket to the realtime worker and `router.refresh()`es on `data-changed`.
+
+**Order matters** whenever database work ships:
+
+```bash
+npx alalaam db migrate            # 1. apply migrations/ to remote D1 (add --local for miniflare)
+npx alalaam db push               # 2. idempotent seed upsert + version stamp + live-refresh bump
+npm run deploy -w @alalaam/web    # 3. deploy the web Worker that reads the new schema
+```
+
+`db push --dry-run` previews the row-level diff without writing. Connected clients live-refresh within seconds of step 2; a redeploy of the realtime worker is only needed when `workers/realtime` itself changes.
 
 ## Solo Shipping Flow
 
@@ -50,6 +64,6 @@ The v0.4 live layer adds D1 + Durable Object bindings to `wrangler.jsonc` and SQ
 3. Run `npm run agent:check`
 4. Open a pull request and wait for `Required checks` to pass
 5. Merge to `main`
-6. If the change includes database work (v0.4+), run the migration/deploy commands first
+6. If the change includes database work (v0.4+), run `npx alalaam db migrate && npx alalaam db push` first
 7. Run `npm run deploy -w @alalaam/web`
 8. Verify the deployed Worker serves the explorer against the expected data

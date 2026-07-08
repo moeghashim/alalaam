@@ -4,7 +4,7 @@ import { join } from "node:path";
 const MAX_LINES = Number(process.env.MAX_FILE_LINES ?? 600);
 
 const ROOT = process.cwd();
-const INCLUDE_DIRS = ["apps", "packages"];
+const INCLUDE_DIRS = ["apps", "packages", "workers"];
 const INCLUDE_EXTENSIONS = new Set([".ts", ".tsx", ".js", ".mjs"]);
 const EXCLUDE_DIR_NAMES = new Set(["node_modules", "dist", "build", ".git", ".next", ".open-next", ".wrangler"]);
 
