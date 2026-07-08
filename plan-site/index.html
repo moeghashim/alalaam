@@ -102,12 +102,13 @@
 </div>
 <header class="masthead">
   <p class="kicker">Product Requirements &amp; Build Plan · signed off 2026-07-08 · build in progress</p>
-  <h1>Alalaam <span class="ar" lang="ar" dir="rtl">الأعلام</span></h1>
+  <h1>Alalaam <span class="ar" lang="ar" dir="rtl">العَلّام</span></h1>
   <p class="dek">One historical figure at the centre of their world, drawn as an evidence graph — who they met, who they may have met, and who they only knew through books. Demo subject: al-Khwarizmi, with 23 related figures.</p>
 </header>
 
 <div class="statusbar">
-  <span class="pill brass">Status: signed off · v0.0 foundation complete · CI green</span>
+  <span class="pill brass">Status: v0.1 + v0.2 shipped · v0.3 web in progress</span>
+  <span class="pill"><a href="https://alalaam-www.mohanadgh.workers.dev">teaser site live</a> → alalaam.com pending NS switch</span>
   <span class="pill">base: moeghashim/PI-Starter</span>
   <span class="pill"><a href="https://github.com/moeghashim/alalaam">repo: moeghashim/alalaam</a></span>
   <span class="pill">deploys to: Cloudflare Workers + D1 + DO</span>
@@ -228,6 +229,7 @@
 </ul>
 <h3>Build log</h3>
 <ul class="log">
+  <li><strong>2026-07-08 — public teaser site shipped (PR #3):</strong> a static landing page in the full design language (grammar vignette, under-development notice, links here and to GitHub), live at <a href="https://alalaam-www.mohanadgh.workers.dev">alalaam-www.mohanadgh.workers.dev</a>; it claims <strong>alalaam.com</strong> automatically once the domain's nameservers move to Cloudflare. Same PR fixed the docs front-matter that had main CI red and authenticated CI's GitHub API calls to kill the macOS rate-limit flake.</li>
   <li><strong>2026-07-08 — v0.1 + v0.2 merged; v0.3 underway:</strong> PR #1 (engine) and PR #2 (skill) merged with CI green; roster-scale decision locked in PLAN.md (23+1 is the legacy example, not a limit — ring layout must be computed from data); v0.3 web build started from <code>docs/handoff-v0.3.md</code>.</li>
   <li><strong>2026-07-08 — v0.1 engine built, PR #1 open:</strong> <code>@alalaam/core</code> (bilingual model + circleNotes, deriveContext grammar, validation naming offending rows, Sheets ingestion) and the <code>alalaam</code> CLI (sheet sync, validate, figure/link add with the two-writers warning, compile, graph export, seed legacy). <code>seed:legacy</code> reproduces the prototype's tiers <em>and</em> medallion categories for all 23 figures — the parity assertion caught a real books-prefix bug on its first run. 24 figures / 45 connections committed to <code>data/</code>; 29 tests green.</li>
   <li><strong>2026-07-08 — plan signed off;</strong> v0.0 foundation complete: PI-Starter history merged (<code>42c4e82</code>), fork-boundary entry appended to <code>progress.md</code>, full quality gate green under Node 22, CI <code>Required checks</code> passing on <code>main</code>. This status page deployed to Cloudflare Pages from <code>plan-site/</code>.</li>
