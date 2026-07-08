@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Alalaam — Cities &amp; Roads (concept)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="system.css"/>
+  <link rel="stylesheet" href="uplift.css"/>
+  <link rel="stylesheet" href="pages.css"/>
+  <style>
+    .tc-head { padding: 30px 0 26px; border-bottom: 1px solid var(--line-2); display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .tc-head h1 { font-family: var(--font-disp); font-size: 40px; font-weight: 600; letter-spacing: -.025em; line-height: 1.05; margin: 14px 0 0; }
+    .tc-head .pg-lede { margin-top: 12px; font-size: 16px; max-width: 560px; }
+    .tc-split { min-width: 280px; }
+    .tc-split .lbl { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); margin-bottom: 7px; text-align: right; }
+    .tc-split .bar { display: flex; height: 8px; border-radius: 999px; overflow: hidden; border: 1px solid var(--line-2); background: var(--inset); }
+    .tc-split .bar i { display: block; transition: width .3s ease; }
+
+    /* filter rows */
+    .tc-filters { width: 980px; max-width: 100%; margin: 24px auto 0; display: flex; flex-direction: column; gap: 10px; }
+    .tc-frow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tc-frow .dk { font-family: var(--font-sans); font-size: 10.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-4); width: 72px; flex: 0 0 auto; }
+    .tc-frow .chips { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+    .tc-dec { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-3); background: var(--card); border: 1px solid var(--line-2); border-radius: 999px; padding: 4px 9px; cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+    .tc-dec:hover { border-color: var(--brass); color: var(--ink); }
+    .tc-dec.on { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+    .tc-city-chip { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-sans); font-size: 12px; font-weight: 600; color: var(--ink-3); background: var(--card); border: 1px solid var(--line-2); border-radius: 999px; padding: 5px 12px; cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease, opacity .15s ease; }
+    .tc-city-chip .d { width: 8px; height: 8px; border-radius: 50%; }
+    .tc-city-chip.on { color: var(--ink); border-color: var(--ink-3); background: var(--card); box-shadow: 0 0 0 1px var(--ink-3); }
+    .tc-city-chip:not(.on) { opacity: .55; }
+    .tc-all { font-family: var(--font-sans); font-size: 11.5px; font-weight: 700; color: var(--brass-deep); background: none; border: none; cursor: pointer; padding: 4px 6px; white-space: nowrap; }
+    .tc-all:hover { color: var(--ink); }
+    .tc-cap { font-family: var(--font-serif); font-style: italic; font-size: 13px; color: var(--ink-3); margin-inline-start: auto; }
+
+    /* stage */
+    .tc-scroll { overflow-x: auto; margin: 20px auto 0; }
+    .tc-stage { position: relative; width: 980px; height: 700px; margin: 0 auto; background: var(--card); border: 1px solid var(--line-2); border-radius: 10px; overflow: hidden; }
+    .tc-road { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-3); background: var(--paper); border: 1px solid var(--line-2); border-radius: 999px; padding: 4px 14px; white-space: nowrap; z-index: 5; }
+
+    .tc-citylbl { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 1px; z-index: 4; background: color-mix(in srgb, var(--card) 88%, transparent); border-radius: 6px; padding: 3px 10px 4px; pointer-events: none; }
+    .tc-citylbl .cn { font-family: var(--font-sans); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .tc-citylbl .ca { font-family: "Reem Kufi", serif; font-size: 13px; color: var(--ink-3); line-height: 1.2; }
+    .tc-citylbl .cc { font-family: var(--font-mono); font-size: 9.5px; color: var(--ink-4); }
+
+    .tc-node { position: absolute; transform: translate(-50%, -50%); z-index: 3; transition: opacity .25s ease; }
+    .tc-node.off { opacity: .18; }
+    .tc-node .stk { position: absolute; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 4px; width: 140px; text-align: center; pointer-events: none; }
+    .tc-node .stk.dn { top: calc(100% + 4px); }
+    .tc-node .stk.up { bottom: calc(100% + 4px); flex-direction: column-reverse; }
+    .tc-node .nl { font-family: var(--font-disp); font-size: 13px; font-weight: 600; line-height: 1.05; letter-spacing: -.008em; white-space: nowrap; background: color-mix(in srgb, var(--card) 88%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--line-2) 55%, transparent); border-radius: 4px; padding: 2px 8px; }
+    .tc-node .ny { font-family: var(--font-mono); font-size: 9px; color: var(--ink-3); background: color-mix(in srgb, var(--paper) 75%, transparent); padding: 0 5px; border-radius: 3px; letter-spacing: .06em; }
+    .tc-node .trav { font-family: var(--font-sans); font-size: 9px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--brass-deep); background: var(--brass-tint); border: 1px solid color-mix(in srgb, var(--brass) 45%, transparent); border-radius: 999px; padding: 1px 8px; margin-top: 1px; }
+
+    svg [data-a] { transition: opacity .25s ease; }
+    svg .eoff { opacity: .1; }
+
+    .tc-legend { position: absolute; bottom: 16px; left: 20px; z-index: 4; display: flex; flex-direction: column; gap: 5px; background: color-mix(in srgb, var(--card) 92%, transparent); border: 1px solid var(--line-2); border-radius: 8px; padding: 10px 13px; }
+    .tc-legend .t { font-family: var(--font-sans); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 2px; }
+    .tc-legend .row { display: flex; align-items: center; gap: 9px; font-family: var(--font-serif); font-size: 12px; color: var(--ink-2); }
+
+    .tc-foot { width: 980px; max-width: 100%; margin: 14px auto 0; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .tc-foot .fn { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-4); max-width: 560px; line-height: 1.5; }
+
+    .tc-why { margin: 46px auto 0; width: 980px; max-width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    @media (max-width: 860px) { .tc-why { grid-template-columns: 1fr; } }
+    .tc-why .gl-card .gt { font-size: 16px; }
+  </style>
+</head>
+<body class="pg-body th-sahifa kw-lattice" style="--orn:.5">
+
+  <header class="pg-top">
+    <a class="pg-brand" href="Home.html">
+      <div class="kw-medallion" style="width:30px;height:30px"><span class="kw-glyph" style="font-size:12px">خ</span></div>
+      <span class="nm">Alalaam</span>
+    </a>
+    <nav class="pg-nav">
+      <a href="Home.html">Explorer</a>
+      <a href="Cities.html" class="on">Cities</a>
+    </nav>
+  </header>
+
+  <main class="pg-wrap" style="max-width:1100px">
+
+    <section class="tc-head" data-screen-label="Cities header">
+      <div>
+        <div class="pg-kicker">Concept · geographic view · v2</div>
+        <h1>Cities &amp; roads</h1>
+        <p class="pg-lede">Each city is a wedge of one shared circle — its own majlis. Wedge width is the city's share of the roster; dashed meridians are the roads between them. Within-city ties recede; ties that <em>cross a road</em> keep the full evidence grammar. Filter by decade to see who was alive in these cities at the same time.</p>
+      </div>
+      <div class="tc-split">
+        <div class="lbl" id="tc-lbl">—</div>
+        <div class="bar" id="tc-bar"></div>
+      </div>
+    </section>
+
+    <div class="tc-filters" data-screen-label="Filters">
+      <div class="tc-frow">
+        <span class="dk">Cities</span>
+        <div class="chips" id="tc-citychips"></div>
+      </div>
+      <div class="tc-frow">
+        <span class="dk">Decades</span>
+        <div class="chips" id="tc-chips"></div>
+        <button class="tc-all" id="tc-alldec">All decades</button>
+        <span class="tc-cap" id="tc-cap"></span>
+      </div>
+    </div>
+
+    <div class="tc-scroll">
+    <div class="tc-stage" data-screen-label="Cities map">
+      <div class="tc-road" id="tc-road">— ties cross the roads</div>
+
+      <svg width="980" height="700" viewBox="0 0 980 700" style="position:absolute;inset:0">
+        <defs>
+          <marker id="tc-out" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 1L9 5L0 9z" fill="#A14A60"></path></marker>
+        </defs>
+        <g id="g-wedges"></g>
+        <g id="g-bounds"></g>
+        <g id="g-edges"></g>
+      </svg>
+
+      <div id="g-labels"></div>
+      <div id="g-nodes"></div>
+
+      <div class="tc-legend">
+        <div class="t">How to read</div>
+        <div class="row"><svg width="34" height="8"><line x1="2" y1="4" x2="32" y2="4" stroke="#8C6620" stroke-width="2.2" stroke-opacity=".72"></line></svg><span>Crosses a road — full strength</span></div>
+        <div class="row"><svg width="34" height="8"><line x1="2" y1="4" x2="32" y2="4" stroke="#8C6620" stroke-width="1.4" stroke-opacity=".28"></line></svg><span>Within one city — receded</span></div>
+        <div class="row"><svg width="34" height="8"><line x1="2" y1="4" x2="28" y2="4" stroke="#A14A60" stroke-width="1.6" stroke-dasharray="2 6" stroke-opacity=".65" marker-end="url(#tc-out)"></line></svg><span>Through books — arrow = direction of reading</span></div>
+        <div class="row"><svg width="34" height="8"><line x1="2" y1="4" x2="32" y2="4" stroke="#8C6620" stroke-width="2" stroke-opacity=".12"></line></svg><span>Faded — not alive in the chosen decades</span></div>
+      </div>
+    </div>
+    </div>
+
+    <div class="tc-foot">
+      <span class="fn">Position = geography (wedge + angle). Medallion colour still = category; line texture still = evidence — the graph grammar is unchanged, only the meaning of position swaps from certainty to place. A tie fades unless <em>both</em> lives overlap the chosen decades.</span>
+      <span class="fn" style="text-align:right">※ City assignments are partly illustrative — the roster is historically Baghdad-heavy.</span>
+    </div>
+
+    <section class="tc-why" data-screen-label="Design rationale">
+      <div class="gl-card">
+        <div class="gt">Why wedges, not islands</div>
+        <div class="gd">Sharing one circle keeps every city comparable: wedge width <em>is</em> the share, and the split-bar restates it. Separate clusters would hide the proportion.</div>
+      </div>
+      <div class="gl-card">
+        <div class="gt">Why roads radiate from a crossroads</div>
+        <div class="gd">Cross-city ties converge through the middle — the crossroads becomes the visual home of exchange, and a busy centre means a connected age.</div>
+      </div>
+      <div class="gl-card">
+        <div class="gt">Why decades filter co-presence</div>
+        <div class="gd">Pick a decade and the map answers “who was alive in these cities, together, then?” A tie only holds if both lives overlap the selection — time is the test of who could have met.</div>
+      </div>
+    </section>
+
+    <footer class="pg-foot">
+      <span class="f1">Alalaam — lives, in context. Every city is a claim a reader can check.</span>
+      <span style="display:flex;gap:20px">
+        <a href="Brand Guidelines.html">Brand guidelines</a>
+        <a href="Roadmap.html">Roadmap</a>
+        <a href="Home.html">Back to the explorer →</a>
+      </span>
+    </footer>
+
+  </main>
+
+  <script>
+    (function () {
+      // ── data ─────────────────────────────────────────────
+      var CITIES = [
+        { id: "bg", name: "Baghdad",  ar: "بغداد",   color: "#B0822F", deep: "#8C6620" },
+        { id: "dm", name: "Damascus", ar: "دمشق",    color: "#335E9E", deep: "#234678" },
+        { id: "ca", name: "Cairo",    ar: "القاهرة", color: "#3C7E6E", deep: "#2C6052" },
+        { id: "co", name: "Cordoba",  ar: "قرطبة",   color: "#A14A60", deep: "#7E3850" },
+      ];
+      var FIGS = [
+        { id: "kw",       name: "al-Khwarizmi",    glyph: "خ", med: "",       y0: 780, y1: 850, city: "bg", big: true, badge: "read in every city" },
+        { id: "mamun",    name: "al-Ma'mun",       glyph: "م", med: "",       y0: 786, y1: 833, city: "bg" },
+        { id: "kindi",    name: "al-Kindi",        glyph: "ك", med: "m-verd", y0: 801, y1: 873, city: "bg" },
+        { id: "banumusa", name: "The Banu Musa",   glyph: "و", med: "m-verd", y0: 800, y1: 873, city: "bg" },
+        { id: "hunayn",   name: "Hunayn ibn Ishaq",glyph: "ح", med: "m-verd", y0: 809, y1: 873, city: "bg" },
+        { id: "shafii",   name: "al-Shafi'i",      glyph: "ش", med: "m-sand", y0: 767, y1: 820, city: "dm", badge: "travelled the roads" },
+        { id: "abunuwas", name: "Abu Nuwas",       glyph: "ن", med: "m-sand", y0: 756, y1: 814, city: "dm" },
+        { id: "jahiz",    name: "al-Jahiz",        glyph: "ج", med: "m-sand", y0: 776, y1: 868, city: "dm" },
+        { id: "hanbal",   name: "Ibn Hanbal",      glyph: "ح", med: "m-sand", y0: 780, y1: 855, city: "dm" },
+        { id: "farghani", name: "al-Farghani",     glyph: "ف", med: "m-verd", y0: 800, y1: 870, city: "ca" },
+        { id: "abukamil", name: "Abu Kamil",       glyph: "ق", med: "m-rose", y0: 850, y1: 930, city: "ca" },
+        { id: "sind",     name: "Sind ibn Ali",    glyph: "س", med: "m-verd", y0: 795, y1: 860, city: "ca" },
+        { id: "ziryab",   name: "Ziryab",          glyph: "ز", med: "m-sand", y0: 789, y1: 857, city: "co", badge: "carried Baghdad west" },
+        { id: "battani",  name: "al-Battani",      glyph: "ب", med: "m-rose", y0: 858, y1: 929, city: "co" },
+      ];
+      var EDGES = [
+        { a: "kw", b: "mamun",    kind: "direct" },
+        { a: "kw", b: "kindi",    kind: "direct" },
+        { a: "kw", b: "banumusa", kind: "direct" },
+        { a: "kw", b: "hunayn",   kind: "direct" },
+        { a: "kindi", b: "hunayn",    kind: "direct" },
+        { a: "banumusa", b: "hunayn", kind: "direct" },
+        { a: "shafii", b: "abunuwas", kind: "possible" },
+        { a: "abunuwas", b: "jahiz",  kind: "possible" },
+        { a: "hanbal", b: "shafii",   kind: "direct" },
+        { a: "sind", b: "farghani",   kind: "direct" },
+        { a: "farghani", b: "abukamil", kind: "possible" },
+        { a: "kw", b: "sind",     kind: "direct" },
+        { a: "kw", b: "farghani", kind: "direct" },
+        { a: "mamun", b: "shafii",kind: "possible" },
+        { a: "kindi", b: "jahiz", kind: "possible" },
+        { a: "mamun", b: "ziryab",kind: "possible" },
+        { a: "abunuwas", b: "ziryab", kind: "possible" },
+        { a: "kw", b: "abukamil", kind: "books" },
+        { a: "kw", b: "battani",  kind: "books" },
+        { a: "farghani", b: "battani", kind: "books" },
+      ];
+
+      // ── state ────────────────────────────────────────────
+      var enabled = new Set(CITIES.map(function (c) { return c.id; }));
+      var sel = new Set(); // decades; empty = all
+      var DECADES = [];
+      for (var d = 750; d <= 920; d += 10) DECADES.push(d);
+
+      var CX = 490, CY = 350, XS = 1.25;
+      function P(ang, R) { return [CX + XS * R * Math.cos(ang), CY + R * Math.sin(ang)]; }
+      var figById = {};
+      FIGS.forEach(function (f) { figById[f.id] = f; });
+      var cityById = {};
+      CITIES.forEach(function (c) { cityById[c.id] = c; });
+
+      var SVGNS = "http://www.w3.org/2000/svg";
+      function el(tag, attrs) {
+        var e = document.createElementNS(SVGNS, tag);
+        for (var k in attrs) e.setAttribute(k, attrs[k]);
+        return e;
+      }
+
+      var pos = {}; // figure id -> [x,y]
+
+      // ── measured label collision pass ────────────────────
+      function rectsHit(a, b, m) {
+        return !(a.r + m < b.l || a.l - m > b.r || a.b + m < b.t || a.t - m > b.b);
+      }
+      function resolveLabels(labelMeta) {
+        var stageEl = document.querySelector(".tc-stage");
+        var stage = stageEl.getBoundingClientRect();
+        var toLocal = function (r) {
+          return { l: r.left - stage.left, t: r.top - stage.top, r: r.right - stage.left, b: r.bottom - stage.top };
+        };
+        var obstacles = [];
+        stageEl.querySelectorAll("#g-nodes .kw-medallion, #g-nodes .nl, #g-nodes .ny, #g-nodes .trav, .tc-legend, .tc-road").forEach(function (o) {
+          obstacles.push(toLocal(o.getBoundingClientRect()));
+        });
+        var DA = [0, -0.08, 0.08, -0.16, 0.16, -0.24, 0.24, -0.32, 0.32];
+        var DR = [0, 14, 28, 42];
+        labelMeta.forEach(function (m) {
+          var r0 = m.el.getBoundingClientRect();
+          var w = r0.width, h = r0.height;
+          var found = null;
+          for (var ri = 0; ri < DR.length && !found; ri++) {
+            for (var ai = 0; ai < DA.length && !found; ai++) {
+              var p = P(m.ang + DA[ai], m.R + DR[ri]);
+              var cand = { l: p[0] - w / 2, t: p[1] - h / 2, r: p[0] + w / 2, b: p[1] + h / 2 };
+              if (cand.l < 6 || cand.t < 6 || cand.r > 974 || cand.b > 694) continue;
+              var hit = obstacles.some(function (o) { return rectsHit(cand, o, 4); });
+              if (!hit) found = { p: p, cand: cand };
+            }
+          }
+          if (found) {
+            m.el.style.left = found.p[0] + "px";
+            m.el.style.top = found.p[1] + "px";
+            obstacles.push(found.cand);
+          } else {
+            obstacles.push(toLocal(m.el.getBoundingClientRect()));
+          }
+        });
+      }
+
+      // ── build map (cities → geometry) ────────────────────
+      function build() {
+        var wedges = document.getElementById("g-wedges");
+        var bounds = document.getElementById("g-bounds");
+        var edgesG = document.getElementById("g-edges");
+        var labels = document.getElementById("g-labels");
+        var nodesBox = document.getElementById("g-nodes");
+        wedges.innerHTML = ""; bounds.innerHTML = ""; edgesG.innerHTML = "";
+        labels.innerHTML = ""; nodesBox.innerHTML = "";
+        pos = {};
+        var labelMeta = [];
+
+        var vis = CITIES.filter(function (c) { return enabled.has(c.id); });
+        var counts = {};
+        vis.forEach(function (c) { counts[c.id] = FIGS.filter(function (f) { return f.city === c.id; }).length; });
+        var total = vis.reduce(function (s, c) { return s + counts[c.id]; }, 0);
+
+        var single = vis.length === 1;
+        var a = -Math.PI / 2; // start at top, clockwise
+        vis.forEach(function (c) {
+          var span = (counts[c.id] / total) * Math.PI * 2;
+          var a0 = a, a1 = a + span;
+          a = a1;
+
+          // wedge tint + boundary road
+          if (!single) {
+            var R = 296, p0 = P(a0, R), p1 = P(a1, R);
+            var large = span > Math.PI ? 1 : 0;
+            wedges.appendChild(el("path", {
+              d: "M" + CX + " " + CY + " L" + p0[0] + " " + p0[1] +
+                 " A" + (XS * R) + " " + R + " 0 " + large + " 1 " + p1[0] + " " + p1[1] + " Z",
+              fill: c.color, opacity: ".055",
+            }));
+            var pb = P(a0, 306);
+            bounds.appendChild(el("line", {
+              x1: CX, y1: CY, x2: pb[0], y2: pb[1],
+              stroke: "var(--line-3)", "stroke-width": "1", "stroke-dasharray": "4 6",
+            }));
+          }
+
+          // city label beside the wedge's END boundary road — never at the
+          // mid-angle, which is reserved for the outer node arc's rim stacks
+          var la = a1 - span * 0.08, pl = P(la, single ? 0 : 320);
+          var lbl = document.createElement("div");
+          lbl.className = "tc-citylbl";
+          if (single) { pl = [CX, 60]; }
+          lbl.style.left = pl[0] + "px"; lbl.style.top = pl[1] + "px";
+          lbl.innerHTML = '<span class="cn" style="color:' + c.deep + '">' + c.name + '</span>' +
+                          '<span class="ca">' + c.ar + '</span>' +
+                          '<span class="cc" id="tc-cc-' + c.id + '"></span>';
+          labels.appendChild(lbl);
+          labelMeta.push({ el: lbl, ang: single ? -Math.PI / 2 : la, R: single ? 290 : 320 });
+
+          // figures on arcs inside the wedge — every multi-node wedge is a
+          // staggered double arc; label stacks grow AWAY from the other arc
+          // (outer → outward, inner → toward the hub) so columns never collide
+          var figs = FIGS.filter(function (f) { return f.city === c.id; });
+          var k = figs.length;
+          var pad = single ? 0 : span * 0.16;
+          var placeNode = function (f, ang, r, arc) {
+            var p = P(ang, r);
+            pos[f.id] = p;
+            var s = Math.sin(ang);
+            var flipUp = arc === "inner" ? s > 0.05 : s < -0.05;
+            var nd = document.createElement("div");
+            nd.className = "tc-node";
+            nd.setAttribute("data-id", f.id);
+            nd.style.left = p[0] + "px"; nd.style.top = p[1] + "px";
+            var ms = f.big ? 58 : 44, gs = f.big ? 23 : 18;
+            nd.innerHTML = '<div class="kw-medallion ' + f.med + '" style="width:' + ms + 'px;height:' + ms + 'px"><span class="kw-glyph" style="font-size:' + gs + 'px">' + f.glyph + '</span></div>' +
+                           '<span class="stk ' + (flipUp ? "up" : "dn") + '">' +
+                             '<span class="nl">' + f.name + '</span>' +
+                             '<span class="ny">' + f.y0 + " – " + f.y1 + '</span>' +
+                             (f.badge ? '<span class="trav">' + f.badge + '</span>' : "") +
+                           '</span>';
+            nodesBox.appendChild(nd);
+          };
+          if (single) {
+            figs.forEach(function (f, i) {
+              placeNode(f, -Math.PI / 2 + (i / k) * Math.PI * 2, 205, "solo");
+            });
+          } else if (k === 1) {
+            placeNode(figs[0], (a0 + a1) / 2, 196, "solo");
+          } else {
+            var outerF = figs.filter(function (_, i) { return i % 2 === 0; });
+            var innerF = figs.filter(function (_, i) { return i % 2 === 1; });
+            outerF.forEach(function (f, j) {
+              placeNode(f, a0 + pad + (j + 0.5) * ((span - 2 * pad) / outerF.length), 240, "outer");
+            });
+            innerF.forEach(function (f, j) {
+              placeNode(f, a0 + pad + (j + 0.5) * ((span - 2 * pad) / innerF.length), 132, "inner");
+            });
+          }
+        });
+
+        // measured pass: slide each city label to the first slot that clears
+        // every REAL rect on the stage (nodes, badges, legend, road pill)
+        resolveLabels(labelMeta);
+
+        // edges (only among visible figures)
+        EDGES.forEach(function (e) {
+          var pa = pos[e.a], pb = pos[e.b];
+          if (!pa || !pb) return;
+          var cross = figById[e.a].city !== figById[e.b].city;
+          var attrs = { x1: pa[0], y1: pa[1], x2: pb[0], y2: pb[1], "data-a": e.a, "data-b": e.b };
+          if (cross) attrs["data-cross"] = "1";
+          if (e.kind === "direct") {
+            attrs.stroke = "#8C6620";
+            attrs["stroke-width"] = cross ? "2.2" : "1.4";
+            attrs["stroke-opacity"] = cross ? ".7" : ".26";
+          } else if (e.kind === "possible") {
+            attrs.stroke = "#8A7A55"; attrs["stroke-dasharray"] = "8 6";
+            attrs["stroke-width"] = cross ? "1.7" : "1.2";
+            attrs["stroke-opacity"] = cross ? ".58" : ".24";
+          } else {
+            attrs.stroke = "#A14A60"; attrs["stroke-dasharray"] = "2 6";
+            attrs["stroke-width"] = cross ? "1.7" : "1.2";
+            attrs["stroke-opacity"] = cross ? ".62" : ".22";
+            // arrow points at the reader (b): trim end so the head sits outside the medallion
+            var dx = pb[0] - pa[0], dy = pb[1] - pa[1], len = Math.hypot(dx, dy);
+            var trim = (figById[e.b].big ? 38 : 31);
+            attrs.x2 = pa[0] + dx / len * (len - trim);
+            attrs.y2 = pa[1] + dy / len * (len - trim);
+            attrs["marker-end"] = "url(#tc-out)";
+          }
+          edgesG.appendChild(el("line", attrs));
+        });
+
+        applyFilter();
+      }
+
+      // ── decade filter ────────────────────────────────────
+      function alive(f) {
+        if (!sel.size) return true;
+        var ok = false;
+        sel.forEach(function (dec) { if (f.y0 < dec + 10 && f.y1 >= dec) ok = true; });
+        return ok;
+      }
+
+      function applyFilter() {
+        var act = {}, cross = 0;
+        var cityAct = {}, cityTot = {};
+        FIGS.forEach(function (f) {
+          if (!enabled.has(f.city)) return;
+          cityTot[f.city] = (cityTot[f.city] || 0) + 1;
+          var a = alive(f);
+          act[f.id] = a;
+          if (a) cityAct[f.city] = (cityAct[f.city] || 0) + 1;
+        });
+        document.querySelectorAll(".tc-node").forEach(function (nd) {
+          nd.classList.toggle("off", !act[nd.getAttribute("data-id")]);
+        });
+        document.querySelectorAll("#g-edges [data-a]").forEach(function (e) {
+          var on = act[e.getAttribute("data-a")] && act[e.getAttribute("data-b")];
+          e.classList.toggle("eoff", !on);
+          if (on && e.getAttribute("data-cross")) cross++;
+        });
+
+        // header split bar + label
+        var bar = document.getElementById("tc-bar");
+        bar.innerHTML = "";
+        var vis = CITIES.filter(function (c) { return enabled.has(c.id); });
+        var totalAct = vis.reduce(function (s, c) { return s + (cityAct[c.id] || 0); }, 0);
+        var parts = [];
+        vis.forEach(function (c) {
+          var n = cityAct[c.id] || 0;
+          var i = document.createElement("i");
+          i.style.background = c.color;
+          i.style.width = (totalAct ? (n / totalAct) * 100 : 100 / vis.length) + "%";
+          bar.appendChild(i);
+          parts.push(c.name + " " + n);
+        });
+        document.getElementById("tc-lbl").textContent = parts.join(" · ");
+
+        // per-city rim counts
+        vis.forEach(function (c) {
+          var cc = document.getElementById("tc-cc-" + c.id);
+          if (!cc) return;
+          var n = cityAct[c.id] || 0, t = cityTot[c.id] || 0;
+          cc.textContent = sel.size ? n + " of " + t + " alive" : t + " figures · " + Math.round((t / (totalActAll(vis, cityTot))) * 100) + "%";
+        });
+
+        document.getElementById("tc-road").textContent =
+          cross + (cross === 1 ? " tie crosses the roads" : " ties cross the roads");
+
+        var cap = document.getElementById("tc-cap");
+        if (sel.size) {
+          var list = Array.from(sel).sort(function (x, y) { return x - y; });
+          var span = list.length === 1 ? list[0] + "s" : list[0] + "s – " + list[list.length - 1] + "s";
+          cap.textContent = span + (list.length > 2 ? " (" + list.length + " decades)" : "") + " · " + totalAct + " alive";
+        } else {
+          cap.textContent = "all decades · 756 – 930";
+        }
+      }
+      function totalActAll(vis, cityTot) {
+        return vis.reduce(function (s, c) { return s + (cityTot[c.id] || 0); }, 0);
+      }
+
+      // ── controls ─────────────────────────────────────────
+      var cityBox = document.getElementById("tc-citychips");
+      CITIES.forEach(function (c) {
+        var n = FIGS.filter(function (f) { return f.city === c.id; }).length;
+        var b = document.createElement("button");
+        b.className = "tc-city-chip on";
+        b.innerHTML = '<span class="d" style="background:' + c.color + '"></span>' + c.name + " · " + n;
+        b.addEventListener("click", function () {
+          if (enabled.has(c.id)) {
+            if (enabled.size <= 2) return; // keep at least two cities
+            enabled.delete(c.id);
+          } else {
+            enabled.add(c.id);
+          }
+          b.classList.toggle("on", enabled.has(c.id));
+          build();
+        });
+        cityBox.appendChild(b);
+      });
+
+      var chipsBox = document.getElementById("tc-chips");
+      var chips = DECADES.map(function (dec) {
+        var b = document.createElement("button");
+        b.className = "tc-dec";
+        b.textContent = dec + "s";
+        b.addEventListener("click", function () {
+          sel.has(dec) ? sel.delete(dec) : sel.add(dec);
+          chips.forEach(function (c) { c.el.classList.toggle("on", sel.has(c.dec)); });
+          applyFilter();
+        });
+        chipsBox.appendChild(b);
+        return { dec: dec, el: b };
+      });
+      document.getElementById("tc-alldec").addEventListener("click", function () {
+        sel.clear();
+        chips.forEach(function (c) { c.el.classList.remove("on"); });
+        applyFilter();
+      });
+
+      build();
+      // re-run once webfonts settle so measured label/badge widths are final
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function () { build(); });
+      }
+    })();
+  </script>
+</body>
+</html>

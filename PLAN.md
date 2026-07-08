@@ -261,6 +261,8 @@ The web's data access is abstracted behind a single `getSubjectGraph()` seam, so
 | Roster scale | **Unbounded.** The 23-figure roster is the legacy example, not a limit. No figure counts, ring capacities, or fixed-size structures hardcoded anywhere in core / CLI / web; the literal `23` is allowed only in `seed:legacy` and its parity tests against the frozen prototype fixture. Everything downstream (validation, derivation, sync, D1, explorer layout) must scale to hundreds of figures per subject. | **Locked by user (2026-07-08)** |
 | Second subject | Deferred to v0.5 | Locked |
 | City matching (compare / multi-focal) | Shared-city facts match on the **EN** `lived` value as the key; AR is display-only | Added in review |
+| Site IA (redesign) | **The Majlis Explorer is the homepage** at alalaam.com. Top bar: The Majlis · Compare lives · **Cities** (link, bilingual المدن); wordmark links home with no figure selected. Fixed footer pill: Guidelines · Roadmap (`.kw-footlinks`). New static **Cities** page ("cities drawn as evidence"). The standalone teaser page is retired; the under-development notice + plan-page link stay on the homepage. | **Locked by user (2026-07-08)** |
+| Design reference | `redesign/` **supersedes** `design_handoff_alalaam/` where they differ (new `uplift.css` footer-pill/link styles, `Home.html` top bar, `Cities.html`, brand Arabic name). Brand Arabic wordmark: **الأعلام** (per `redesign/data.js` `ui.brand`; supersedes the old Brand Guidelines' العَلّام). | **Locked by user (2026-07-08)** |
 
 ---
 
