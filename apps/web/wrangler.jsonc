@@ -8,6 +8,14 @@
 		"directory": ".open-next/assets",
 		"binding": "ASSETS"
 	},
+	// The explorer IS the homepage (PLAN.md Decisions: "Site IA (redesign)") —
+	// it owns the apex and www. Zone routes (not custom domains): the zone was
+	// imported from name.com with proxied DNS records already in place, and
+	// routes intercept proxied traffic without recreating DNS.
+	"routes": [
+		{ "pattern": "alalaam.com/*", "zone_name": "alalaam.com" },
+		{ "pattern": "www.alalaam.com/*", "zone_name": "alalaam.com" }
+	],
 	// v0.4 live layer (PLAN.md §10): the web worker reads the roster from D1 at
 	// request time; `alalaam db migrate` / `db push` target the same database
 	// through this config (its migrations live at the repo root ../../migrations).
