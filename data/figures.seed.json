@@ -1,0 +1,2099 @@
+{
+	"version": 1,
+	"figures": [
+		{
+			"slug": "kw",
+			"glyph": "خ",
+			"name": {
+				"en": "al-Khwarizmi",
+				"ar": "الخوارزمي"
+			},
+			"full": {
+				"en": "Muhammad ibn Musa al-Khwarizmi",
+				"ar": "محمد بن موسى الخوارزمي"
+			},
+			"role": {
+				"en": "Mathematician · Astronomer · Geographer",
+				"ar": "رياضياتي · فلكي · جغرافي"
+			},
+			"life": {
+				"en": "c. 780 – c. 850",
+				"ar": "نحو ٧٨٠ – ٨٥٠"
+			},
+			"birthYear": 780,
+			"deathYear": 850,
+			"birthCirca": true,
+			"deathCirca": true,
+			"born": {
+				"en": "Khwarazm",
+				"ar": "خوارزم"
+			},
+			"died": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "A founding scholar of the Abbasid House of Wisdom under al-Ma'mun. His method of balancing equations named algebra, and the Latin of his name became the word 'algorithm'.",
+				"ar": "من مؤسِّسي علماء بيت الحكمة العباسي في كنف المأمون. منهجُه في موازنة المعادلات أعطى «الجبر» اسمَه، ومن صورة اسمه باللاتينية جاءت كلمة «خوارزمية»."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Al-Jabr wa'l-Muqabala",
+						"ar": "الجبر والمقابلة"
+					},
+					"year": "c.820"
+				},
+				{
+					"title": {
+						"en": "On Calculation with Hindu Numerals",
+						"ar": "في حساب الهند"
+					},
+					"year": "c.825"
+				},
+				{
+					"title": {
+						"en": "Zij al-Sindhind",
+						"ar": "زيج السند هند"
+					},
+					"year": "c.820s"
+				},
+				{
+					"title": {
+						"en": "Kitab Surat al-Ard",
+						"ar": "كتاب صورة الأرض"
+					},
+					"year": "c.833"
+				},
+				{
+					"title": {
+						"en": "On the Astrolabe",
+						"ar": "في العمل بالأسطرلاب"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "student",
+					"label": {
+						"en": "None recorded by name",
+						"ar": "لا أحد مذكور بالاسم"
+					}
+				}
+			]
+		},
+		{
+			"slug": "mamun",
+			"glyph": "م",
+			"name": {
+				"en": "al-Ma'mun",
+				"ar": "المأمون"
+			},
+			"full": {
+				"en": "Caliph al-Ma'mun",
+				"ar": "الخليفة المأمون"
+			},
+			"role": {
+				"en": "Caliph · Patron of the House of Wisdom",
+				"ar": "خليفة · راعي بيت الحكمة"
+			},
+			"life": {
+				"en": "786 – 833",
+				"ar": "٧٨٦ – ٨٣٣"
+			},
+			"birthYear": 786,
+			"deathYear": 833,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"died": {
+				"en": "Tarsus",
+				"ar": "طرسوس"
+			},
+			"lived": [
+				{
+					"en": "Merv",
+					"ar": "مرو"
+				},
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "Al-Khwarizmi's direct patron. He championed the House of Wisdom and commissioned its great astronomical and geographic projects.",
+				"ar": "راعي الخوارزمي المباشر. احتضن بيت الحكمة وكلّف بمشاريعه الفلكية والجغرافية الكبرى."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Commissioned the Zij & the world map",
+						"ar": "كلّف بالزيج وخريطة العالم"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "The meridian measurement",
+						"ar": "قياس خط الزوال"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": []
+		},
+		{
+			"slug": "mutasim",
+			"glyph": "م",
+			"name": {
+				"en": "al-Mu'tasim",
+				"ar": "المعتصم"
+			},
+			"full": {
+				"en": "Caliph al-Mu'tasim",
+				"ar": "الخليفة المعتصم"
+			},
+			"role": {
+				"en": "Caliph · Patron",
+				"ar": "خليفة · راعٍ"
+			},
+			"life": {
+				"en": "794 – 842",
+				"ar": "٧٩٤ – ٨٤٢"
+			},
+			"birthYear": 794,
+			"deathYear": 842,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"died": {
+				"en": "Samarra",
+				"ar": "سامراء"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				},
+				{
+					"en": "Samarra",
+					"ar": "سامراء"
+				}
+			],
+			"bio": {
+				"en": "Successor to al-Ma'mun who founded Samarra and sustained the scholars of the House of Wisdom into the next generation.",
+				"ar": "خليفة المأمون، أسّس سامراء وأدام رعاية علماء بيت الحكمة إلى الجيل التالي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Founded Samarra",
+						"ar": "أسّس سامراء"
+					},
+					"year": "836"
+				},
+				{
+					"title": {
+						"en": "Sustained the House of Wisdom",
+						"ar": "أدام بيت الحكمة"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": []
+		},
+		{
+			"slug": "harun",
+			"glyph": "ه",
+			"name": {
+				"en": "Harun al-Rashid",
+				"ar": "هارون الرشيد"
+			},
+			"full": {
+				"en": "Harun al-Rashid",
+				"ar": "هارون الرشيد"
+			},
+			"role": {
+				"en": "Caliph · Patron",
+				"ar": "خليفة · راعٍ"
+			},
+			"life": {
+				"en": "763 – 809",
+				"ar": "٧٦٣ – ٨٠٩"
+			},
+			"birthYear": 763,
+			"deathYear": 809,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Rayy",
+				"ar": "الرَّي"
+			},
+			"died": {
+				"en": "Tus",
+				"ar": "طوس"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "Under his caliphate Baghdad became the richest city of the age and the translation movement took root — the world into which al-Khwarizmi came.",
+				"ar": "في خلافته صارت بغداد أغنى مدن العصر وترسّخت حركة الترجمة — العالم الذي قَدِم إليه الخوارزمي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Patron — early House of Wisdom",
+						"ar": "راعٍ — بدايات بيت الحكمة"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "Yahya the Barmakid",
+						"ar": "يحيى البرمكي"
+					}
+				}
+			]
+		},
+		{
+			"slug": "banumusa",
+			"glyph": "ب",
+			"name": {
+				"en": "The Banu Musa",
+				"ar": "بنو موسى"
+			},
+			"full": {
+				"en": "Banu Musa ibn Shakir",
+				"ar": "بنو موسى بن شاكر"
+			},
+			"role": {
+				"en": "Engineers · Mathematicians · Patrons",
+				"ar": "مهندسون · رياضياتيون · رعاة"
+			},
+			"life": {
+				"en": "fl. 9th c.",
+				"ar": "ازدهروا ق ٩"
+			},
+			"birthYear": 800,
+			"deathYear": 873,
+			"birthCirca": true,
+			"deathCirca": true,
+			"born": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"died": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "Three brothers — Muhammad, Ahmad and al-Hasan — patrons, engineers and mathematicians whose Book of Ingenious Devices shared al-Khwarizmi's circle.",
+				"ar": "ثلاثة إخوة — محمد وأحمد والحسن — رعاة ومهندسون ورياضياتيون شارك كتابُهم «الحِيَل» حلقةَ الخوارزمي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Book of Ingenious Devices",
+						"ar": "كتاب الحِيَل"
+					},
+					"year": "850"
+				},
+				{
+					"title": {
+						"en": "On the Measurement of Plane & Spherical Figures",
+						"ar": "في مساحة الأشكال"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "student",
+					"label": {
+						"en": "Thabit ibn Qurra",
+						"ar": "ثابت بن قُرّة"
+					}
+				}
+			]
+		},
+		{
+			"slug": "kindi",
+			"glyph": "ك",
+			"name": {
+				"en": "al-Kindi",
+				"ar": "الكِندي"
+			},
+			"full": {
+				"en": "Abu Yusuf al-Kindi",
+				"ar": "أبو يوسف الكِندي"
+			},
+			"role": {
+				"en": "Philosopher · Polymath",
+				"ar": "فيلسوف · موسوعي"
+			},
+			"life": {
+				"en": "c. 801 – 873",
+				"ar": "نحو ٨٠١ – ٨٧٣"
+			},
+			"birthYear": 801,
+			"deathYear": 873,
+			"birthCirca": true,
+			"deathCirca": false,
+			"born": {
+				"en": "Kufa",
+				"ar": "الكوفة"
+			},
+			"died": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"lived": [
+				{
+					"en": "Basra",
+					"ar": "البصرة"
+				},
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "The 'Philosopher of the Arabs' — polymath of philosophy, optics and medicine, and author of the first known work on breaking ciphers.",
+				"ar": "«فيلسوف العرب» — موسوعيٌّ في الفلسفة والبصريات والطب، ومؤلّف أوّل عملٍ معروف في كسر الشيفرات."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "On First Philosophy",
+						"ar": "في الفلسفة الأولى"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "On Deciphering Cryptographic Messages",
+						"ar": "في استخراج المعمّى"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "On the Use of Indian Numerals",
+						"ar": "في استعمال الأعداد الهندية"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "Educated in Basra & Baghdad",
+						"ar": "تعلّم في البصرة وبغداد"
+					}
+				},
+				{
+					"group": "student",
+					"label": {
+						"en": "al-Sarakhsi",
+						"ar": "السرخسي"
+					}
+				}
+			]
+		},
+		{
+			"slug": "hunayn",
+			"glyph": "ح",
+			"name": {
+				"en": "Hunayn ibn Ishaq",
+				"ar": "حنين بن إسحاق"
+			},
+			"full": {
+				"en": "Hunayn ibn Ishaq al-Ibadi",
+				"ar": "حنين بن إسحاق العبادي"
+			},
+			"role": {
+				"en": "Physician · Master translator",
+				"ar": "طبيب · سيّد المترجمين"
+			},
+			"life": {
+				"en": "809 – 873",
+				"ar": "٨٠٩ – ٨٧٣"
+			},
+			"birthYear": 809,
+			"deathYear": 873,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "al-Hira",
+				"ar": "الحيرة"
+			},
+			"died": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "The master translator of the age, rendering Greek medicine and science into Arabic with unmatched care for the House of Wisdom.",
+				"ar": "سيّد المترجمين في عصره، نقل الطب والعلم اليوناني إلى العربية بعناية لا تُضاهى لبيت الحكمة."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Ten Treatises on the Eye",
+						"ar": "العشر مقالات في العين"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Translations of Galen & Hippocrates",
+						"ar": "ترجمات جالينوس وأبقراط"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "Ibn Masawayh",
+						"ar": "ابن ماسويه"
+					}
+				},
+				{
+					"group": "student",
+					"label": {
+						"en": "Hubaysh",
+						"ar": "حُبَيش"
+					}
+				},
+				{
+					"group": "student",
+					"label": {
+						"en": "Isa ibn Yahya",
+						"ar": "عيسى بن يحيى"
+					}
+				}
+			]
+		},
+		{
+			"slug": "farghani",
+			"glyph": "ف",
+			"name": {
+				"en": "al-Farghani",
+				"ar": "الفَرغاني"
+			},
+			"full": {
+				"en": "Ahmad ibn Muhammad al-Farghani",
+				"ar": "أحمد بن محمد الفَرغاني"
+			},
+			"role": {
+				"en": "Astronomer",
+				"ar": "فلكي"
+			},
+			"life": {
+				"en": "c. 800 – 870",
+				"ar": "نحو ٨٠٠ – ٨٧٠"
+			},
+			"birthYear": 800,
+			"deathYear": 870,
+			"birthCirca": true,
+			"deathCirca": false,
+			"born": {
+				"en": "Farghana",
+				"ar": "فَرغانة"
+			},
+			"died": {
+				"en": "Cairo",
+				"ar": "القاهرة"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				},
+				{
+					"en": "Cairo",
+					"ar": "القاهرة"
+				}
+			],
+			"bio": {
+				"en": "Astronomer — the Latin 'Alfraganus' — whose summary of Ptolemy shaped European cosmology for centuries and was quoted by Dante.",
+				"ar": "فلكيٌّ — «ألفراغانوس» باللاتينية — صاغ خلاصةً لبطليموس شكّلت علم الكون الأوروبي قرونًا واقتبسها دانتي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Elements of Astronomy",
+						"ar": "جوامع علم النجوم"
+					},
+					"year": "c.833"
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "student",
+					"label": {
+						"en": "Through books — European astronomers",
+						"ar": "عبر الكتب — فلكيّو أوروبا"
+					}
+				}
+			]
+		},
+		{
+			"slug": "sind",
+			"glyph": "س",
+			"name": {
+				"en": "Sind ibn Ali",
+				"ar": "سند بن علي"
+			},
+			"full": {
+				"en": "Sind ibn Ali",
+				"ar": "سند بن علي"
+			},
+			"role": {
+				"en": "Astronomer · Mathematician",
+				"ar": "فلكي · رياضياتي"
+			},
+			"life": {
+				"en": "fl. 9th c.",
+				"ar": "ازدهر ق ٩"
+			},
+			"birthYear": 795,
+			"deathYear": 860,
+			"birthCirca": true,
+			"deathCirca": true,
+			"born": {
+				"en": "Unknown",
+				"ar": "غير معروف"
+			},
+			"died": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "Astronomer of the House of Wisdom and a collaborator on the observational programme behind the Zij and the meridian measurement.",
+				"ar": "فلكيُّ بيت الحكمة وشريكٌ في برنامج الرصد وراء «الزيج» وقياس خط الزوال."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Astronomical tables",
+						"ar": "جداول فلكية"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Contributions to the Zij",
+						"ar": "إسهامات في الزيج"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "The House of Wisdom",
+						"ar": "بيت الحكمة"
+					}
+				}
+			]
+		},
+		{
+			"slug": "brahmagupta",
+			"glyph": "ब",
+			"name": {
+				"en": "Brahmagupta",
+				"ar": "براهماغوبتا"
+			},
+			"full": {
+				"en": "Brahmagupta",
+				"ar": "براهماغوبتا"
+			},
+			"role": {
+				"en": "Mathematician · Astronomer",
+				"ar": "رياضياتي · فلكي"
+			},
+			"life": {
+				"en": "598 – 668",
+				"ar": "٥٩٨ – ٦٦٨"
+			},
+			"birthYear": 598,
+			"deathYear": 668,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Bhinmal",
+				"ar": "بهينمال"
+			},
+			"died": {
+				"en": "Ujjain",
+				"ar": "أُجَّين"
+			},
+			"lived": [
+				{
+					"en": "Ujjain",
+					"ar": "أُجَّين"
+				}
+			],
+			"bio": {
+				"en": "Head of the Ujjain observatory whose Brahmasphutasiddhanta carried the decimal numerals and the first rules for zero that al-Khwarizmi later systematised.",
+				"ar": "رئيس مرصد أُجَّين، حمل كتابُه «براهما سفوتا سدهانتا» الأرقامَ العشرية وأوّل قواعد الصفر التي نظّمها الخوارزمي لاحقًا."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Brahmasphutasiddhanta",
+						"ar": "براهما سفوتا سدهانتا"
+					},
+					"year": "628"
+				},
+				{
+					"title": {
+						"en": "Khandakhadyaka",
+						"ar": "خانداخاديكا"
+					},
+					"year": "665"
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "Unknown",
+						"ar": "غير معروف"
+					}
+				},
+				{
+					"group": "peer",
+					"label": {
+						"en": "The astronomers of Ujjain",
+						"ar": "فلكيّو أُجَّين"
+					}
+				}
+			]
+		},
+		{
+			"slug": "ptolemy",
+			"glyph": "Π",
+			"name": {
+				"en": "Ptolemy",
+				"ar": "بطليموس"
+			},
+			"full": {
+				"en": "Claudius Ptolemy",
+				"ar": "كلوديوس بطليموس"
+			},
+			"role": {
+				"en": "Astronomer · Geographer",
+				"ar": "فلكي · جغرافي"
+			},
+			"life": {
+				"en": "c. 100 – 170",
+				"ar": "نحو ١٠٠ – ١٧٠"
+			},
+			"birthYear": 100,
+			"deathYear": 170,
+			"birthCirca": true,
+			"deathCirca": false,
+			"born": {
+				"en": "Egypt",
+				"ar": "مصر"
+			},
+			"died": {
+				"en": "Alexandria",
+				"ar": "الإسكندرية"
+			},
+			"lived": [
+				{
+					"en": "Alexandria",
+					"ar": "الإسكندرية"
+				}
+			],
+			"bio": {
+				"en": "The astronomer of Alexandria whose Almagest and Geography framed the heavens and the earth for a thousand years — and set the targets al-Khwarizmi would correct.",
+				"ar": "فلكيُّ الإسكندرية الذي وضع كتاباه «المجسطي» و«الجغرافيا» إطارَ السماء والأرض ألف عام — وحدّدا ما سيصحّحه الخوارزمي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Almagest",
+						"ar": "المجسطي"
+					},
+					"year": "c.150"
+				},
+				{
+					"title": {
+						"en": "Geography",
+						"ar": "الجغرافيا"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Tetrabiblos",
+						"ar": "الأربعة مقالات"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "The Alexandrian tradition",
+						"ar": "تقليد الإسكندرية"
+					}
+				}
+			]
+		},
+		{
+			"slug": "diophantus",
+			"glyph": "Δ",
+			"name": {
+				"en": "Diophantus",
+				"ar": "ديوفانتوس"
+			},
+			"full": {
+				"en": "Diophantus of Alexandria",
+				"ar": "ديوفانتوس الإسكندري"
+			},
+			"role": {
+				"en": "Mathematician",
+				"ar": "رياضياتي"
+			},
+			"life": {
+				"en": "c. 201 – 285",
+				"ar": "نحو ٢٠١ – ٢٨٥"
+			},
+			"birthYear": 201,
+			"deathYear": 285,
+			"birthCirca": true,
+			"deathCirca": false,
+			"born": {
+				"en": "Alexandria",
+				"ar": "الإسكندرية"
+			},
+			"died": {
+				"en": "Alexandria",
+				"ar": "الإسكندرية"
+			},
+			"lived": [
+				{
+					"en": "Alexandria",
+					"ar": "الإسكندرية"
+				}
+			],
+			"bio": {
+				"en": "The Greek 'father of arithmetic', whose Arithmetica treated equations with unknowns and prefigured the problems al-Khwarizmi would make general.",
+				"ar": "«أبو الحساب» اليوناني، عالج كتابُه «الحساب» المعادلاتِ بالمجاهيل ومهّد للمسائل التي عمّمها الخوارزمي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Arithmetica",
+						"ar": "الحساب (أريثمتيكا)"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "Unknown",
+						"ar": "غير معروف"
+					}
+				},
+				{
+					"group": "student",
+					"label": {
+						"en": "Through books — later algebraists",
+						"ar": "عبر الكتب — الجبريّون اللاحقون"
+					}
+				}
+			]
+		},
+		{
+			"slug": "euclid",
+			"glyph": "Ε",
+			"name": {
+				"en": "Euclid",
+				"ar": "إقليدس"
+			},
+			"full": {
+				"en": "Euclid of Alexandria",
+				"ar": "إقليدس الإسكندري"
+			},
+			"role": {
+				"en": "Mathematician",
+				"ar": "رياضياتي"
+			},
+			"life": {
+				"en": "c. 325 – 265 BCE",
+				"ar": "نحو ٣٢٥ – ٢٦٥ ق.م"
+			},
+			"birthYear": -325,
+			"deathYear": -265,
+			"birthCirca": true,
+			"deathCirca": false,
+			"born": {
+				"en": "Unknown",
+				"ar": "غير معروف"
+			},
+			"died": {
+				"en": "Alexandria",
+				"ar": "الإسكندرية"
+			},
+			"lived": [
+				{
+					"en": "Alexandria",
+					"ar": "الإسكندرية"
+				}
+			],
+			"bio": {
+				"en": "Author of the Elements, the foundation of geometry. Its proofs gave al-Khwarizmi the rigorous ground on which he justified completing the square.",
+				"ar": "مؤلّف «الأصول»، أساس الهندسة. منحت براهينُه الخوارزميَّ الأرضَ الصارمة التي برهن عليها قاعدة إكمال المربّع."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Elements",
+						"ar": "الأصول"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Optics",
+						"ar": "المناظر"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Data",
+						"ar": "المعطيات"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "The school of Plato",
+						"ar": "مدرسة أفلاطون"
+					}
+				},
+				{
+					"group": "student",
+					"label": {
+						"en": "Through books — all geometers since",
+						"ar": "عبر الكتب — كل الهندسيين بعده"
+					}
+				}
+			]
+		},
+		{
+			"slug": "abukamil",
+			"glyph": "أ",
+			"name": {
+				"en": "Abu Kamil",
+				"ar": "أبو كامل"
+			},
+			"full": {
+				"en": "Abu Kamil Shuja ibn Aslam",
+				"ar": "أبو كامل شجاع بن أسلم"
+			},
+			"role": {
+				"en": "Mathematician",
+				"ar": "رياضياتي"
+			},
+			"life": {
+				"en": "c. 850 – 930",
+				"ar": "نحو ٨٥٠ – ٩٣٠"
+			},
+			"birthYear": 850,
+			"deathYear": 930,
+			"birthCirca": true,
+			"deathCirca": false,
+			"born": {
+				"en": "Egypt",
+				"ar": "مصر"
+			},
+			"died": {
+				"en": "Egypt",
+				"ar": "مصر"
+			},
+			"lived": [
+				{
+					"en": "Egypt",
+					"ar": "مصر"
+				}
+			],
+			"bio": {
+				"en": "'The Egyptian reckoner' — the first to build directly on Al-Jabr, extending algebra to higher powers and irrational solutions.",
+				"ar": "«الحاسب المصري» — أوّل من بنى مباشرةً على «الجبر»، فامتدّ به إلى القوى الأعلى والحلول الصمّاء."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Book of Algebra",
+						"ar": "كتاب في الجبر والمقابلة"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Book of Rare Things in Calculation",
+						"ar": "كتاب الطرائف في الحساب"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": []
+		},
+		{
+			"slug": "battani",
+			"glyph": "ب",
+			"name": {
+				"en": "al-Battani",
+				"ar": "البتّاني"
+			},
+			"full": {
+				"en": "Muhammad ibn Jabir al-Battani",
+				"ar": "محمد بن جابر البتّاني"
+			},
+			"role": {
+				"en": "Astronomer · Mathematician",
+				"ar": "فلكي · رياضياتي"
+			},
+			"life": {
+				"en": "c. 858 – 929",
+				"ar": "نحو ٨٥٨ – ٩٢٩"
+			},
+			"birthYear": 858,
+			"deathYear": 929,
+			"birthCirca": true,
+			"deathCirca": false,
+			"born": {
+				"en": "Harran",
+				"ar": "حرّان"
+			},
+			"died": {
+				"en": "Samarra",
+				"ar": "سامراء"
+			},
+			"lived": [
+				{
+					"en": "Raqqa",
+					"ar": "الرقّة"
+				}
+			],
+			"bio": {
+				"en": "Astronomer — the Latin 'Albategnius' — who refined Ptolemy's tables and the trigonometry al-Khwarizmi had begun, measuring the solar year with great precision.",
+				"ar": "فلكيٌّ — «ألبتانيوس» باللاتينية — نقّح جداول بطليموس وعلمَ المثلثات الذي بدأه الخوارزمي، وقاس السنة الشمسية بدقّة بالغة."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Kitab az-Zij (De Motu Stellarum)",
+						"ar": "كتاب الزيج الصابئ"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "student",
+					"label": {
+						"en": "Through books — Copernicus, Kepler",
+						"ar": "عبر الكتب — كوبرنيكوس، كبلر"
+					}
+				},
+				{
+					"group": "peer",
+					"label": {
+						"en": "Thabit ibn Qurra",
+						"ar": "ثابت بن قُرّة"
+					}
+				}
+			]
+		},
+		{
+			"slug": "karaji",
+			"glyph": "ك",
+			"name": {
+				"en": "al-Karaji",
+				"ar": "الكَرَجي"
+			},
+			"full": {
+				"en": "Abu Bakr al-Karaji",
+				"ar": "أبو بكر الكَرَجي"
+			},
+			"role": {
+				"en": "Mathematician · Engineer",
+				"ar": "رياضياتي · مهندس"
+			},
+			"life": {
+				"en": "953 – 1029",
+				"ar": "٩٥٣ – ١٠٢٩"
+			},
+			"birthYear": 953,
+			"deathYear": 1029,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Karaj",
+				"ar": "كَرَج"
+			},
+			"died": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "Freed algebra from geometry, treating the unknown as a thing in itself — a direct descendant of Al-Jabr and a step toward modern algebra.",
+				"ar": "حرّر الجبر من الهندسة، فعامل المجهولَ شيئًا قائمًا بذاته — وريثٌ مباشر لـ«الجبر» وخطوةٌ نحو الجبر الحديث."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "al-Fakhri",
+						"ar": "الفخري"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "al-Badi",
+						"ar": "البديع"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "al-Kafi fi al-Hisab",
+						"ar": "الكافي في الحساب"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "student",
+					"label": {
+						"en": "Through books — al-Samawal",
+						"ar": "عبر الكتب — السموأل"
+					}
+				},
+				{
+					"group": "sameGeneration",
+					"label": {
+						"en": "Ibn Sina (era)",
+						"ar": "ابن سينا (العصر)"
+					}
+				}
+			]
+		},
+		{
+			"slug": "khayyam",
+			"glyph": "ع",
+			"name": {
+				"en": "Omar Khayyam",
+				"ar": "عمر الخيّام"
+			},
+			"full": {
+				"en": "Ghiyath al-Din Omar Khayyam",
+				"ar": "غياث الدين عمر الخيّام"
+			},
+			"role": {
+				"en": "Mathematician · Astronomer · Poet",
+				"ar": "رياضياتي · فلكي · شاعر"
+			},
+			"life": {
+				"en": "1048 – 1131",
+				"ar": "١٠٤٨ – ١١٣١"
+			},
+			"birthYear": 1048,
+			"deathYear": 1131,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Nishapur",
+				"ar": "نيسابور"
+			},
+			"died": {
+				"en": "Nishapur",
+				"ar": "نيسابور"
+			},
+			"lived": [
+				{
+					"en": "Samarkand",
+					"ar": "سمرقند"
+				},
+				{
+					"en": "Isfahan",
+					"ar": "أصفهان"
+				},
+				{
+					"en": "Nishapur",
+					"ar": "نيسابور"
+				}
+			],
+			"bio": {
+				"en": "Poet and mathematician who classified and solved the cubic equations beyond al-Khwarizmi's reach, and reformed the calendar with great accuracy.",
+				"ar": "شاعرٌ ورياضياتي صنّف المعادلات التكعيبية وحلّها فيما تجاوز مدى الخوارزمي، وأصلح التقويم بدقّة عالية."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Treatise on Problems of Algebra",
+						"ar": "رسالة في البراهين على مسائل الجبر"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Rubaiyat",
+						"ar": "الرباعيات"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Jalali calendar reform",
+						"ar": "إصلاح التقويم الجلالي"
+					},
+					"year": "1079"
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "student",
+					"label": {
+						"en": "Through books — later algebraists",
+						"ar": "عبر الكتب — الجبريّون اللاحقون"
+					}
+				},
+				{
+					"group": "peer",
+					"label": {
+						"en": "al-Khazini",
+						"ar": "الخازني"
+					}
+				},
+				{
+					"group": "acquaintance",
+					"label": {
+						"en": "Nizam al-Mulk (patron)",
+						"ar": "نظام الملك (الراعي)"
+					}
+				},
+				{
+					"group": "acquaintance",
+					"label": {
+						"en": "Malik-Shah",
+						"ar": "ملكشاه"
+					}
+				},
+				{
+					"group": "sameGeneration",
+					"label": {
+						"en": "al-Ghazali",
+						"ar": "الغزالي"
+					}
+				}
+			]
+		},
+		{
+			"slug": "fibonacci",
+			"glyph": "L",
+			"name": {
+				"en": "Fibonacci",
+				"ar": "فيبوناتشي"
+			},
+			"full": {
+				"en": "Leonardo of Pisa",
+				"ar": "ليوناردو البيزي"
+			},
+			"role": {
+				"en": "Mathematician",
+				"ar": "رياضياتي"
+			},
+			"life": {
+				"en": "c. 1170 – 1250",
+				"ar": "نحو ١١٧٠ – ١٢٥٠"
+			},
+			"birthYear": 1170,
+			"deathYear": 1250,
+			"birthCirca": true,
+			"deathCirca": false,
+			"born": {
+				"en": "Pisa",
+				"ar": "بيزا"
+			},
+			"died": {
+				"en": "Pisa",
+				"ar": "بيزا"
+			},
+			"lived": [
+				{
+					"en": "Bugia",
+					"ar": "بجاية"
+				},
+				{
+					"en": "Pisa",
+					"ar": "بيزا"
+				}
+			],
+			"bio": {
+				"en": "Leonardo of Pisa, who learned Hindu-Arabic numerals from Arab merchants in Bugia and carried al-Khwarizmi's reckoning into Europe in his Liber Abaci.",
+				"ar": "ليوناردو البيزي، تعلّم الأرقامَ الهندية-العربية من تجّار العرب في بجاية، وحمل حسابَ الخوارزمي إلى أوروبا في «كتاب الحساب»."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Liber Abaci",
+						"ar": "كتاب الحساب (ليبر أباتشي)"
+					},
+					"year": "1202"
+				},
+				{
+					"title": {
+						"en": "Practica Geometriae",
+						"ar": "الهندسة العملية"
+					},
+					"year": "1220"
+				},
+				{
+					"title": {
+						"en": "Liber Quadratorum",
+						"ar": "كتاب المربّعات"
+					},
+					"year": "1225"
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "student",
+					"label": {
+						"en": "Europe's reckoning masters",
+						"ar": "أساتذة الحساب في أوروبا"
+					}
+				},
+				{
+					"group": "acquaintance",
+					"label": {
+						"en": "Frederick II's court",
+						"ar": "بلاط فريدريك الثاني"
+					}
+				}
+			]
+		},
+		{
+			"slug": "shafii",
+			"glyph": "ش",
+			"name": {
+				"en": "al-Shafi'i",
+				"ar": "الشافعي"
+			},
+			"full": {
+				"en": "Imam Muhammad al-Shafi'i",
+				"ar": "الإمام محمد الشافعي"
+			},
+			"role": {
+				"en": "Jurist · Founder of a school of law",
+				"ar": "فقيه · مؤسّس مذهب"
+			},
+			"life": {
+				"en": "767 – 820",
+				"ar": "٧٦٧ – ٨٢٠"
+			},
+			"birthYear": 767,
+			"deathYear": 820,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Gaza",
+				"ar": "غزّة"
+			},
+			"died": {
+				"en": "Cairo",
+				"ar": "القاهرة"
+			},
+			"lived": [
+				{
+					"en": "Mecca",
+					"ar": "مكّة"
+				},
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				},
+				{
+					"en": "Cairo",
+					"ar": "القاهرة"
+				}
+			],
+			"bio": {
+				"en": "Jurist who founded one of the great schools of Islamic law in the same decades and the same city as al-Khwarizmi's rise.",
+				"ar": "فقيهٌ أسّس أحد المذاهب الكبرى في الفقه الإسلامي في العقود ذاتها والمدينة ذاتها لصعود الخوارزمي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "al-Risala",
+						"ar": "الرسالة"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Kitab al-Umm",
+						"ar": "كتاب الأم"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "Malik ibn Anas",
+						"ar": "مالك بن أنس"
+					}
+				},
+				{
+					"group": "peer",
+					"label": {
+						"en": "The jurists of Baghdad",
+						"ar": "فقهاء بغداد"
+					}
+				}
+			]
+		},
+		{
+			"slug": "hanbal",
+			"glyph": "ح",
+			"name": {
+				"en": "Ibn Hanbal",
+				"ar": "ابن حنبل"
+			},
+			"full": {
+				"en": "Ahmad ibn Hanbal",
+				"ar": "أحمد بن حنبل"
+			},
+			"role": {
+				"en": "Theologian · Jurist · Traditionist",
+				"ar": "محدِّث · فقيه"
+			},
+			"life": {
+				"en": "780 – 855",
+				"ar": "٧٨٠ – ٨٥٥"
+			},
+			"birthYear": 780,
+			"deathYear": 855,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"died": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "Theologian and jurist, born — by tradition — the same year as al-Khwarizmi and into the same Baghdad; founder of the Hanbali school.",
+				"ar": "محدِّثٌ وفقيه، وُلد بحسب الرواية عام الخوارزمي نفسه وفي بغداد ذاتها؛ مؤسّس المذهب الحنبلي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Musnad",
+						"ar": "المسند"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "student",
+					"label": {
+						"en": "al-Bukhari (circle)",
+						"ar": "البخاري (الحلقة)"
+					}
+				},
+				{
+					"group": "peer",
+					"label": {
+						"en": "The traditionists of Baghdad",
+						"ar": "محدِّثو بغداد"
+					}
+				}
+			]
+		},
+		{
+			"slug": "abunuwas",
+			"glyph": "ن",
+			"name": {
+				"en": "Abu Nuwas",
+				"ar": "أبو نوّاس"
+			},
+			"full": {
+				"en": "Abu Nuwas al-Hasan ibn Hani",
+				"ar": "أبو نوّاس الحسن بن هانئ"
+			},
+			"role": {
+				"en": "Poet",
+				"ar": "شاعر"
+			},
+			"life": {
+				"en": "756 – 814",
+				"ar": "٧٥٦ – ٨١٤"
+			},
+			"birthYear": 756,
+			"deathYear": 814,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Ahvaz",
+				"ar": "الأهواز"
+			},
+			"died": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"lived": [
+				{
+					"en": "Basra",
+					"ar": "البصرة"
+				},
+				{
+					"en": "Kufa",
+					"ar": "الكوفة"
+				},
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "The great wine-and-wit poet of the Abbasid court — the literary voice of al-Khwarizmi's Baghdad.",
+				"ar": "شاعر الخمر والظرف الأكبر في البلاط العباسي — الصوت الأدبي لبغداد الخوارزمي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Diwan of Abu Nuwas",
+						"ar": "ديوان أبي نوّاس"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "Khalaf al-Ahmar",
+						"ar": "خلف الأحمر"
+					}
+				},
+				{
+					"group": "student",
+					"label": {
+						"en": "The Abbasid poets",
+						"ar": "شعراء العباسيين"
+					}
+				},
+				{
+					"group": "peer",
+					"label": {
+						"en": "The court poets",
+						"ar": "شعراء البلاط"
+					}
+				}
+			]
+		},
+		{
+			"slug": "jahiz",
+			"glyph": "ج",
+			"name": {
+				"en": "al-Jahiz",
+				"ar": "الجاحظ"
+			},
+			"full": {
+				"en": "Amr ibn Bahr al-Jahiz",
+				"ar": "عمرو بن بحر الجاحظ"
+			},
+			"role": {
+				"en": "Prose master · Polymath",
+				"ar": "إمام النثر · موسوعي"
+			},
+			"life": {
+				"en": "776 – 868",
+				"ar": "٧٧٦ – ٨٦٨"
+			},
+			"birthYear": 776,
+			"deathYear": 868,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Basra",
+				"ar": "البصرة"
+			},
+			"died": {
+				"en": "Basra",
+				"ar": "البصرة"
+			},
+			"lived": [
+				{
+					"en": "Basra",
+					"ar": "البصرة"
+				},
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				}
+			],
+			"bio": {
+				"en": "Prose master whose Book of Animals shows the same encyclopaedic appetite for the world that drove the House of Wisdom.",
+				"ar": "إمام النثر، يُظهر «كتاب الحيوان» النهمَ الموسوعي ذاته للعالم الذي حرّك بيت الحكمة."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Kitab al-Hayawan (Book of Animals)",
+						"ar": "كتاب الحيوان"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "al-Bayan wa al-Tabyin",
+						"ar": "البيان والتبيين"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Book of Misers",
+						"ar": "كتاب البخلاء"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "The scholars of Basra",
+						"ar": "علماء البصرة"
+					}
+				},
+				{
+					"group": "student",
+					"label": {
+						"en": "The Arabic prose tradition",
+						"ar": "تقليد النثر العربي"
+					}
+				},
+				{
+					"group": "acquaintance",
+					"label": {
+						"en": "The Abbasid court",
+						"ar": "البلاط العباسي"
+					}
+				}
+			]
+		},
+		{
+			"slug": "charlemagne",
+			"glyph": "C",
+			"name": {
+				"en": "Charlemagne",
+				"ar": "شارلمان"
+			},
+			"full": {
+				"en": "Charlemagne, Emperor of the West",
+				"ar": "شارلمان، إمبراطور الغرب"
+			},
+			"role": {
+				"en": "Emperor · Patron of learning",
+				"ar": "إمبراطور · راعي العلم"
+			},
+			"life": {
+				"en": "748 – 814",
+				"ar": "٧٤٨ – ٨١٤"
+			},
+			"birthYear": 748,
+			"deathYear": 814,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Frankish lands",
+				"ar": "بلاد الفرنجة"
+			},
+			"died": {
+				"en": "Aachen",
+				"ar": "آخن"
+			},
+			"lived": [
+				{
+					"en": "Aachen",
+					"ar": "آخن"
+				}
+			],
+			"bio": {
+				"en": "Crowned emperor in the West in the same generation; his Carolingian revival of letters a distant mirror of Baghdad's golden age.",
+				"ar": "تُوِّج إمبراطورًا في الغرب في الجيل نفسه؛ ونهضتُه الكارولنجية في العلم مرآةٌ بعيدة لعصر بغداد الذهبي."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Patron — the Carolingian Renaissance",
+						"ar": "راعٍ — النهضة الكارولنجية"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "Alcuin of York",
+						"ar": "ألكوين اليوركي"
+					}
+				},
+				{
+					"group": "student",
+					"label": {
+						"en": "The Carolingian schools",
+						"ar": "المدارس الكارولنجية"
+					}
+				}
+			]
+		},
+		{
+			"slug": "ziryab",
+			"glyph": "ز",
+			"name": {
+				"en": "Ziryab",
+				"ar": "زرياب"
+			},
+			"full": {
+				"en": "Abu al-Hasan Ali ibn Nafi (Ziryab)",
+				"ar": "أبو الحسن علي بن نافع (زرياب)"
+			},
+			"role": {
+				"en": "Musician · Polymath",
+				"ar": "موسيقي · موسوعي"
+			},
+			"life": {
+				"en": "789 – 857",
+				"ar": "٧٨٩ – ٨٥٧"
+			},
+			"birthYear": 789,
+			"deathYear": 857,
+			"birthCirca": false,
+			"deathCirca": false,
+			"born": {
+				"en": "Baghdad",
+				"ar": "بغداد"
+			},
+			"died": {
+				"en": "Cordoba",
+				"ar": "قرطبة"
+			},
+			"lived": [
+				{
+					"en": "Baghdad",
+					"ar": "بغداد"
+				},
+				{
+					"en": "Cordoba",
+					"ar": "قرطبة"
+				}
+			],
+			"bio": {
+				"en": "Musician and polymath who carried Baghdad's refinements — music, cuisine, fashion — clear across the world to al-Andalus.",
+				"ar": "موسيقيٌّ وموسوعيٌّ حمل رقيّ بغداد — موسيقى ومطبخًا وأزياء — عبر العالم إلى الأندلس."
+			},
+			"publications": [
+				{
+					"title": {
+						"en": "Founded the Cordoba music school",
+						"ar": "أسّس مدرسة الموسيقى بقرطبة"
+					},
+					"year": ""
+				},
+				{
+					"title": {
+						"en": "Added the fifth string to the oud",
+						"ar": "أضاف الوتر الخامس للعود"
+					},
+					"year": ""
+				}
+			],
+			"circleNotes": [
+				{
+					"group": "teacher",
+					"label": {
+						"en": "Ishaq al-Mawsili",
+						"ar": "إسحاق الموصلي"
+					}
+				},
+				{
+					"group": "student",
+					"label": {
+						"en": "The Andalusian music school",
+						"ar": "مدرسة الموسيقى الأندلسية"
+					}
+				},
+				{
+					"group": "peer",
+					"label": {
+						"en": "The court musicians",
+						"ar": "موسيقيّو البلاط"
+					}
+				},
+				{
+					"group": "acquaintance",
+					"label": {
+						"en": "Abd al-Rahman II",
+						"ar": "عبد الرحمن الثاني"
+					}
+				}
+			]
+		}
+	],
+	"relationships": [
+		{
+			"from": "brahmagupta",
+			"to": "kw",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "ptolemy",
+			"to": "kw",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "euclid",
+			"to": "kw",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "mamun",
+			"to": "kw",
+			"type": "patron",
+			"nature": "documented"
+		},
+		{
+			"from": "mutasim",
+			"to": "kw",
+			"type": "patron",
+			"nature": "documented"
+		},
+		{
+			"from": "kw",
+			"to": "abukamil",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "kw",
+			"to": "karaji",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "kw",
+			"to": "khayyam",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "kw",
+			"to": "fibonacci",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "harun",
+			"to": "kw",
+			"type": "patron",
+			"nature": "plausible"
+		},
+		{
+			"from": "diophantus",
+			"to": "kw",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "kw",
+			"to": "battani",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "banumusa",
+			"to": "kw",
+			"type": "peer",
+			"nature": "documented"
+		},
+		{
+			"from": "kindi",
+			"to": "kw",
+			"type": "peer",
+			"nature": "documented"
+		},
+		{
+			"from": "farghani",
+			"to": "kw",
+			"type": "peer",
+			"nature": "documented"
+		},
+		{
+			"from": "hunayn",
+			"to": "kw",
+			"type": "peer",
+			"nature": "documented"
+		},
+		{
+			"from": "sind",
+			"to": "kw",
+			"type": "peer",
+			"nature": "documented"
+		},
+		{
+			"from": "abunuwas",
+			"to": "kw",
+			"type": "contemporary",
+			"nature": "plausible"
+		},
+		{
+			"from": "shafii",
+			"to": "kw",
+			"type": "contemporary",
+			"nature": "plausible"
+		},
+		{
+			"from": "hanbal",
+			"to": "kw",
+			"type": "contemporary",
+			"nature": "plausible"
+		},
+		{
+			"from": "jahiz",
+			"to": "kw",
+			"type": "contemporary",
+			"nature": "plausible"
+		},
+		{
+			"from": "charlemagne",
+			"to": "kw",
+			"type": "contemporary",
+			"nature": "plausible"
+		},
+		{
+			"from": "kindi",
+			"to": "mamun",
+			"type": "acquaintance",
+			"nature": "documented"
+		},
+		{
+			"from": "jahiz",
+			"to": "mamun",
+			"type": "contemporary",
+			"nature": "plausible"
+		},
+		{
+			"from": "kindi",
+			"to": "mutasim",
+			"type": "acquaintance",
+			"nature": "documented"
+		},
+		{
+			"from": "shafii",
+			"to": "harun",
+			"type": "acquaintance",
+			"nature": "documented"
+		},
+		{
+			"from": "abunuwas",
+			"to": "harun",
+			"type": "acquaintance",
+			"nature": "documented"
+		},
+		{
+			"from": "mamun",
+			"to": "banumusa",
+			"type": "patron",
+			"nature": "documented"
+		},
+		{
+			"from": "banumusa",
+			"to": "hunayn",
+			"type": "teacher",
+			"nature": "documented"
+		},
+		{
+			"from": "kindi",
+			"to": "banumusa",
+			"type": "peer",
+			"nature": "documented"
+		},
+		{
+			"from": "hunayn",
+			"to": "kindi",
+			"type": "peer",
+			"nature": "documented"
+		},
+		{
+			"from": "jahiz",
+			"to": "hunayn",
+			"type": "contemporary",
+			"nature": "plausible"
+		},
+		{
+			"from": "banumusa",
+			"to": "farghani",
+			"type": "peer",
+			"nature": "documented"
+		},
+		{
+			"from": "mamun",
+			"to": "farghani",
+			"type": "acquaintance",
+			"nature": "documented"
+		},
+		{
+			"from": "mamun",
+			"to": "sind",
+			"type": "acquaintance",
+			"nature": "documented"
+		},
+		{
+			"from": "ptolemy",
+			"to": "farghani",
+			"type": "teacher",
+			"nature": "documented"
+		},
+		{
+			"from": "abukamil",
+			"to": "karaji",
+			"type": "teacher",
+			"nature": "documented"
+		},
+		{
+			"from": "battani",
+			"to": "abukamil",
+			"type": "contemporary",
+			"nature": "plausible"
+		},
+		{
+			"from": "ptolemy",
+			"to": "battani",
+			"type": "source",
+			"nature": "booksOnly"
+		},
+		{
+			"from": "abukamil",
+			"to": "fibonacci",
+			"type": "teacher",
+			"nature": "documented"
+		},
+		{
+			"from": "shafii",
+			"to": "hanbal",
+			"type": "teacher",
+			"nature": "documented"
+		},
+		{
+			"from": "mutasim",
+			"to": "hanbal",
+			"type": "acquaintance",
+			"nature": "documented"
+		},
+		{
+			"from": "kindi",
+			"to": "jahiz",
+			"type": "peer",
+			"nature": "documented"
+		},
+		{
+			"from": "harun",
+			"to": "charlemagne",
+			"type": "acquaintance",
+			"nature": "documented",
+			"note": {
+				"en": "Harun al-Rashid (embassies)",
+				"ar": "هارون الرشيد (سفارات)"
+			}
+		},
+		{
+			"from": "kw",
+			"to": "ziryab",
+			"type": "contemporary",
+			"nature": "plausible"
+		}
+	]
+}

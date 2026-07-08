@@ -258,3 +258,16 @@ Append-only learning log for commits and deploys. Add new entries only at the en
   - PLAN.md
   - design_handoff_alalaam
   - .gitignore
+## 2026-07-08T10:25:18.949Z
+- Trigger: commit
+- Learning: v0.1 engine: the seed:legacy parity assertion caught a real bug on first run — kw's teacher chips carry the books prefix inconsistently, so Ptolemy/Euclid derived as direct teacher edges instead of past sources. Fix: the prototype INTER map is ground truth for subject pairs; every past/future pair gets a forced source edge. Also: npm builds workspaces alphabetically (cli before core), so the root build script must build @alalaam/core first.
+- Context: feat: v0.1 engine — core domain model + alalaam CLI
+- Branch: feat/v0.1-engine
+- Actor: Moe Ghashim <mohanadgh@gmail.com>
+- Changed Paths:
+  - packages/core
+  - packages/cli
+  - data
+  - tsconfig.json
+  - package.json
+  - README.md

@@ -1,0 +1,3917 @@
+{
+	"version": 1,
+	"subjects": {
+		"kw": {
+			"mamun": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "patron",
+				"medallionVariant": "brass"
+			},
+			"mutasim": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "patron",
+				"medallionVariant": "brass"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "patron",
+				"medallionVariant": "brass"
+			},
+			"banumusa": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"kindi": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"hunayn": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"farghani": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"sind": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"mamun": {
+			"kw": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"kindi": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"sind": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"mutasim": {
+			"kw": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mamun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"harun": {
+			"kw": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mamun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"banumusa": {
+			"kw": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"mamun": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "patron",
+				"medallionVariant": "brass"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"hunayn": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"farghani": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"battani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"kindi": {
+			"kw": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"mamun": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"mutasim": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"hunayn": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"battani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"hunayn": {
+			"kw": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"mamun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"kindi": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"battani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"farghani": {
+			"kw": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"mamun": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"battani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"sind": {
+			"kw": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"mamun": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"battani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"brahmagupta": {
+			"kw": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mamun": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mutasim": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"harun": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"banumusa": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"kindi": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"hunayn": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"farghani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"sind": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"hanbal": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"abunuwas": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"jahiz": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"charlemagne": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"ziryab": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			}
+		},
+		"ptolemy": {
+			"kw": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mamun": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mutasim": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"harun": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"banumusa": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"kindi": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"hunayn": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"farghani": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"sind": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"brahmagupta": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"diophantus": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"hanbal": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"abunuwas": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"jahiz": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"charlemagne": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"ziryab": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			}
+		},
+		"diophantus": {
+			"kw": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mamun": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mutasim": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"harun": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"banumusa": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"kindi": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"hunayn": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"farghani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"sind": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"brahmagupta": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"hanbal": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"abunuwas": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"jahiz": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"charlemagne": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"ziryab": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			}
+		},
+		"euclid": {
+			"kw": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mamun": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"mutasim": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"harun": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"banumusa": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"kindi": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"hunayn": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"farghani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"sind": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"brahmagupta": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"ptolemy": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"diophantus": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"hanbal": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"abunuwas": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"jahiz": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"charlemagne": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"ziryab": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			}
+		},
+		"abukamil": {
+			"kw": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mamun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mutasim": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"harun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"battani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"karaji": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"battani": {
+			"kw": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mamun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mutasim": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"harun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"hanbal": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abunuwas": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ziryab": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			}
+		},
+		"karaji": {
+			"kw": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mamun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mutasim": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"harun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"banumusa": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"kindi": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"hunayn": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"farghani": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"sind": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"battani": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"hanbal": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abunuwas": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"jahiz": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"charlemagne": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ziryab": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			}
+		},
+		"khayyam": {
+			"kw": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mamun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mutasim": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"harun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"banumusa": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"kindi": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"hunayn": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"farghani": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"sind": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"battani": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"karaji": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"hanbal": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abunuwas": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"jahiz": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"charlemagne": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ziryab": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			}
+		},
+		"fibonacci": {
+			"kw": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mamun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"mutasim": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"harun": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"banumusa": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"kindi": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"hunayn": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"farghani": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"sind": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"battani": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"karaji": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"khayyam": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"shafii": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"hanbal": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abunuwas": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"jahiz": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"charlemagne": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ziryab": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			}
+		},
+		"shafii": {
+			"kw": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mamun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"hanbal": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"hanbal": {
+			"kw": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mamun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mutasim": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"abunuwas": {
+			"kw": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mamun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"jahiz": {
+			"kw": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mamun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"battani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"charlemagne": {
+			"kw": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mamun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "direct",
+				"edgeTexture": "solid",
+				"arrow": "none",
+				"category": "peer",
+				"medallionVariant": "verdigris"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"ziryab": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		},
+		"ziryab": {
+			"kw": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mamun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"mutasim": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"harun": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"banumusa": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"kindi": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hunayn": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"farghani": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"sind": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"brahmagupta": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"ptolemy": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"diophantus": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"euclid": {
+				"tier": "past",
+				"edgeTexture": "dots",
+				"arrow": "in",
+				"category": "source",
+				"medallionVariant": "lapis"
+			},
+			"abukamil": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"battani": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"karaji": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"khayyam": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"fibonacci": {
+				"tier": "future",
+				"edgeTexture": "dots",
+				"arrow": "out",
+				"category": "heir",
+				"medallionVariant": "rose"
+			},
+			"shafii": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"hanbal": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"abunuwas": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"jahiz": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			},
+			"charlemagne": {
+				"tier": "possible",
+				"edgeTexture": "longDash",
+				"arrow": "none",
+				"category": "world",
+				"medallionVariant": "sand"
+			}
+		}
+	}
+}
