@@ -63,17 +63,17 @@ If you switch between `arm64` and `x64`, or between Rosetta and native Node, run
 
 This starter is used across `darwin-x64`, `darwin-arm64`, and Linux environments. Keep `node_modules` machine-local and rerun `npm install` or `npm run reinstall:clean` whenever native dependencies stop matching the current OS or CPU architecture.
 
-## Start A Vercel App
+## Run The Web App
 
-`apps/web` is the default app target. Vercel should use `apps/web` as the root directory. No custom `vercel.json` is required for the starter.
+`apps/web` (`@alalaam/web`) is the Majlis Explorer, adapted to Cloudflare Workers via `@opennextjs/cloudflare` (PLAN.md §4.1).
 
-GitHub Actions runs the required `Required checks` gate for pull requests and pushes to `main`; Vercel Git integration should remain responsible for deployment packaging only.
+GitHub Actions runs the required `Required checks` gate for pull requests and pushes to `main`; deployment stays out of CI.
 
 ```bash
-npm run dev -w @pi-starter/web
+npm run dev -w @alalaam/web
 ```
 
-See `docs/deploying-to-vercel.md` for the minimal Vercel setup.
+See `docs/deploying-to-cloudflare.md` for the Cloudflare setup (`npm run deploy -w @alalaam/web`), and `docs/pi-starter-cloudflare/` for the generic upstream adaptation kit. `docs/deploying-to-vercel.md` remains the upstream PI-Starter baseline.
 
 ## Publish A Package
 
@@ -140,5 +140,6 @@ npm run release:patch -- --learning "What we learned from this release." --publi
 
 ## Workspaces
 
-- `@pi-starter/web`
-- `@pi-starter/core`
+- `@alalaam/web`
+- `@alalaam/core`
+- `@alalaam/cli`

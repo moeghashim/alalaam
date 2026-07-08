@@ -1,3 +1,10 @@
+---
+summary: "Implementation brief for v0.3 — the Majlis Explorer web app on Cloudflare Workers"
+read_when:
+  - Implementing or reviewing the v0.3 Web (Cloudflare) task.
+  - Checking what the v0.3 scope and success criteria were.
+---
+
 # v0.3 handoff — Web on Cloudflare
 
 > Paste this (or point the implementing agent at it) to start v0.3. PLAN.md is

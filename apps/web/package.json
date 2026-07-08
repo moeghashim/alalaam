@@ -1,24 +1,30 @@
 {
-	"name": "@pi-starter/web",
+	"name": "@alalaam/web",
 	"version": "0.0.2",
 	"private": true,
 	"scripts": {
-		"clean": "rm -rf .next",
+		"clean": "rm -rf .next .open-next",
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"check": "tsc -p tsconfig.json --noEmit"
+		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+		"check": "tsc -p tsconfig.json --noEmit",
+		"test": "tsx --test test/**/*.test.ts"
 	},
 	"dependencies": {
-		"next": "16.2.3",
+		"@alalaam/core": "0.1.0",
+		"next": "^16.2.10",
 		"react": "19.2.4",
 		"react-dom": "19.2.4"
 	},
 	"devDependencies": {
+		"@opennextjs/cloudflare": "^1.20.1",
 		"@types/node": "^22.10.5",
 		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
-		"typescript": "^5.9.2"
+		"typescript": "^5.9.2",
+		"wrangler": "^4.108.0"
 	},
 	"engines": {
 		"node": "22.x"
